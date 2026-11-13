@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "canva": {
+      "type": "http",
+      "url": "https://mcp.canva.com/mcp"
+    },
+    "openart": {
+      "type": "http",
+      "url": "https://mcp.openart.ai/mcp"
+    }
+  }
+}
