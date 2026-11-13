@@ -1,3 +1,6 @@
 node_modules/
 .env
 __pycache__/
+video/out/lines/
+video/out/*.wav
+video/out/video-only.mp4

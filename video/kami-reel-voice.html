@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Kami Reel</title>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;800;900&family=Fraunces:opsz,wght@144,800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F4F0E4;--paper:#FBF8EF;--green:#2E3B2A;--green2:#3E4D39;--sage:#9AA88A;--sage-l:#CDD6BF;--blush:#ECD3CE;--rose:#D3959B;--skin:#E2B48C}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1920px;overflow:hidden}
+body{font-family:'Alexandria',sans-serif;color:var(--green);background:linear-gradient(170deg,var(--paper),var(--cream) 50%,var(--sage-l));position:relative}
+.abs{position:absolute}
+.wm{position:absolute;font-family:'Fraunces';font-weight:800;font-size:520px;opacity:.045;bottom:180px;left:-30px;direction:ltr}
+.spark{position:absolute;width:60px;height:60px}
+.scene{position:absolute;inset:0;opacity:0}
+.title{position:absolute;top:260px;right:230px;left:60px;display:flex;align-items:center;gap:26px;justify-content:flex-start}
+.badge{flex:none;width:150px;height:150px;border-radius:50%;background:var(--green);color:var(--paper);font-family:'Fraunces';font-weight:800;font-size:110px;display:flex;align-items:center;justify-content:center;box-shadow:10px 10px 0 var(--rose)}
+.ttl{font-weight:900;font-size:66px;line-height:1.25}
+.mark{background:var(--blush);padding:0 16px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.mark.s{background:var(--sage-l)}
+.mark.g{background:var(--green);color:var(--paper)}
+.stage{position:absolute;top:470px;left:60px;width:790px;height:540px}
+.item{position:absolute;opacity:0}
+.cardx{background:var(--paper);border:6px solid var(--green);border-radius:34px;box-shadow:12px 12px 0 var(--sage);display:flex;align-items:center;justify-content:center;flex-direction:column;font-weight:800;font-size:34px;gap:10px;text-align:center}
+.ln{fill:none;stroke:var(--green);stroke-width:8;stroke-linecap:round;stroke-linejoin:round}
+.bubble{position:absolute;left:400px;width:450px;top:1080px;min-height:220px;background:var(--paper);border:6px solid var(--green);border-radius:40px;padding:30px 34px;font-weight:800;font-size:42px;line-height:1.45;display:flex;align-items:center;box-shadow:10px 10px 0 var(--rose)}
+.bubble:after{content:"";position:absolute;left:-40px;bottom:50px;border:22px solid transparent;border-right:34px solid var(--green)}
+#kid{position:absolute;left:30px;top:1010px;width:380px;height:440px}
+.big{font-family:'Fraunces';font-weight:800;color:var(--green)}
+</style>
+</head>
+<body>
+<div class="wm">Kami</div>
+<svg class="spark" id="sp1" style="top:200px;left:120px" viewBox="0 0 40 40"><path d="M20 0C22 14 26 18 40 20C26 22 22 26 20 40C18 26 14 22 0 20C14 18 18 14 20 0Z" fill="#D3959B"/></svg>
+<svg class="spark" id="sp2" style="top:1000px;left:880px;width:40px" viewBox="0 0 40 40"><path d="M20 0C22 14 26 18 40 20C26 22 22 26 20 40C18 26 14 22 0 20C14 18 18 14 20 0Z" fill="#9AA88A"/></svg>
+
+<!-- ================= SCENES ================= -->
+<!-- 0: hook -->
+<div class="scene" data-scene="0">
+  <div class="title" style="top:300px"><div class="ttl" style="font-size:88px"><span class="mark g">٥ أشياء</span><br>نطلبها من <span style="font-family:Fraunces;direction:ltr">Kami</span></div></div>
+  <div class="stage"><div class="item big" data-d=".3" style="font-size:520px;line-height:1;left:220px;top:-40px">5</div></div>
+</div>
+<!-- 1: secret -->
+<div class="scene" data-scene="1">
+  <div class="title" style="top:300px"><div class="ttl" style="font-size:84px">رقم ٥<br><span class="mark">محد يدري عنه!</span></div></div>
+  <div class="stage"><svg class="item" data-d=".2" style="left:240px;top:60px;width:340px" viewBox="0 0 200 200"><circle class="ln" cx="100" cy="100" r="80" style="fill:var(--paper)"/><text x="100" y="135" text-anchor="middle" style="font:800 110px Fraunces;fill:var(--rose)">?</text></svg></div>
+</div>
+<!-- 2: births -->
+<div class="scene" data-scene="2">
+  <div class="title"><div class="badge">1</div><div class="ttl">توزيعات<br><span class="mark">المواليد</span></div></div>
+  <div class="stage">
+    <div class="item cardx" data-l="3" data-d="0" style="left:0;top:20px;width:240px;height:250px">
+      <svg width="130" viewBox="0 0 100 100"><rect class="ln" x="12" y="40" width="76" height="52" rx="6" style="fill:var(--blush)"/><rect class="ln" x="6" y="26" width="88" height="18" rx="5" style="fill:var(--paper)"/><path class="ln" d="M50 26v66M50 26c-10-18-30-14-22-2M50 26c10-18 30-14 22-2"/></svg>علب</div>
+    <div class="item cardx" data-l="3" data-d="0.6" style="left:275px;top:20px;width:240px;height:250px">
+      <svg width="130" viewBox="0 0 100 100"><circle class="ln" cx="50" cy="50" r="40" style="fill:var(--sage-l)"/><text x="50" y="60" text-anchor="middle" style="font:800 26px Fraunces;fill:var(--green)">Baby</text></svg>ستيكرات</div>
+    <div class="item cardx" data-l="3" data-d="1.2" style="left:550px;top:20px;width:240px;height:250px">
+      <svg width="130" viewBox="0 0 100 100"><rect class="ln" x="14" y="18" width="72" height="64" rx="8" style="fill:var(--paper)"/><text x="50" y="52" text-anchor="middle" style="font:800 20px Alexandria;fill:var(--rose)">سارة</text><path class="ln" d="M30 66h40" style="stroke-width:5"/></svg>كروت بالاسم</div>
+    <div class="item cardx" data-l="4" data-d="0" style="left:120px;top:310px;width:560px;height:200px;flex-direction:row;gap:24px;background:var(--blush)">
+      <svg width="150" viewBox="0 0 120 80"><path class="ln" d="M10 40h100M20 40v34M100 40v34"/><rect class="ln" x="34" y="12" width="20" height="28" rx="3" style="fill:var(--paper)"/><circle class="ln" cx="78" cy="26" r="12" style="fill:var(--sage-l)"/></svg>وطاولة الاستقبال!</div>
+  </div>
+</div>
+<!-- 3: seasons -->
+<div class="scene" data-scene="3">
+  <div class="title"><div class="badge">2</div><div class="ttl">رمضان وقرقاعون<br><span class="mark s">والعيد</span></div></div>
+  <div class="stage">
+    <div class="item cardx" data-d=".3" style="left:0;top:20px;width:240px;height:250px"><svg width="130" viewBox="0 0 100 100"><path class="ln" d="M64 14a38 38 0 1 0 22 58a30 30 0 1 1 -22 -58z" style="fill:var(--sage-l)"/></svg>رمضان</div>
+    <div class="item cardx" data-d=".9" style="left:275px;top:20px;width:240px;height:250px"><svg width="130" viewBox="0 0 100 100"><path class="ln" d="M28 36h44l-6 54h-32z" style="fill:var(--blush)"/><path class="ln" d="M38 36c0-14 24-14 24 0"/><circle cx="50" cy="62" r="7" fill="#2E3B2A"/></svg>قرقاعون</div>
+    <div class="item cardx" data-d="1.5" style="left:550px;top:20px;width:240px;height:250px"><svg width="130" viewBox="0 0 100 100"><path class="ln" d="M40 10h20v12H40zM30 22h40l6 18v40l-6 12H30l-6-12V40z" style="fill:var(--paper)"/><path class="ln" d="M50 44v24M38 56h24" style="stroke:var(--rose)"/></svg>العيد</div>
+    <div class="item cardx" data-l="7" data-d="0" style="left:120px;top:310px;width:560px;height:200px;flex-direction:row;gap:24px;background:var(--sage-l)">
+      <svg width="130" viewBox="0 0 100 100"><rect class="ln" x="16" y="46" width="68" height="40" rx="6" style="fill:var(--blush)"/><path class="ln" d="M16 62c12 8 22-8 34 0s22 8 34 0M36 46V32M64 46V32"/><path d="M36 22c-4 4 0 8 0 8s4-4 0-8zM64 22c-4 4 0 8 0 8s4-4 0-8z" fill="#D3959B"/></svg>أعراس وأعياد ميلاد</div>
+  </div>
+</div>
+<!-- 4: printing -->
+<div class="scene" data-scene="4">
+  <div class="title"><div class="badge">3</div><div class="ttl"><span class="mark">الطباعة</span></div></div>
+  <div class="stage">
+    <div class="item cardx" data-l="9" data-d="0" style="left:0;top:0;width:380px;height:240px"><svg width="200" viewBox="0 0 160 80"><rect class="ln" x="10" y="12" width="140" height="56" rx="6" style="fill:var(--green)"/><text x="80" y="50" text-anchor="middle" style="font:800 26px Fraunces;fill:var(--paper)">Kami</text></svg>بنرات</div>
+    <div class="item cardx" data-l="9" data-d="0.5" style="left:410px;top:0;width:380px;height:240px"><svg width="200" viewBox="0 0 160 80"><rect class="ln" x="40" y="14" width="90" height="54" rx="6" transform="rotate(10 85 41)" style="fill:var(--sage-l)"/><rect class="ln" x="26" y="12" width="90" height="54" rx="6" style="fill:var(--paper)"/></svg>بزنس كارد</div>
+    <div class="item cardx" data-l="9" data-d="1" style="left:0;top:280px;width:380px;height:240px"><svg width="130" viewBox="0 0 100 100"><path class="ln" d="M50 10l12 26 28 4-20 20 5 28-25-14-25 14 5-28-20-20 28-4z" style="fill:var(--blush);stroke-dasharray:10 8"/></svg>ستيكرات بقص</div>
+    <div class="item cardx" data-l="9" data-d="1.5" style="left:410px;top:280px;width:380px;height:240px"><svg width="130" viewBox="0 0 100 100"><rect class="ln" x="22" y="12" width="56" height="70" rx="6" style="fill:rgba(205,214,191,.5)"/><path class="ln" d="M34 24l12 -6M34 36l22 -11" style="stroke:var(--paper)"/><path class="ln" d="M30 82h40v8H30z" style="fill:var(--green)"/></svg>أكريليك</div>
+  </div>
+</div>
+<!-- 5: stationery -->
+<div class="scene" data-scene="5">
+  <div class="title"><div class="badge">4</div><div class="ttl">قرطاسية<br><span class="mark s">المدرسة</span></div></div>
+  <div class="stage">
+    <svg class="item" data-d=".4" style="left:90px;top:10px;width:300px" viewBox="0 0 150 190"><rect class="ln" x="10" y="10" width="130" height="170" rx="10" style="fill:var(--sage)"/><rect class="ln" x="30" y="60" width="90" height="50" rx="10" style="fill:var(--paper)"/><text x="75" y="93" text-anchor="middle" style="font:800 22px Alexandria;fill:var(--green)">اسمي</text></svg>
+    <svg class="item" data-d="1" style="left:420px;top:40px;width:300px" viewBox="0 0 150 190"><rect class="ln" x="10" y="10" width="130" height="170" rx="10" style="fill:var(--rose)"/><rect class="ln" x="30" y="60" width="90" height="50" rx="10" style="fill:var(--paper)"/><text x="75" y="93" text-anchor="middle" style="font:800 22px Alexandria;fill:var(--green)">اسمي</text></svg>
+    <div class="item ttl" data-l="11" data-d="0.2" style="left:120px;top:440px;font-size:44px"><span class="mark">ستيكر اسمها على كل دفاترها!</span></div>
+  </div>
+</div>
+<!-- 6: drumroll -->
+<div class="scene" data-scene="6">
+  <div class="stage"><div class="item big" data-d="0" style="font-size:560px;line-height:1;left:150px;top:-60px">5<span style="color:var(--rose)">?</span></div></div>
+</div>
+<!-- 7: clearance -->
+<div class="scene" data-scene="7">
+  <div class="title"><div class="badge">5</div><div class="ttl" style="font-size:60px">تخليص المعاملات<br><span class="mark g">الحكومية</span></div></div>
+  <div class="stage">
+    <div class="item cardx" data-l="14" data-d="0" style="left:0;top:20px;width:240px;height:250px"><svg width="140" viewBox="0 0 120 80"><rect class="ln" x="6" y="6" width="108" height="68" rx="10" style="fill:var(--paper)"/><rect class="ln" x="76" y="22" width="28" height="36" rx="5" style="fill:var(--blush)"/><path class="ln" d="M18 26h44M18 44h30" style="stroke-width:6"/></svg>البطاقة</div>
+    <div class="item cardx" data-l="14" data-d="0.5" style="left:275px;top:20px;width:240px;height:250px"><svg width="120" viewBox="0 0 100 100"><path class="ln" d="M14 50L50 18l36 32M24 42v44h52V42" style="fill:var(--sage-l)"/><rect class="ln" x="42" y="62" width="16" height="24"/></svg>الإسكان</div>
+    <div class="item cardx" data-l="14" data-d="1" style="left:550px;top:20px;width:240px;height:250px"><svg width="120" viewBox="0 0 100 100"><rect class="ln" x="26" y="6" width="48" height="88" rx="10" style="fill:var(--green)"/><circle cx="50" cy="50" r="14" fill="#D3959B"/><path d="M43 50l5 5 9-10" stroke="#FBF8EF" stroke-width="5" fill="none" stroke-linecap="round"/></svg>بنفت</div>
+    <div class="item ttl" data-l="14" data-d="2" style="left:140px;top:330px;font-size:52px"><span class="mark">وأنت في البيت!</span></div>
+  </div>
+</div>
+<!-- 8: location -->
+<div class="scene" data-scene="8">
+  <div class="title" style="top:300px"><div class="ttl" style="font-size:80px">مدينة عيسى<br><span class="mark s">والتوصيل متوفر</span></div></div>
+  <div class="stage"><svg class="item" data-d=".2" style="left:210px;top:40px;width:380px" viewBox="0 0 200 200"><path class="ln" d="M40 70h120l-10 120H50z" style="fill:var(--paper)"/><path class="ln" d="M75 70c0-40 50-40 50 0"/><text x="100" y="145" text-anchor="middle" style="font:800 40px Fraunces;fill:var(--green)">Kami</text></svg></div>
+</div>
+<!-- 9: CTA -->
+<div class="scene" data-scene="9">
+  <div class="title" style="top:300px"><div class="ttl" style="font-size:80px">اكتب <span class="mark g" style="font-family:Fraunces">Kami</span><br>بالتعليقات</div></div>
+  <div class="stage"><svg class="item" data-d=".2" style="left:300px;top:60px;width:200px" viewBox="0 0 100 140"><path class="ln" d="M50 10v110M15 85l35 40 35-40"/></svg></div>
+</div>
+<!-- 10: end card -->
+<div class="scene" data-scene="10">
+  <div class="stage" style="top:420px">
+    <div class="item" data-d="0" style="left:0;right:0;text-align:center;direction:ltr">
+      <div style="font-family:Fraunces;font-weight:800;font-size:220px;line-height:1">Kami</div>
+      <div style="font-weight:600;letter-spacing:22px;font-size:40px;color:var(--rose)">PRINTING</div>
+    </div>
+    <div class="item" data-d=".5" style="left:0;right:0;top:400px;text-align:center;font-weight:800;font-size:46px;line-height:1.7"><span dir="ltr">@kami.printing</span><br><span class="mark">66606959</span></div>
+  </div>
+</div>
+
+<!-- speech bubble -->
+<div class="bubble" id="bubble"><span id="say"></span></div>
+
+<!-- kid character -->
+<svg id="kid" viewBox="0 0 380 440">
+  <g id="kidbody">
+    <path d="M50 440 C50 320 110 292 190 292 C270 292 330 320 330 440Z" fill="#FBF8EF" stroke="#2E3B2A" stroke-width="8"/>
+    <path d="M190 300 V440" stroke="#CDD6BF" stroke-width="6"/>
+    <circle cx="190" cy="340" r="5" fill="#9AA88A"/><circle cx="190" cy="372" r="5" fill="#9AA88A"/>
+    <g id="arm"><path d="M300 345 C338 312 352 262 346 222" fill="none" stroke="#2E3B2A" stroke-width="30" stroke-linecap="round"/><path d="M300 345 C338 312 352 262 346 222" fill="none" stroke="#FBF8EF" stroke-width="16" stroke-linecap="round"/><circle cx="346" cy="210" r="24" fill="#D9A77E" stroke="#2E3B2A" stroke-width="7"/></g>
+    <g id="head">
+      <!-- ghutra back drape -->
+      <path d="M78 150 C70 260 90 330 120 350 L260 350 C290 330 310 260 302 150 Z" fill="#FFFFFF" stroke="#2E3B2A" stroke-width="8" stroke-linejoin="round"/>
+      <rect x="168" y="250" width="44" height="50" fill="#D9A77E" stroke="#2E3B2A" stroke-width="7"/>
+      <ellipse cx="190" cy="178" rx="84" ry="98" fill="#D9A77E" stroke="#2E3B2A" stroke-width="8"/>
+      <!-- stubble / short beard -->
+      <path d="M112 200 C118 262 150 278 190 278 C230 278 262 262 268 200 C252 236 226 246 190 246 C154 246 128 236 112 200Z" fill="#2E3B2A" opacity=".55"/>
+      <path d="M160 214 C175 206 205 206 220 214" stroke="#2E3B2A" stroke-width="9" fill="none" stroke-linecap="round" opacity=".8"/>
+      <!-- eyes & brows -->
+      <circle cx="156" cy="170" r="9" fill="#2E3B2A"/><circle cx="224" cy="170" r="9" fill="#2E3B2A"/>
+      <path d="M138 148 L172 144 M208 144 L242 148" stroke="#2E3B2A" stroke-width="8" stroke-linecap="round"/>
+      <path d="M190 178 Q196 198 186 200" stroke="#2E3B2A" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <!-- mouth -->
+      <path id="mouthC" d="M168 228 Q190 240 212 228" fill="none" stroke="#2E3B2A" stroke-width="7" stroke-linecap="round"/>
+      <ellipse id="mouthO" cx="190" cy="232" rx="20" ry="4" fill="#5A2E2A" stroke="#2E3B2A" stroke-width="5"/>
+      <!-- ghutra top + agal -->
+      <path d="M86 160 C80 80 140 52 190 52 C240 52 300 80 294 160 C280 118 240 100 190 100 C140 100 100 118 86 160Z" fill="#FFFFFF" stroke="#2E3B2A" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M100 98 C140 72 240 72 280 98" stroke="#1E1E1E" stroke-width="13" fill="none" stroke-linecap="round"/>
+      <path d="M104 116 C144 92 236 92 276 116" stroke="#1E1E1E" stroke-width="11" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>
+
+<script src="timeline.js"></script>
+<script>
+// TL = {lines:[{t,d,text,scene}], dur, env:[mouth 0..1 per frame @30fps]}
+const ease=x=>1-Math.pow(1-x,3);
+const back=x=>{const c=1.70158;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)};
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const SC=[]; TL.lines.forEach(l=>{ if(SC[l.scene]===undefined) SC[l.scene]=l.t; });
+SC[10]=SC[10]??TL.lines[TL.lines.length-1].t;
+const sceneIn=k=>k===0?0:SC[k]-0.15, sceneOut=k=>k+1<SC.length?SC[k+1]-0.15:TL.dur+1;
+window.renderAt=function(t){
+  document.querySelectorAll('.scene').forEach(s=>{
+    const k=+s.dataset.scene, a=sceneIn(k), b=sceneOut(k);
+    if(t<a||t>=b){s.style.opacity=0;return}
+    const fin=k===0?1:clamp((t-a)/.3), fout=clamp((b-t)/.25);
+    s.style.opacity=Math.min(fin,fout);
+    s.style.transform=`translateY(${(1-ease(fin))*40}px)`;
+    s.querySelectorAll('.item').forEach(it=>{
+      const base=it.dataset.l!==undefined?TL.lines[+it.dataset.l].t:a;
+      const p=clamp((t-base-(+(it.dataset.d||0)))/.4);
+      it.style.opacity=p>0?1:0;
+      it.style.transform=`scale(${p>0?back(p):0}) rotate(${(1-p)*-8}deg)`;
+    });
+  });
+  let cur=null;
+  for(const l of TL.lines){ if(t>=l.t-0.1) cur=l }
+  const bub=document.getElementById('bubble');
+  if(!cur){bub.style.opacity=0}else{
+    bub.style.opacity=1; document.getElementById('say').textContent=cur.text;
+    const p=clamp((t-cur.t+0.1)/.25); bub.style.transform=`scale(${.85+.15*back(p)})`;
+  }
+  const m=TL.env[Math.min(TL.env.length-1,Math.floor(t*30))]||0;
+  const mo=document.getElementById('mouthO'), mc=document.getElementById('mouthC');
+  if(m>0.08){mo.style.display='';mc.style.display='none';mo.setAttribute('ry',4+m*20);mo.setAttribute('rx',16+m*6)}
+  else{mo.style.display='none';mc.style.display=''}
+  document.getElementById('kidbody').setAttribute('transform',`translate(0 ${Math.sin(t*4)*4})`);
+  document.getElementById('head').setAttribute('transform',`rotate(${Math.sin(t*2.1)*3+m*2} 190 260)`);
+  document.getElementById('arm').setAttribute('transform',`rotate(${Math.sin(t*5)*10+m*8} 300 345)`);
+  const dr=document.querySelector('[data-scene="6"] .item'); const t6=t-sceneIn(6);
+  if(t6>=0&&t<sceneOut(6)){dr.style.transform=`scale(${1+Math.sin(t6*30)*.04+t6*.12})`}
+  document.getElementById('sp1').style.transform=`rotate(${t*40}deg) scale(${1+Math.sin(t*3)*.15})`;
+  document.getElementById('sp2').style.transform=`rotate(${-t*50}deg)`;
+};
+renderAt(0);
+</script>
+</body>
+</html>
