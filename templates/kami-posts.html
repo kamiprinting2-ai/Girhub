@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Kami Templates</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;700;800;900&family=Fraunces:opsz,wght@144,800&display=swap" rel="stylesheet">
+<style>
+/* ============ Kami Printing brand ============ */
+:root{
+  --cream:#F4F0E4; --paper:#FBF8EF; --green:#2E3B2A; --green2:#3E4D39;
+  --sage:#9AA88A; --sage-l:#CDD6BF; --blush:#ECD3CE; --rose:#D3959B;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#ddd;font-family:'Alexandria',sans-serif;color:var(--green);display:flex;flex-wrap:wrap;gap:40px;padding:40px;justify-content:center}
+.post{width:1080px;height:1350px;position:relative;overflow:hidden;background:linear-gradient(160deg,var(--paper) 0%,var(--cream) 45%,var(--sage-l) 100%)}
+.post.dark{background:radial-gradient(circle at 30% 20%,var(--green2),var(--green) 70%);color:var(--paper)}
+
+/* soft watermark like the reference */
+.wm{position:absolute;font-family:'Fraunces',serif;font-weight:800;font-size:560px;line-height:1;color:var(--green);opacity:.045;bottom:-90px;left:-40px;direction:ltr;pointer-events:none}
+.dark .wm{color:#fff;opacity:.05}
+.blob{position:absolute;border-radius:50%;filter:blur(2px)}
+
+/* headline + marker highlight */
+.h{font-weight:900;line-height:1.25;letter-spacing:-.5px}
+.mark{display:inline;padding:0 18px;box-decoration-break:clone;-webkit-box-decoration-break:clone;background:var(--blush)}
+.mark.s{background:var(--sage-l)}
+.mark.g{background:var(--green);color:var(--paper)}
+.mark.w{background:var(--paper);color:var(--green)}
+.sub{font-weight:500;font-size:40px;line-height:1.6;color:var(--green2)}
+
+/* sticker badge (like "بقعة؟") */
+.sticker{position:absolute;display:inline-block;font-weight:900;color:var(--paper);background:var(--green);padding:14px 40px 22px;border-radius:26px;transform:rotate(-8deg);box-shadow:10px 10px 0 var(--rose)}
+
+/* CTA pill */
+.pill{display:inline-flex;align-items:center;gap:18px;background:var(--paper);border:4px solid var(--green);border-radius:80px;padding:16px 40px;font-weight:800;font-size:40px;box-shadow:8px 8px 0 var(--green)}
+.price{position:absolute;width:250px;height:250px;border-radius:50%;background:var(--rose);color:var(--paper);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;transform:rotate(10deg);border:6px dashed var(--paper);outline:10px solid var(--rose)}
+.price b{font-size:68px;line-height:1;direction:ltr}
+.price span{font-size:32px}
+
+/* logo */
+.logo{position:absolute;direction:ltr;text-align:center;line-height:1}
+.logo .k{font-family:'Fraunces',serif;font-weight:800;font-size:84px;color:var(--green);position:relative}
+.logo .p{font-family:'Alexandria';font-weight:500;letter-spacing:9px;font-size:17px;color:var(--rose);margin-top:-2px}
+.logo .st{position:absolute;top:-6px;right:-22px;width:26px}
+.dark .logo .k{color:var(--paper)}
+.logo img{height:120px}
+
+/* footer like reference (icons + handle) */
+.foot{position:absolute;bottom:44px;right:60px;left:60px;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:28px;direction:ltr}
+.foot .ic{display:flex;gap:10px;align-items:center}
+.foot .ic i{width:38px;height:38px;border-radius:50%;background:var(--green);display:inline-flex;align-items:center;justify-content:center}
+.dark .foot .ic i{background:var(--paper);color:var(--green)!important}
+.foot .ic svg{width:22px;height:22px}
+.foot .loc{font-size:24px;font-weight:500;direction:rtl;opacity:.85}
+
+/* photo slot: background-image if provided, otherwise illustration shows */
+.photo{position:absolute;border-radius:40px;background:var(--paper) center/cover no-repeat;border:6px solid var(--paper);box-shadow:0 30px 60px rgba(46,59,42,.18);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.photo .ph{font-size:30px;color:var(--sage);font-weight:700;text-align:center}
+.tape{position:absolute;width:170px;height:54px;background:rgba(236,211,206,.85);transform:rotate(-12deg)}
+
+svg.doodle{position:absolute;overflow:visible}
+.ln{fill:none;stroke:var(--green);stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+.dark .ln{stroke:var(--paper)}
+.sp{fill:var(--rose)}
+.list{position:absolute;right:70px;left:70px;background:var(--paper);border-radius:40px;border:4px solid var(--green);padding:20px 44px;box-shadow:12px 12px 0 var(--sage)}
+.row{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:3px dashed var(--sage-l);font-size:33px;font-weight:600;gap:24px}
+.row:last-child{border:0}
+.row em{font-style:normal;background:var(--sage-l);border-radius:40px;padding:8px 24px;font-weight:800;white-space:nowrap;direction:ltr;font-size:31px}
+.num{font-family:'Fraunces',serif;font-weight:800;font-size:330px;line-height:.8;color:var(--green)}
+.label{position:absolute;top:28px;left:28px;background:#000;color:#fff;font:600 22px monospace;padding:6px 14px;border-radius:8px;z-index:9;direction:ltr}
+@media print{.label{display:none}}
+</style>
+</head>
+<body>
+
+<!-- reusable bits -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="spark" viewBox="0 0 40 40"><path d="M20 0 C22 14 26 18 40 20 C26 22 22 26 20 40 C18 26 14 22 0 20 C14 18 18 14 20 0Z"/></symbol>
+    <symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="17.3" cy="6.7" r="1.4" fill="currentColor"/></symbol>
+    <symbol id="wa" viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8.5 19z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M9 9.5c.5 2.5 2.5 4.5 5 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<template id="foot-tpl">
+  <div class="foot">
+    <div class="ic"><i style="color:var(--paper)"><svg><use href="#ig"/></svg></i><i style="color:var(--paper)"><svg><use href="#wa"/></svg></i>&nbsp;@kami.printing · 66606959</div>
+    <div class="loc">مدينة عيسى · التوصيل متوفر</div>
+  </div>
+</template>
+<template id="logo-tpl">
+  <div class="k">Kami<svg class="st" viewBox="0 0 40 40"><use href="#spark" class="sp"/></svg></div><div class="p">PRINTING</div>
+</template>
+
+<!-- ============ 01 HOOK (style: "بقعة؟ ولا كأنها صارت!") ============ -->
+<section class="post" id="p01-hook">
+  <span class="label">01 hook</span>
+  <div class="wm">Kami</div>
+  <div class="blob" style="width:520px;height:520px;background:var(--blush);opacity:.55;top:-160px;left:-160px"></div>
+  <div class="logo" data-logo style="top:60px;left:70px"></div>
+  <div class="sticker" style="top:150px;right:90px;font-size:96px">معاملة؟</div>
+  <div class="h" style="position:absolute;top:400px;right:90px;font-size:104px">ولا كأنها<br><span class="mark">كانت!</span></div>
+  <div class="sub" style="position:absolute;top:680px;right:90px;width:520px">نخلّصها لك أونلاين<br>وأنت مرتاح بمكانك</div>
+  <!-- arrow doodle -->
+  <svg class="doodle" style="top:540px;right:590px;width:110px;height:150px;z-index:2" viewBox="0 0 150 200"><path class="ln" d="M130 10 C40 40 20 120 70 150 C110 175 120 120 80 120 C40 120 30 170 20 190"/><path class="ln" d="M5 165 L20 192 L45 175"/></svg>
+  <div class="photo" data-photo="" style="width:560px;height:520px;bottom:150px;left:70px;transform:rotate(-4deg)">
+    <!-- illustration fallback: stacked papers + check stamp -->
+    <svg viewBox="0 0 400 380" width="430">
+      <rect class="ln" x="70" y="70" width="230" height="280" rx="18" transform="rotate(-8 185 210)" style="fill:var(--sage-l)"/>
+      <rect class="ln" x="90" y="40" width="230" height="280" rx="18" style="fill:var(--paper)"/>
+      <path class="ln" d="M130 100h150M130 145h150M130 190h100"/>
+      <circle cx="290" cy="270" r="62" style="fill:var(--rose)" class="ln"/>
+      <path class="ln" d="M262 270l20 20 34-40" style="stroke:var(--paper)"/>
+    </svg>
+  </div>
+  <svg class="doodle" style="top:960px;right:120px;width:70px"><use href="#spark" class="sp"/></svg>
+  <svg class="doodle" style="top:1050px;right:230px;width:40px"><use href="#spark" style="fill:var(--sage)"/></svg>
+  <div data-foot></div>
+</section>
+
+<!-- ============ 02 SERVICE + PRICE ============ -->
+<section class="post" id="p02-service">
+  <span class="label">02 service</span>
+  <div class="wm">Kami</div>
+  <div class="logo" data-logo style="top:60px;left:70px"></div>
+  <div class="h" style="position:absolute;top:190px;right:80px;font-size:88px"><span class="mark s">بطاقتك الذكية</span><br>خلصت؟</div>
+  <div class="sub" style="position:absolute;top:470px;right:84px">تجديد · إصدار · بدل فاقد<br><b style="font-weight:800">نخلّصها لك وأنت بمكانك</b></div>
+  <div class="photo" data-photo="" style="width:720px;height:480px;bottom:170px;right:80px;transform:rotate(3deg)">
+    <!-- ID card illustration -->
+    <svg viewBox="0 0 460 300" width="520">
+      <rect class="ln" x="20" y="20" width="420" height="260" rx="28" style="fill:var(--paper)"/>
+      <rect x="20" y="20" width="420" height="64" rx="28" style="fill:var(--sage)"/><rect x="20" y="56" width="420" height="28" style="fill:var(--sage)"/>
+      <rect class="ln" x="20" y="20" width="420" height="260" rx="28"/>
+      <rect class="ln" x="300" y="115" width="105" height="130" rx="16" style="fill:var(--blush)"/>
+      <circle class="ln" cx="352" cy="165" r="22"/><path class="ln" d="M318 232c8-26 60-26 68 0"/>
+      <path class="ln" d="M60 130h190M60 175h150M60 220h110"/>
+    </svg>
+  </div>
+  <div class="price" style="bottom:600px;left:90px"><b>1.500</b><span>د.ب فقط</span></div>
+  <svg class="doodle" style="top:560px;left:380px;width:60px"><use href="#spark" class="sp"/></svg>
+  <div data-foot></div>
+</section>
+
+<!-- ============ 03 BRAND CTA (style: "نظافتك تبدأ من أول خطوة") ============ -->
+<section class="post" id="p03-cta">
+  <span class="label">03 cta</span>
+  <div class="wm">Kami</div>
+  <div class="h" style="position:absolute;top:90px;right:0;left:0;text-align:center;font-size:84px"><span class="mark g">وقتك أغلى من الطابور!</span></div>
+  <div class="sub" style="position:absolute;top:250px;right:0;left:0;text-align:center">معاملاتك الحكومية .. <b style="font-weight:800">علينا</b></div>
+  <svg class="doodle" style="top:380px;left:140px;width:800px;height:620px" viewBox="0 0 800 620">
+    <!-- big star doodles like the reference -->
+    <path class="ln" style="stroke:var(--sage);stroke-width:6" d="M120 120 l40 90 95 10 -72 62 22 95 -85 -50 -85 50 22 -95 -72 -62 95 -10z"/>
+    <path class="ln" style="stroke:var(--sage);stroke-width:6" d="M660 330 l30 70 72 8 -55 47 17 72 -64 -38 -64 38 17 -72 -55 -47 72 -8z"/>
+    <!-- phone -->
+    <rect class="ln" x="280" y="40" width="250" height="500" rx="44" style="fill:var(--green)"/>
+    <rect x="300" y="90" width="210" height="400" rx="18" style="fill:var(--paper)"/>
+    <rect x="320" y="120" width="150" height="56" rx="22" style="fill:var(--sage-l)"/>
+    <rect x="345" y="200" width="145" height="56" rx="22" style="fill:var(--blush)"/>
+    <rect x="320" y="280" width="170" height="56" rx="22" style="fill:var(--sage-l)"/>
+    <circle cx="405" cy="420" r="44" style="fill:var(--rose)"/>
+    <path class="ln" d="M385 420l14 14 26-30" style="stroke:var(--paper)"/>
+  </svg>
+  <div style="position:absolute;bottom:250px;right:0;left:0;text-align:center"><span class="pill">أرسل طلبك الآن ← 66606959</span></div>
+  <div style="position:absolute;bottom:175px;right:0;left:0;text-align:center;font-size:36px;font-weight:700">وخلّك مرتاح ✦</div>
+  <div class="logo" data-logo style="top:330px;left:70px"></div>
+  <div data-foot></div>
+</section>
+
+<!-- ============ 04 BIG NUMBER (style: "ملصق 1 واحد") ============ -->
+<section class="post" id="p04-number">
+  <span class="label">04 number</span>
+  <div class="wm">Kami</div>
+  <div class="blob" style="width:600px;height:600px;background:var(--sage-l);opacity:.7;bottom:-200px;right:-200px"></div>
+  <div style="position:absolute;top:80px;right:80px;display:flex;align-items:flex-end;gap:20px">
+    <div class="h" style="font-size:96px;padding-bottom:40px">رسالة</div>
+    <div class="num">1</div>
+  </div>
+  <div class="h" style="position:absolute;top:350px;right:80px;font-size:96px"><span class="mark">وحدة</span></div>
+  <div class="photo" data-photo="" style="width:600px;height:640px;top:300px;left:70px;transform:rotate(-5deg)">
+    <svg viewBox="0 0 400 420" width="420">
+      <path class="ln" d="M60 330 l18-60 A150 150 0 1 1 130 320 Z" style="fill:var(--paper)"/>
+      <path class="ln" d="M145 150c10 50 50 90 100 100" />
+      <path class="ln" d="M130 150l25-20 25 35-15 15M245 250l20-25 35 25-15 15"/>
+      <g transform="translate(250 30)"><use href="#spark" width="70" height="70" class="sp"/></g>
+    </svg>
+  </div>
+  <div class="h" style="position:absolute;bottom:200px;right:80px;font-size:100px">ومعاملتك<br><span class="mark s">تخلص!</span></div>
+  <svg class="doodle" style="bottom:470px;right:540px;width:150px;height:120px" viewBox="0 0 150 120"><path class="ln" d="M140 10 C90 20 40 50 25 105"/><path class="ln" d="M5 80 L25 108 L55 88"/></svg>
+  <div data-foot></div>
+</section>
+
+<!-- ============ 05 PRICE LIST CARD ============ -->
+<section class="post" id="p05-prices">
+  <span class="label">05 prices</span>
+  <div class="wm">Kami</div>
+  <div class="logo" data-logo style="top:60px;left:70px"></div>
+  <div class="h" style="position:absolute;top:80px;right:70px;font-size:76px">تخليص<br><span class="mark">المعاملات الحكومية</span></div>
+  <div class="sub" style="position:absolute;top:300px;right:74px;font-size:34px">نوفّر عليك الوقت والجهد .. وإنجاز معاملتك علينا</div>
+  <div class="list" style="top:400px">
+    <div style="font-weight:800;font-size:29px;padding:14px 0 6px"><span class="mark s" style="padding:4px 18px;border-radius:30px">خدمات هيئة المعلومات والحكومة الإلكترونية</span></div>
+    <div class="row">تجديد / إصدار / بدل فاقد بطاقة الهوية<em>1.500 د.ب</em></div>
+    <div class="row">تحديث بيانات البطاقة الذكية<em>1.500 د.ب</em></div>
+    <div class="row">التقرير الائتماني من بنفت<em>2.000 د.ب</em></div>
+    <div class="row">شهادة الميلاد / الوفاة<em>1.500 د.ب</em></div>
+    <div class="row">خدمة الإشعارات الحكومية<em>1.500 د.ب</em></div>
+  </div>
+  <svg class="doodle" style="top:360px;left:80px;width:60px"><use href="#spark" class="sp"/></svg>
+  <div style="position:absolute;bottom:130px;right:70px;font-size:26px;font-weight:600;opacity:.8">الأسعار بالدينار البحريني</div>
+  <div data-foot></div>
+</section>
+
+<!-- ============ 06 OCCASION, dark line-art (style: Eid post) ============ -->
+<section class="post dark" id="p06-occasion">
+  <span class="label">06 occasion</span>
+  <div class="wm">Kami</div>
+  <div style="position:absolute;top:110px;right:0;left:0;text-align:center">
+    <div class="h" style="font-size:112px;color:var(--paper)">عيد وطني<br>مجيد</div>
+    <svg style="width:56px;position:absolute;top:10px;left:230px"><use href="#spark" class="sp" width="56" height="56"/></svg>
+    <svg style="width:36px;position:absolute;top:220px;right:220px"><use href="#spark" style="fill:var(--sage-l)" width="36" height="36"/></svg>
+  </div>
+  <div style="position:absolute;top:440px;right:0;left:0;text-align:center;font-size:38px;line-height:1.7;font-weight:500">نهنئكم بمناسبة العيد الوطني المجيد<br><span class="mark w" style="font-weight:800">كل عام والبحرين بخير وعز</span></div>
+  <!-- line art: person holding a Kami sign + speech bubble -->
+  <svg class="doodle" style="top:640px;left:200px;width:680px;height:520px" viewBox="0 0 680 520">
+    <rect class="ln" x="150" y="60" width="250" height="150" rx="14" transform="rotate(-6 275 135)"/>
+    <text x="275" y="160" text-anchor="middle" transform="rotate(-6 275 135)" style="font:800 64px Fraunces;fill:var(--paper)">Kami</text>
+    <path class="ln" d="M240 205 L250 300 M320 198 L330 300"/>
+    <circle class="ln" cx="290" cy="330" r="40"/>
+    <path class="ln" d="M290 370 L290 460 M290 400 L240 300 M290 400 L335 300 M290 460 L250 515 M290 460 L330 515"/>
+    <path class="ln" d="M460 70 h180 a24 24 0 0 1 24 24 v80 a24 24 0 0 1 -24 24 h-120 l-40 34 6 -34 h-26 a24 24 0 0 1 -24 -24 v-80 a24 24 0 0 1 24 -24z"/>
+    <text x="550" y="128" text-anchor="middle" style="font:700 30px Alexandria;fill:var(--paper)">كل عام</text>
+    <text x="550" y="168" text-anchor="middle" style="font:700 30px Alexandria;fill:var(--paper)">وانتوا بخير!</text>
+    <use href="#spark" x="40" y="250" width="44" height="44" style="fill:var(--sage-l)"/>
+    <use href="#spark" x="560" y="330" width="56" height="56" class="sp"/>
+    <use href="#spark" x="90" y="420" width="30" height="30" style="fill:var(--rose)"/>
+  </svg>
+  <div data-foot></div>
+</section>
+
+<!-- ============ 07 WORK SHOWCASE (من أعمالنا) ============ -->
+<section class="post" id="p07-work">
+  <span class="label">07 work</span>
+  <div class="wm">Kami</div>
+  <div class="logo" data-logo style="top:60px;left:70px"></div>
+  <div class="h" style="position:absolute;top:90px;right:80px;font-size:96px">من <span class="mark">أعمالنا</span></div>
+  <div class="sub" style="position:absolute;top:240px;right:84px">معاملة منجزة ✓ وعميل مرتاح</div>
+  <div class="photo" data-photo="" style="width:860px;height:720px;top:360px;right:110px;transform:rotate(-2deg)">
+    <div class="ph">ضع صورة عملك هنا<br><span style="font-size:24px;font-weight:500">(photos/work-1.jpg)</span></div>
+  </div>
+  <div class="tape" style="top:340px;right:150px"></div>
+  <div class="tape" style="top:340px;left:130px;transform:rotate(14deg)"></div>
+  <div style="position:absolute;bottom:150px;right:90px;font-size:40px;font-weight:800" data-caption>[اسم الخدمة] · <span style="font-weight:500">[وصف قصير]</span></div>
+  <svg class="doodle" style="bottom:240px;left:120px;width:60px"><use href="#spark" class="sp"/></svg>
+  <div data-foot></div>
+</section>
+
+<script>
+// fill shared footer/logo, and swap in photos / real logo when provided
+const foot=document.getElementById('foot-tpl').innerHTML, logo=document.getElementById('logo-tpl').innerHTML;
+document.querySelectorAll('[data-foot]').forEach(e=>e.outerHTML=foot);
+const real=new Image(); real.src='../brand/logo.png';
+document.querySelectorAll('[data-logo]').forEach(e=>e.innerHTML=logo);
+real.onload=()=>document.querySelectorAll('.logo').forEach(e=>e.innerHTML='<img src="../brand/logo.png">');
+const params=new URLSearchParams(location.search);
+// ?p01=photos/a.jpg&p07=photos/work-1.jpg puts a photo into that post
+document.querySelectorAll('.post').forEach(p=>{
+  const key=p.id.slice(0,3), src=params.get(key); const slot=p.querySelector('[data-photo]');
+  if(src&&slot){slot.style.backgroundImage=`url(${src})`; slot.innerHTML='';}
+});
+</script>
+</body>
+</html>
