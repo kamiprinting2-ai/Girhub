@@ -4,12 +4,12 @@ const { chromium } = require('playwright');
 const path = require('path');
 const fs = require('fs');
 (async () => {
-  const out = path.join(__dirname, 'out');
+  const out = path.join(__dirname, process.env.OUTDIR || 'out');
   fs.mkdirSync(out, { recursive: true });
   const b = await chromium.launch();
   const pg = await b.newPage({ viewport: { width: 1200, height: 1400 }, deviceScaleFactor: 1 });
   const q = process.argv[2] ? '?' + process.argv[2] : '';
-  await pg.goto('file://' + path.join(__dirname, 'kami-posts.html') + q, { waitUntil: 'networkidle' });
+  await pg.goto('file://' + path.join(__dirname, process.env.PAGE || 'kami-posts.html') + q, { waitUntil: 'networkidle' });
   await pg.addStyleTag({ content: '.label{display:none}' });
   await pg.evaluate(() => document.fonts.ready);
   await pg.waitForTimeout(800);
