@@ -1,0 +1,308 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>Kami Carousels</title>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sage:#A7B591;--cream:#EDE9E0;--blush:#E2CDCC;--forest:#2E3B2A;--forest2:#384833;--line:rgba(237,233,224,.18)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#999;display:flex;flex-wrap:wrap;gap:30px;padding:30px;font-family:'IBM Plex Sans Arabic',sans-serif}
+.post{flex:none;width:1080px;height:1350px;position:relative;overflow:hidden;color:var(--cream);
+  background:radial-gradient(circle at 80% 15%,#3b4b36 0%,var(--forest) 55%,#263222 100%)}
+.wm{position:absolute;width:620px;height:620px;left:-230px;bottom:120px;fill:var(--sage);opacity:.06}
+.wm2{position:absolute;width:260px;height:260px;right:-80px;top:240px;fill:var(--blush);opacity:.05}
+header{position:absolute;top:56px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;direction:ltr}
+header img{height:78px}
+.chip{display:flex;align-items:center;gap:14px;direction:rtl;font-family:Alexandria;font-weight:500;font-size:28px;color:var(--cream)}
+.chip svg{width:40px;height:40px;fill:none;stroke:var(--blush);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+main{position:absolute;top:180px;left:64px;right:64px;bottom:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+footer{position:absolute;left:64px;right:64px;bottom:52px;display:flex;justify-content:space-between;align-items:center;direction:ltr;border-top:1.5px solid var(--line);padding-top:26px}
+.fw{display:flex;align-items:center;gap:14px}
+.fwi{width:52px;height:52px;fill:none;stroke:var(--cream);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.fw small{display:block;font-size:20px;opacity:.75;direction:rtl}
+.fw b{font-family:Alexandria;font-size:32px;font-weight:600;letter-spacing:1px}
+.fr{display:flex;align-items:center;gap:20px}
+.fr .h{font-size:26px;opacity:.85}
+.cnt{background:var(--blush);color:var(--forest);font-family:Alexandria;font-weight:700;font-size:24px;padding:4px 20px;border-radius:30px;direction:rtl}
+h1,h2{font-family:Alexandria;font-weight:700;line-height:1.45;letter-spacing:-.5px}
+.hl{background:var(--blush);color:var(--forest);padding:0 18px;border-radius:10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.sub{font-size:34px;font-weight:400;opacity:.9;margin-top:26px;line-height:1.6}
+.kicker{font-family:Alexandria;font-size:30px;font-weight:500;color:var(--blush);letter-spacing:.5px}
+h2{font-size:66px;margin-top:14px}
+h2.ent{font-size:52px}
+.rule{width:100%;height:1.5px;background:var(--line);margin:30px 0 34px}
+/* cover */
+.cover main{padding-bottom:40px}
+.bigic{width:250px;height:250px;border-radius:50%;background:rgba(167,181,145,.16);border:2px solid var(--sage);display:flex;align-items:center;justify-content:center;margin-bottom:50px;box-shadow:0 0 0 22px rgba(167,181,145,.06)}
+.bigic svg{width:130px;height:130px;fill:none;stroke:var(--cream);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.coverlogo{width:420px;margin-bottom:60px}
+.t-cover{font-size:80px}
+.swipe{position:absolute;left:0;bottom:-10px;display:flex;align-items:center;gap:6px;font-family:Alexandria;font-size:28px;color:var(--blush);direction:rtl}
+.swipe svg{width:120px;height:50px;fill:none;stroke:var(--blush);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 20px;width:100%}
+.gi{display:flex;flex-direction:column;align-items:center;gap:14px}
+.gc{width:136px;height:136px;border-radius:50%;background:rgba(167,181,145,.18);border:2px solid var(--sage);display:flex;align-items:center;justify-content:center}
+.gc svg{width:66px;height:66px;fill:none;stroke:var(--cream);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.gc.sm{flex:none;width:118px;height:118px}.gc.sm svg{width:58px;height:58px}
+.gl{font-size:29px;font-weight:500}
+.grid:has(.gi:nth-child(7)) .gc{width:116px;height:116px}.grid:has(.gi:nth-child(7)) .gc svg{width:56px;height:56px}
+.grid:has(.gi:nth-child(7)){gap:22px 20px}.grid:has(.gi:nth-child(7)) .gl{font-size:27px}
+.pill{margin-top:64px;background:var(--blush);color:var(--forest);font-family:Alexandria;font-weight:600;font-size:30px;padding:16px 44px;border-radius:50px}
+/* features + steps */
+.feats,.steps{display:flex;flex-direction:column;gap:26px;width:100%;margin-top:6px}
+.ft,.st{display:flex;align-items:center;gap:34px;text-align:right;background:rgba(237,233,224,.06);border:1.5px solid var(--line);border-radius:30px;padding:32px 36px}
+.ftt{font-family:Alexandria;font-weight:600;font-size:40px}
+.ftd{font-size:30px;opacity:.85;margin-top:6px}
+.sn{flex:none;width:96px;height:96px;border-radius:50%;background:var(--blush);color:var(--forest);font-family:Alexandria;font-weight:700;font-size:50px;display:flex;align-items:center;justify-content:center}
+.steps .st{padding:22px 34px}
+/* prices */
+
+.card{width:100%;background:var(--cream);color:var(--forest);border-radius:28px;padding:10px 36px;text-align:right}
+.card.tight{padding:4px 32px;margin-bottom:22px}
+.gh{align-self:flex-start;background:var(--sage);color:var(--forest);font-family:Alexandria;font-weight:600;font-size:28px;padding:6px 26px;border-radius:30px;margin:22px 0 14px}
+.gh:first-of-type{margin-top:20px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;border-bottom:2px dotted rgba(46,59,42,.25)}
+.tight .row{padding:15px 0}
+.row:last-child{border:0}
+.rn{font-size:31px;font-weight:500;line-height:1.45}
+.rn small{display:block;font-size:22px;font-weight:400;opacity:.7}
+.rp{flex:none;background:var(--blush);border-radius:40px;padding:6px 22px;font-size:24px;font-weight:500;white-space:nowrap}
+.rp b{font-family:Alexandria;font-size:30px;font-weight:700;direction:ltr;unicode-bidi:isolate}
+.cur{margin-top:26px;font-size:24px;opacity:.7}
+/* faq */
+.faqs{display:flex;flex-direction:column;gap:26px;width:100%;margin-top:50px;text-align:right}
+.q{align-self:flex-start;background:var(--blush);color:var(--forest);font-family:Alexandria;font-weight:600;font-size:44px;padding:24px 40px;border-radius:36px 36px 36px 8px;line-height:1.4}
+.a{font-size:38px;line-height:1.7;padding:0 20px 50px;opacity:.95}
+/* cta */
+.cta main{justify-content:center}
+.ctaw{display:flex;flex-direction:column;align-items:center}
+.spk{width:64px;height:64px;fill:var(--blush);margin-bottom:34px}
+.t-cta{font-size:76px}
+.wa{margin-top:54px;display:flex;align-items:center;gap:20px;background:var(--blush);color:var(--forest);border-radius:60px;padding:16px 54px;direction:ltr}
+.wa span{font-family:Alexandria;font-weight:700;font-size:64px;letter-spacing:2px}
+.wai{width:64px;height:64px;fill:none;stroke:var(--forest);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ctalogo{width:230px;margin-top:70px;opacity:.95}
+</style></head><body><svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="star" viewBox="0 0 40 40"><path d="M20 0C21 13 27 19 40 20C27 21 21 27 20 40C19 27 13 21 0 20C13 19 19 13 20 0Z"/></symbol>
+<!-- icons, 24x24 line style -->
+<symbol id="printer" viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4a1 1 0 0 1-1-1v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1h-3"/><path d="M7 14h10v7H7z"/><path d="M17.5 11h.5"/></symbol>
+<symbol id="laminate" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><rect x="7.5" y="5.5" width="9" height="13" rx="1"/><path d="M9.5 9h5M9.5 12h5M9.5 15h3"/></symbol>
+<symbol id="sticker" viewBox="0 0 24 24"><path d="M4 4h16v10l-6 6H4z"/><path d="M14 20v-6h6"/><path d="M9 9h.01M14 9h.01M9 13.5c1.5 1.3 3.5 1.3 5 0"/></symbol>
+<symbol id="uv" viewBox="0 0 24 24"><path d="M10 2c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7z"/><path d="M18.5 14c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3z"/></symbol>
+<symbol id="cotton" viewBox="0 0 24 24"><path d="M4 5l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1v3l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1-2 1z"/><path d="M4 11l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1v3l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1-2 1z"/><path d="M5 17l2-1 2 1 2-1 2 1 2-1 2 1 2-1 1 1v3l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-1-1z"/></symbol>
+<symbol id="acrylic" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="15" rx="1.5"/><path d="M9.5 9l3-3M10 13l5-5M4 21h16M9 18v3M15 18v3"/></symbol>
+<symbol id="banner" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="16" rx="1"/><path d="M9.5 6h5M9.5 9h5M9.5 12h3M12 18v3M7 21h10"/></symbol>
+<symbol id="card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="8" cy="11" r="1.6"/><path d="M6 15h4M12.5 10h5M12.5 13h4"/></symbol>
+<symbol id="letter" viewBox="0 0 24 24"><path d="M5 2h14v20H5z"/><path d="M8 5h3M15 5.5h.01M8 9h8M8 12h8M8 15h8M8 18h5"/></symbol>
+<symbol id="baby" viewBox="0 0 24 24"><path d="M10 2h4v3h-4z"/><path d="M9 5h6l1 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8z"/><path d="M8 11h3M8 14h3M8 17h3"/></symbol>
+<symbol id="rings" viewBox="0 0 24 24"><circle cx="9" cy="14" r="5.5"/><circle cx="15" cy="14" r="5.5"/><path d="M7.5 6l1.5-2.5L10.5 6z"/></symbol>
+<symbol id="cake" viewBox="0 0 24 24"><path d="M4 21V12a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9z"/><path d="M4 15c1.3 1 2.7 1 4 0s2.7-1 4 0 2.7 1 4 0 2.7-1 4 0M8 11V8M12 11V8M16 11V8M3 21h18"/><path d="M8 4.5c-.6.6 0 1.5 0 1.5s.6-.9 0-1.5zM12 4.5c-.6.6 0 1.5 0 1.5s.6-.9 0-1.5zM16 4.5c-.6.6 0 1.5 0 1.5s.6-.9 0-1.5z"/></symbol>
+<symbol id="ramadan" viewBox="0 0 24 24"><path d="M14 3a8 8 0 1 0 7 11.5A6.5 6.5 0 0 1 14 3z"/><path d="M18 3.5l.7 1.6 1.6.7-1.6.7L18 8.1l-.7-1.6-1.6-.7 1.6-.7z"/></symbol>
+<symbol id="gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10 4 6.5 4.5 8 7.2M12 8c2-4 5.5-3.5 4-.8"/></symbol>
+<symbol id="bag" viewBox="0 0 24 24"><path d="M6 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z"/><path d="M9 6V5a3 3 0 0 1 6 0v1M6 12h12M10 12v2h4v-2M8 17h8"/></symbol>
+<symbol id="tag" viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="10" rx="5"/><path d="M7 12h7M16.5 12h.01"/></symbol>
+<symbol id="pencil" viewBox="0 0 24 24"><path d="M15 4l5 5L9 20H4v-5z"/><path d="M13 6l5 5M4 15l5 5"/></symbol>
+<symbol id="docs" viewBox="0 0 24 24"><path d="M14 2H6a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/><path d="M14 2v5h5M8 11h6M8 14h4"/><circle cx="15.5" cy="17" r="3"/><path d="M14.2 17l1 1 1.6-1.8"/></symbol>
+<symbol id="truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 9h4l3 3v4h-7"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+<symbol id="wa" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.8c.3 2.8 2.6 5.4 6 6.2l1.2-1.6-2-1-1 .8c-1-.5-2-1.5-2.4-2.4l.8-1-1-2z"/></symbol>
+</defs></svg>
+<section class="post cover" id="launch-01">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>إطلاق الهوية</span></div></header>
+  <main><img class="coverlogo" src="../brand/logo-ar-cream.png"><h1 class="t-cover">حكاية تبدأ<br><span class="hl">من التفاصيل</span></h1><div class="sub">أهلاً فيكم في كامي للطباعة</div>
+        <div class="swipe">اسحبوا<svg viewBox="0 0 120 50"><path d="M110 10 C80 40 40 40 12 26"/><path d="M26 14 L10 26 L28 36"/></svg></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">١ من ٤</span></div></footer>
+</section><section class="post features" id="launch-02">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>إطلاق الهوية</span></div></header>
+  <main><div class="kicker">✦ خدماتنا ✦</div><h2>شنو نقدّم <span class="hl">لكم؟</span></h2><div class="rule"></div><div class="feats"><div class="ft"><div class="gc sm"><svg class="ic"><use href="#gift"/></svg></div><div><div class="ftt">التوزيعات</div><div class="ftd">لكل مناسبة توزيعة تشبهها</div></div></div><div class="ft"><div class="gc sm"><svg class="ic"><use href="#printer"/></svg></div><div><div class="ftt">الطباعة</div><div class="ftd">خامات مختارة وتشطيب نظيف</div></div></div><div class="ft"><div class="gc sm"><svg class="ic"><use href="#pencil"/></svg></div><div><div class="ftt">الأدوات المدرسية</div><div class="ftd">بداية مرتبة من أول يوم</div></div></div><div class="ft"><div class="gc sm"><svg class="ic"><use href="#docs"/></svg></div><div><div class="ftt">تخليص المعاملات</div><div class="ftd">معاملتك علينا.. ووقتك لك</div></div></div></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٢ من ٤</span></div></footer>
+</section><section class="post features" id="launch-03">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>إطلاق الهوية</span></div></header>
+  <main><div class="kicker">✦ ليش كامي؟ ✦</div><h2>عناية <span class="hl">بكل تفصيلة</span></h2><div class="rule"></div><div class="feats"><div class="ft"><div class="gc sm"><svg class="ic"><use href="#star"/></svg></div><div><div class="ftt">لمسة راقية</div><div class="ftd">نشتغل على كل طلب كأنه لنا</div></div></div><div class="ft"><div class="gc sm"><svg class="ic"><use href="#uv"/></svg></div><div><div class="ftt">تصميم على ذوقكم</div><div class="ftd">الاسم والألوان حسب مناسبتكم</div></div></div><div class="ft"><div class="gc sm"><svg class="ic"><use href="#truck"/></svg></div><div><div class="ftt">التوصيل متوفر</div><div class="ftd">طلبكم يوصلكم لين الباب</div></div></div></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٣ من ٤</span></div></footer>
+</section><section class="post cta" id="launch-04">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>إطلاق الهوية</span></div></header>
+  <main><div class="ctaw"><svg class="spk"><use href="#star"/></svg><h1 class="t-cta">قولوا لنا مناسبتكم..<br><span class="hl">والباقي علينا</span></h1>
+        <div class="sub">حيّاكم على الواتساب</div><div class="wa"><svg class="wai"><use href="#wa"/></svg><span>66606959</span></div>
+        <img class="ctalogo" src="../brand/logo-ar-cream.png"></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٤ من ٤</span></div></footer>
+</section><section class="post cover" id="giveaways-01">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>التوزيعات</span></div></header>
+  <main><div class="bigic"><svg class="ic"><use href="#gift"/></svg></div><h1 class="t-cover">أول انطباع عن فرحتكم..<br><span class="hl">يبدأ من التوزيعة</span></h1><div class="sub">توزيعات لكل مناسبة، بلمسة تشبهكم</div>
+        <div class="swipe">اسحبوا<svg viewBox="0 0 120 50"><path d="M110 10 C80 40 40 40 12 26"/><path d="M26 14 L10 26 L28 36"/></svg></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">١ من ٥</span></div></footer>
+</section><section class="post grid" id="giveaways-02">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>التوزيعات</span></div></header>
+  <main><div class="kicker">✦ توزيعات لكل مناسبة ✦</div><h2>مناسباتكم <span class="hl">علينا</span></h2><div class="rule"></div><div class="grid"><div class="gi"><div class="gc"><svg class="ic"><use href="#baby"/></svg></div><div class="gl">المواليد والاستقبال</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#rings"/></svg></div><div class="gl">الزواج والملكة</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#cake"/></svg></div><div class="gl">أعياد الميلاد</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#ramadan"/></svg></div><div class="gl">رمضان والقرقاعون</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#gift"/></svg></div><div class="gl">العيد</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#bag"/></svg></div><div class="gl">التوزيعات المدرسية</div></div></div><div class="pill">نصمم التوزيعة على ذوقكم وثيم مناسبتكم</div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٢ من ٥</span></div></footer>
+</section><section class="post features" id="giveaways-03">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>التوزيعات</span></div></header>
+  <main><div class="kicker">✦ تفاصيل تفرق ✦</div><h2>ليش توزيعاتنا <span class="hl">غير؟</span></h2><div class="rule"></div><div class="feats"><div class="ft"><div class="gc sm"><svg class="ic"><use href="#tag"/></svg></div><div><div class="ftt">الاسم والتاريخ</div><div class="ftd">بخط أنيق يليق بالمناسبة</div></div></div><div class="ft"><div class="gc sm"><svg class="ic"><use href="#uv"/></svg></div><div><div class="ftt">ألوان الثيم</div><div class="ftd">تمشي مع ألوان مناسبتكم</div></div></div><div class="ft"><div class="gc sm"><svg class="ic"><use href="#gift"/></svg></div><div><div class="ftt">تغليف مرتب</div><div class="ftd">بتفاصيل هادية وراقية</div></div></div></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٣ من ٥</span></div></footer>
+</section><section class="post steps" id="giveaways-04">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>التوزيعات</span></div></header>
+  <main><div class="kicker">✦ طريقة الطلب ✦</div><h2>كيف <span class="hl">تطلبون؟</span></h2><div class="rule"></div><div class="steps"><div class="st"><div class="sn">١</div><div><div class="ftt">أرسلوا لنا مناسبتكم</div><div class="ftd">النوع، العدد، والتاريخ</div></div></div><div class="st"><div class="sn">٢</div><div><div class="ftt">نصمم على ذوقكم</div><div class="ftd">الاسم والألوان والثيم</div></div></div><div class="st"><div class="sn">٣</div><div><div class="ftt">نطبع ونغلّف</div><div class="ftd">بعناية في كل تفصيلة</div></div></div><div class="st"><div class="sn">٤</div><div><div class="ftt">نوصلها لكم</div><div class="ftd">التوصيل متوفر</div></div></div></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٤ من ٥</span></div></footer>
+</section><section class="post cta" id="giveaways-05">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>التوزيعات</span></div></header>
+  <main><div class="ctaw"><svg class="spk"><use href="#star"/></svg><h1 class="t-cta">احجزوا توزيعتكم..<br><span class="hl">من اليوم</span></h1>
+        <div class="sub">وقولوا لنا: شنو مناسبتكم الجاية؟</div><div class="wa"><svg class="wai"><use href="#wa"/></svg><span>66606959</span></div>
+        <img class="ctalogo" src="../brand/logo-ar-cream.png"></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٥ من ٥</span></div></footer>
+</section><section class="post cover" id="school-01">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#bag"/></svg><span>التوزيعات المدرسية</span></div></header>
+  <main><div class="bigic"><svg class="ic"><use href="#bag"/></svg></div><h1 class="t-cover">بداية مرتبة..<br><span class="hl">لسنة أحلى</span></h1><div class="sub">توزيعات وأدوات مدرسية باسم طفلكم</div>
+        <div class="swipe">اسحبوا<svg viewBox="0 0 120 50"><path d="M110 10 C80 40 40 40 12 26"/><path d="M26 14 L10 26 L28 36"/></svg></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">١ من ٤</span></div></footer>
+</section><section class="post grid" id="school-02">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#bag"/></svg><span>التوزيعات المدرسية</span></div></header>
+  <main><div class="kicker">✦ للمدرسة ✦</div><h2>كل اللي <span class="hl">يحتاجونه</span></h2><div class="rule"></div><div class="grid"><div class="gi"><div class="gc"><svg class="ic"><use href="#tag"/></svg></div><div class="gl">ستيكرات أسماء</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#pencil"/></svg></div><div class="gl">أدوات مدرسية</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#bag"/></svg></div><div class="gl">توزيعات الصف</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#gift"/></svg></div><div class="gl">توزيعات نهاية السنة</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#sticker"/></svg></div><div class="gl">ستيكرات بقص</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#laminate"/></svg></div><div class="gl">تغليف حراري</div></div></div><div class="pill">جاهزة من أول يوم دراسي</div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٢ من ٤</span></div></footer>
+</section><section class="post features" id="school-03">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#bag"/></svg><span>التوزيعات المدرسية</span></div></header>
+  <main><div class="kicker">✦ لمين؟ ✦</div><h2>تفاصيل <span class="hl">تفرّحهم</span></h2><div class="rule"></div><div class="feats"><div class="ft"><div class="gc sm"><svg class="ic"><use href="#bag"/></svg></div><div><div class="ftt">للأمهات</div><div class="ftd">تجهيز مرتب باسم طفلكم</div></div></div><div class="ft"><div class="gc sm"><svg class="ic"><use href="#pencil"/></svg></div><div><div class="ftt">للمعلمات</div><div class="ftd">توزيعات تفرّح طلابكم</div></div></div><div class="ft"><div class="gc sm"><svg class="ic"><use href="#gift"/></svg></div><div><div class="ftt">للمدارس</div><div class="ftd">طلبات الكميات بجودة ثابتة</div></div></div></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٣ من ٤</span></div></footer>
+</section><section class="post cta" id="school-04">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#bag"/></svg><span>التوزيعات المدرسية</span></div></header>
+  <main><div class="ctaw"><svg class="spk"><use href="#star"/></svg><h1 class="t-cta">أرسلوا اسم الطالب..<br><span class="hl">ونجهزها لكم</span></h1>
+        <div class="sub">مع الثيم اللي تحبونه، على الواتساب</div><div class="wa"><svg class="wai"><use href="#wa"/></svg><span>66606959</span></div>
+        <img class="ctalogo" src="../brand/logo-ar-cream.png"></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٤ من ٤</span></div></footer>
+</section><section class="post cover" id="printing-01">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#printer"/></svg><span>الطباعة</span></div></header>
+  <main><div class="bigic"><svg class="ic"><use href="#printer"/></svg></div><h1 class="t-cover">طباعة بجودة..<br><span class="hl">تبيّن الفرق</span></h1><div class="sub">خامات مختارة، وتشطيب نظيف</div>
+        <div class="swipe">اسحبوا<svg viewBox="0 0 120 50"><path d="M110 10 C80 40 40 40 12 26"/><path d="M26 14 L10 26 L28 36"/></svg></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">١ من ٣</span></div></footer>
+</section><section class="post grid" id="printing-02">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#printer"/></svg><span>الطباعة</span></div></header>
+  <main><div class="kicker">✦ خدماتنا ✦</div><h2>خدمات <span class="hl">الطباعة</span></h2><div class="rule"></div><div class="grid"><div class="gi"><div class="gc"><svg class="ic"><use href="#printer"/></svg></div><div class="gl">طباعة عالية الجودة</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#laminate"/></svg></div><div class="gl">تغليف حراري</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#sticker"/></svg></div><div class="gl">ستيكرات بقص احترافي</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#uv"/></svg></div><div class="gl">ستيكرات UV</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#acrylic"/></svg></div><div class="gl">أكريليك</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#cotton"/></svg></div><div class="gl">قصاصات قطنية</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#banner"/></svg></div><div class="gl">طباعة البنرات</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#card"/></svg></div><div class="gl">بزنس كارد</div></div><div class="gi"><div class="gc"><svg class="ic"><use href="#letter"/></svg></div><div class="gl">طباعة Letterhead</div></div></div><div class="pill">كل ما تحتاجه من طباعة وإبداع.. بلمسة جميلة</div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٢ من ٣</span></div></footer>
+</section><section class="post cta" id="printing-03">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#printer"/></svg><span>الطباعة</span></div></header>
+  <main><div class="ctaw"><svg class="spk"><use href="#star"/></svg><h1 class="t-cta">عندكم فكرة؟<br><span class="hl">نطبعها لكم</span></h1>
+        <div class="sub">أرسلوا لنا التفاصيل على الواتساب</div><div class="wa"><svg class="wai"><use href="#wa"/></svg><span>66606959</span></div>
+        <img class="ctalogo" src="../brand/logo-ar-cream.png"></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٣ من ٣</span></div></footer>
+</section><section class="post cover" id="clearance-01">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#docs"/></svg><span>تخليص المعاملات</span></div></header>
+  <main><div class="bigic"><svg class="ic"><use href="#docs"/></svg></div><h1 class="t-cover">معاملتك علينا..<br><span class="hl">ووقتك لك</span></h1><div class="sub">للأفراد والشركات · بدون طوابير ولا مشاوير</div>
+        <div class="swipe">اسحبوا<svg viewBox="0 0 120 50"><path d="M110 10 C80 40 40 40 12 26"/><path d="M26 14 L10 26 L28 36"/></svg></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">١ من ٧</span></div></footer>
+</section><section class="post prices" id="clearance-02">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#docs"/></svg><span>تخليص المعاملات</span></div></header>
+  <main><div class="kicker">✦ خدماتنا لمعاملات ✦</div><h2 class="ent">هيئة المعلومات والحكومة الإلكترونية</h2><div class="rule"></div><div class="card"><div class="row"><div class="rn">تجديد / إصدار / بدل فاقد بطاقة الهوية</div><div class="rp"><b>1.500</b> د.ب</div></div><div class="row"><div class="rn">تحديث بيانات البطاقة الذكية<small>(الاجتماعية، الديانة، العائلية، التعليم، العمل، العنوان)</small></div><div class="rp"><b>1.500</b> د.ب</div></div><div class="row"><div class="rn">التقرير الائتماني من بنفت</div><div class="rp"><b>2.000</b> د.ب</div></div><div class="row"><div class="rn">شهادة الميلاد للمواليد الجدد / بدل فاقد، وشهادة الوفاة<small>(إصدار / بدل فاقد)</small></div><div class="rp"><b>1.500</b> د.ب</div></div><div class="row"><div class="rn">خدمة الإشعارات الحكومية</div><div class="rp"><b>1.500</b> د.ب</div></div></div><div class="cur">الأسعار بالدينار البحريني</div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٢ من ٧</span></div></footer>
+</section><section class="post prices" id="clearance-03">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#docs"/></svg><span>تخليص المعاملات</span></div></header>
+  <main><div class="kicker">✦ خدماتنا لمعاملات ✦</div><h2 class="ent">وزارة الإسكان</h2><div class="rule"></div><div class="card"><div class="row"><div class="rn">تقديم طلب جديد</div><div class="rp"><b>4.000</b> د.ب</div></div><div class="row"><div class="rn">طلب برنامج مزايا</div><div class="rp"><b>5.000</b> د.ب</div></div><div class="row"><div class="rn">طلب تمويل للبناء أو الشراء أو الترميم</div><div class="rp"><b>4.000</b> د.ب</div></div><div class="row"><div class="rn">الإقرار لأفراد الأسرة والموافقة عليه</div><div class="rp"><b>0.500</b> د.ب</div></div><div class="row"><div class="rn">الإشعارات الحكومية<small>(تحديث بيانات الاتصال)</small></div><div class="rp"><b>1.500</b> د.ب</div></div></div><div class="cur">الأسعار بالدينار البحريني</div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٣ من ٧</span></div></footer>
+</section><section class="post prices" id="clearance-04">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#docs"/></svg><span>تخليص المعاملات</span></div></header>
+  <main><div class="kicker">✦ خدماتنا لمعاملات ✦</div><div class="gh">وزارة العمل والتنمية الاجتماعية</div><div class="card tight"><div class="row"><div class="rn">تسجيل وتحديث بيانات الباحثين عن عمل</div><div class="rp"><b>2.000</b> د.ب</div></div><div class="row"><div class="rn">تسجيل حضور المواعيد في معرض التوظيف الإلكتروني</div><div class="rp"><b>0.500</b> د.ب</div></div><div class="row"><div class="rn">ترشيح وظيفة في معرض التوظيف الإلكتروني</div><div class="rp"><b>1.000</b> د.ب</div></div></div><div class="gh">المساعدات الاجتماعية / الخيرية الملكية</div><div class="card tight"><div class="row"><div class="rn">تقديم خدمة غلاء المعيشة</div><div class="rp"><b>3.000</b> د.ب</div></div><div class="row"><div class="rn">غلاء اللحوم / تغيير الحساب / الإعاقة</div><div class="rp"><b>1.500</b> د.ب</div></div><div class="row"><div class="rn">مساعدات المؤسسة الملكية للأعمال الإنسانية</div><div class="rp"><b>5.000</b> د.ب</div></div></div><div class="cur">الأسعار بالدينار البحريني</div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٤ من ٧</span></div></footer>
+</section><section class="post prices" id="clearance-05">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#docs"/></svg><span>تخليص المعاملات</span></div></header>
+  <main><div class="kicker">✦ خدماتنا لمعاملات ✦</div><h2 class="ent">وزارة التربية والتعليم</h2><div class="rule"></div><div class="card"><div class="row"><div class="rn">نسخ الإفادات وكشف الدرجات لطلبة المدارس</div><div class="rp"><b>1.500</b> د.ب</div></div><div class="row"><div class="rn">تحويل طلبة المدارس</div><div class="rp"><b>1.500</b> د.ب</div></div><div class="row"><div class="rn">طلب شهادات وإفادات</div><div class="rp"><b>1.500</b> د.ب</div></div><div class="row"><div class="rn">الاطلاع على نتائج الطلبة</div><div class="rp"><b>0.300</b> د.ب + الطباعة</div></div></div><div class="cur">الأسعار بالدينار البحريني</div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٥ من ٧</span></div></footer>
+</section><section class="post prices" id="clearance-06">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#docs"/></svg><span>تخليص المعاملات</span></div></header>
+  <main><div class="kicker">✦ خدماتنا لمعاملات ✦</div><h2 class="ent">خدمات أخرى</h2><div class="rule"></div><div class="card"><div class="row"><div class="rn">بطاقة سديم (بابكو)</div><div class="rp"><b>1.500</b> د.ب</div></div><div class="row"><div class="rn">مفتاح إلكتروني جديد</div><div class="rp"><b>1.000</b> د.ب</div></div><div class="row"><div class="rn">تغيير واسترجاع المفتاح الإلكتروني</div><div class="rp"><b>0.500</b> د.ب</div></div><div class="row"><div class="rn">الاطلاع على الفواتير أو مستحقات المحكمة<small>(بدون طباعة)</small></div><div class="rp"><b>0.300</b> د.ب</div></div><div class="row"><div class="rn">معاملات موقع سجلات</div><div class="rp"><b>3.000</b> د.ب</div></div></div><div class="cur">الأسعار بالدينار البحريني</div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٦ من ٧</span></div></footer>
+</section><section class="post cta" id="clearance-07">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#docs"/></svg><span>تخليص المعاملات</span></div></header>
+  <main><div class="ctaw"><svg class="spk"><use href="#star"/></svg><h1 class="t-cta">أرسلوا نوع المعاملة..<br><span class="hl">وننجزها لكم</span></h1>
+        <div class="sub">نرد عليكم بالتفاصيل على الواتساب</div><div class="wa"><svg class="wai"><use href="#wa"/></svg><span>66606959</span></div>
+        <img class="ctalogo" src="../brand/logo-ar-cream.png"></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٧ من ٧</span></div></footer>
+</section><section class="post cover" id="collab-01">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#rings"/></svg><span>تعاون</span></div></header>
+  <main><div class="bigic"><svg class="ic"><use href="#card"/></svg></div><h1 class="t-cover">منظمين الحفلات والشركات..<br><span class="hl">خلونا نشتغل سوا</span></h1><div class="sub">للفعاليات، الحفلات، وهدايا الشركات</div>
+        <div class="swipe">اسحبوا<svg viewBox="0 0 120 50"><path d="M110 10 C80 40 40 40 12 26"/><path d="M26 14 L10 26 L28 36"/></svg></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">١ من ٣</span></div></footer>
+</section><section class="post features" id="collab-02">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#rings"/></svg><span>تعاون</span></div></header>
+  <main><div class="kicker">✦ شنو نجهز لكم؟ ✦</div><h2>شراكة <span class="hl">تليق فيكم</span></h2><div class="rule"></div><div class="feats"><div class="ft"><div class="gc sm"><svg class="ic"><use href="#gift"/></svg></div><div><div class="ftt">توزيعات وهدايا</div><div class="ftd">بهوية مناسبتكم أو شعار شركتكم</div></div></div><div class="ft"><div class="gc sm"><svg class="ic"><use href="#banner"/></svg></div><div><div class="ftt">مطبوعات الفعاليات</div><div class="ftd">بنرات، كروت، وستيكرات</div></div></div><div class="ft"><div class="gc sm"><svg class="ic"><use href="#card"/></svg></div><div><div class="ftt">طلبات الكميات</div><div class="ftd">بجودة ثابتة في كل قطعة</div></div></div></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٢ من ٣</span></div></footer>
+</section><section class="post cta" id="collab-03">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#rings"/></svg><span>تعاون</span></div></header>
+  <main><div class="ctaw"><svg class="spk"><use href="#star"/></svg><h1 class="t-cta">اكتبوا «تعاون»..<br><span class="hl">ونرتب معاكم</span></h1>
+        <div class="sub">على الواتساب، ونحدد موعد يناسبكم</div><div class="wa"><svg class="wai"><use href="#wa"/></svg><span>66606959</span></div>
+        <img class="ctalogo" src="../brand/logo-ar-cream.png"></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٣ من ٣</span></div></footer>
+</section><section class="post cover" id="faq-01">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#docs"/></svg><span>الأسئلة الشائعة</span></div></header>
+  <main><div class="bigic"><svg class="ic"><use href="#tag"/></svg></div><h1 class="t-cover">أسئلتكم..<br><span class="hl">وأجوبتنا</span></h1><div class="sub">كل اللي تحتاجون تعرفونه قبل الطلب</div>
+        <div class="swipe">اسحبوا<svg viewBox="0 0 120 50"><path d="M110 10 C80 40 40 40 12 26"/><path d="M26 14 L10 26 L28 36"/></svg></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">١ من ٤</span></div></footer>
+</section><section class="post faq" id="faq-02">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#docs"/></svg><span>الأسئلة الشائعة</span></div></header>
+  <main><div class="kicker">✦ الأسئلة الشائعة ✦</div><div class="faqs"><div class="q">هل التوصيل متوفر؟</div><div class="a">إي نعم، التوصيل متوفر.</div><div class="q">أقدر أختار التصميم والألوان؟</div><div class="a">أكيد، نصمم حسب ذوقكم وثيم مناسبتكم.</div></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٢ من ٤</span></div></footer>
+</section><section class="post faq" id="faq-03">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#docs"/></svg><span>الأسئلة الشائعة</span></div></header>
+  <main><div class="kicker">✦ الأسئلة الشائعة ✦</div><div class="faqs"><div class="q">كيف أطلب توزيعات؟</div><div class="a">أرسلوا لنا نوع المناسبة والعدد والتاريخ على الواتساب، ونرتب معاكم التفاصيل.</div><div class="q">كيف أطلب تخليص معاملة؟</div><div class="a">أرسلوا نوع المعاملة على الواتساب، ونوضح لكم المطلوب والسعر.</div></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٣ من ٤</span></div></footer>
+</section><section class="post cta" id="faq-04">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#docs"/></svg><span>الأسئلة الشائعة</span></div></header>
+  <main><div class="ctaw"><svg class="spk"><use href="#star"/></svg><h1 class="t-cta">عندكم سؤال ثاني؟<br><span class="hl">حيّاكم</span></h1>
+        <div class="sub">نسعد بخدمتكم دايماً</div><div class="wa"><svg class="wai"><use href="#wa"/></svg><span>66606959</span></div>
+        <img class="ctalogo" src="../brand/logo-ar-cream.png"></div></main>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٤ من ٤</span></div></footer>
+</section></body></html>
