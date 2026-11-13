@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Kami Storefront</title>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--sage:#A7B591;--cream:#EDE9E0;--blush:#E2CDCC;--forest:#2E3B2A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#888;display:flex;flex-wrap:wrap;gap:30px;padding:30px;font-family:Alexandria,sans-serif}
+.post{flex:none;position:relative;overflow:hidden;background:#000 center/cover no-repeat;color:var(--cream)}
+#post{width:1080px;height:1350px;background-image:url(mockup-fixed.jpg)}
+#story{width:1080px;height:1920px;background-image:url(photo-9x16.jpg)}
+.shade{position:absolute;left:0;width:820px;bottom:0;-webkit-mask-image:linear-gradient(to right,#000 72%,transparent);mask-image:linear-gradient(to right,#000 72%,transparent);background:linear-gradient(to bottom,rgba(46,59,42,0) 0%,rgba(46,59,42,.82) 45%,rgba(38,50,34,.96) 100%)}
+#post .shade{height:500px} #story .shade{height:560px}
+.loc{position:absolute;left:80px;width:600px;display:flex;flex-direction:column;align-items:center;text-align:center}
+#post .loc{bottom:64px} #story .loc{bottom:150px}
+.pin{width:96px;height:96px;border-radius:50%;background:var(--blush);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 14px rgba(226,205,204,.18)}
+.pin svg{width:50px;height:50px;fill:none;stroke:var(--forest);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.k{margin-top:30px;font-size:36px;font-weight:500;opacity:.9}
+.city{font-size:84px;font-weight:700;line-height:1.25;margin-top:4px}
+.city span{color:var(--forest);background:var(--blush);padding:0 22px;border-radius:14px}
+.sub{margin-top:18px;font-size:32px;opacity:.9}
+.sub b{color:var(--blush);font-weight:500}
+</style>
+</head>
+<body>
+<section class="post" id="post">
+  <div class="shade"></div>
+  <div class="loc">
+    <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+    <div class="k">موقعنا في</div>
+    <div class="city"><span>مدينة عيسى</span></div>
+    <div class="sub">حيّاكم تزورونا <b>✦</b></div>
+  </div>
+</section>
+<section class="post" id="story">
+  <div class="shade"></div>
+  <div class="loc">
+    <div class="pin"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+    <div class="k">موقعنا في</div>
+    <div class="city"><span>مدينة عيسى</span></div>
+    <div class="sub">حيّاكم تزورونا <b>✦</b></div>
+  </div>
+</section>
+</body>
+</html>
