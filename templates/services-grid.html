@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>Kami Services Grid</title>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=Fraunces:opsz,wght@144,600&display=swap" rel="stylesheet">
+<style>
+:root{--sage:#A7B591;--cream:#F1EEE6;--blush:#E2CDCC;--forest:#2E3B2A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#bbb;display:flex;flex-wrap:wrap;gap:40px;padding:40px;font-family:'Baloo Bhaijaan 2',sans-serif;color:var(--forest)}
+.post{flex:none;width:1080px;height:1350px;position:relative;overflow:hidden;background-color:var(--cream);
+  background-image:linear-gradient(rgba(46,59,42,.06) 1.5px,transparent 1.5px),linear-gradient(90deg,rgba(46,59,42,.06) 1.5px,transparent 1.5px);background-size:44px 44px}
+.deco{position:absolute;border-radius:50%}
+h1{position:absolute;top:30px;right:70px;font-weight:800;font-size:150px;line-height:1.1}
+h1 svg{position:absolute;top:22px;left:-26px;width:62px}
+.sub{position:absolute;top:238px;right:74px;font-size:38px;font-weight:500}
+.grid{position:absolute;top:300px;left:50px;right:50px;display:grid;grid-template-columns:repeat(3,1fr);row-gap:18px}
+.cell{display:flex;flex-direction:column;align-items:center}
+.ic{position:relative;width:176px;height:176px}
+.ic:before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--forest);transform:translateX(30px);clip-path:inset(0 0 0 50%)}
+.ic .c{position:absolute;inset:0;border-radius:50%;border:3px solid var(--forest);display:flex;align-items:center;justify-content:center}
+.ic svg{width:82px;height:82px;fill:none;stroke:var(--forest);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pill{margin-top:12px;padding:2px 24px 6px;border-radius:16px;font-weight:700;font-size:31px;white-space:nowrap}
+.bar{position:absolute;left:46px;right:46px;top:1148px;height:92px;border-radius:46px;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:0 50px;font-weight:700;font-size:36px}
+.bar span{display:flex;align-items:center;gap:16px}
+.bar svg{width:46px;height:46px;fill:none;stroke:var(--cream);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.foot{position:absolute;bottom:42px;right:70px;font-size:32px;font-weight:600;direction:ltr;display:flex;align-items:center;gap:14px}
+.page{position:absolute;bottom:38px;left:46px;background:var(--forest);color:var(--cream);border-radius:30px;padding:2px 28px 6px;font-size:32px;font-weight:700}
+.logo{position:absolute;top:60px;left:70px;width:200px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="star" viewBox="0 0 40 40"><path d="M20 0C21 13 27 19 40 20C27 21 21 27 20 40C19 27 13 21 0 20C13 19 19 13 20 0Z"/></symbol>
+<!-- icons, 24x24 line style -->
+<symbol id="printer" viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4a1 1 0 0 1-1-1v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1h-3"/><path d="M7 14h10v7H7z"/><path d="M17.5 11h.5"/></symbol>
+<symbol id="laminate" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><rect x="7.5" y="5.5" width="9" height="13" rx="1"/><path d="M9.5 9h5M9.5 12h5M9.5 15h3"/></symbol>
+<symbol id="sticker" viewBox="0 0 24 24"><path d="M4 4h16v10l-6 6H4z"/><path d="M14 20v-6h6"/><path d="M9 9h.01M14 9h.01M9 13.5c1.5 1.3 3.5 1.3 5 0"/></symbol>
+<symbol id="uv" viewBox="0 0 24 24"><path d="M10 2c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7z"/><path d="M18.5 14c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3z"/></symbol>
+<symbol id="cotton" viewBox="0 0 24 24"><path d="M4 5l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1v3l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1-2 1z"/><path d="M4 11l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1v3l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1-2 1z"/><path d="M5 17l2-1 2 1 2-1 2 1 2-1 2 1 2-1 1 1v3l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-1-1z"/></symbol>
+<symbol id="acrylic" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="15" rx="1.5"/><path d="M9.5 9l3-3M10 13l5-5M4 21h16M9 18v3M15 18v3"/></symbol>
+<symbol id="banner" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="16" rx="1"/><path d="M9.5 6h5M9.5 9h5M9.5 12h3M12 18v3M7 21h10"/></symbol>
+<symbol id="card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="8" cy="11" r="1.6"/><path d="M6 15h4M12.5 10h5M12.5 13h4"/></symbol>
+<symbol id="letter" viewBox="0 0 24 24"><path d="M5 2h14v20H5z"/><path d="M8 5h3M15 5.5h.01M8 9h8M8 12h8M8 15h8M8 18h5"/></symbol>
+<symbol id="baby" viewBox="0 0 24 24"><path d="M10 2h4v3h-4z"/><path d="M9 5h6l1 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8z"/><path d="M8 11h3M8 14h3M8 17h3"/></symbol>
+<symbol id="rings" viewBox="0 0 24 24"><circle cx="9" cy="14" r="5.5"/><circle cx="15" cy="14" r="5.5"/><path d="M7.5 6l1.5-2.5L10.5 6z"/></symbol>
+<symbol id="cake" viewBox="0 0 24 24"><path d="M4 21V12a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9z"/><path d="M4 15c1.3 1 2.7 1 4 0s2.7-1 4 0 2.7 1 4 0 2.7-1 4 0M8 11V8M12 11V8M16 11V8M3 21h18"/><path d="M8 4.5c-.6.6 0 1.5 0 1.5s.6-.9 0-1.5zM12 4.5c-.6.6 0 1.5 0 1.5s.6-.9 0-1.5zM16 4.5c-.6.6 0 1.5 0 1.5s.6-.9 0-1.5z"/></symbol>
+<symbol id="ramadan" viewBox="0 0 24 24"><path d="M14 3a8 8 0 1 0 7 11.5A6.5 6.5 0 0 1 14 3z"/><path d="M18 3.5l.7 1.6 1.6.7-1.6.7L18 8.1l-.7-1.6-1.6-.7 1.6-.7z"/></symbol>
+<symbol id="gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10 4 6.5 4.5 8 7.2M12 8c2-4 5.5-3.5 4-.8"/></symbol>
+<symbol id="bag" viewBox="0 0 24 24"><path d="M6 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z"/><path d="M9 6V5a3 3 0 0 1 6 0v1M6 12h12M10 12v2h4v-2M8 17h8"/></symbol>
+<symbol id="tag" viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="10" rx="5"/><path d="M7 12h7M16.5 12h.01"/></symbol>
+<symbol id="pencil" viewBox="0 0 24 24"><path d="M15 4l5 5L9 20H4v-5z"/><path d="M13 6l5 5M4 15l5 5"/></symbol>
+<symbol id="docs" viewBox="0 0 24 24"><path d="M14 2H6a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/><path d="M14 2v5h5M8 11h6M8 14h4"/><circle cx="15.5" cy="17" r="3"/><path d="M14.2 17l1 1 1.6-1.8"/></symbol>
+<symbol id="truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 9h4l3 3v4h-7"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+<symbol id="wa" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.8c.3 2.8 2.6 5.4 6 6.2l1.2-1.6-2-1-1 .8c-1-.5-2-1.5-2.4-2.4l.8-1-1-2z"/></symbol>
+</defs></svg>
+
+<section class="post" id="services-1-printing" data-items='[["printer","طباعة ذات جودة عالية"],["laminate","تغليف حراري"],["sticker","ستيكرات بقص احترافي"],["uv","ستيكرات UV"],["acrylic","أكريليك"],["cotton","قصاصات قطنية"],["banner","طباعة البنرات"],["card","بزنس كارد"],["letter","طباعة Letterhead"]]' data-sub="كل ما تحتاجه من طباعة وإبداع .. بلمسة جميلة" data-page="١/٢ ←"></section>
+<section class="post" id="services-2-giveaways" data-items='[["baby","توزيعات المواليد"],["rings","توزيعات الزواج"],["cake","أعياد الميلاد"],["ramadan","رمضان والقرقاعون"],["gift","توزيعات العيد"],["bag","توزيعات مدرسية"],["tag","ستيكرات أسماء"],["pencil","أدوات مدرسية"],["docs","تخليص المعاملات"]]' data-sub="لكل مناسبة توزيعة .. ومعاملاتكم علينا" data-page="٢/٢"></section>
+
+<script>
+const fill=['var(--sage)','var(--blush)'];
+document.querySelectorAll('.post').forEach(p=>{
+  const items=JSON.parse(p.dataset.items);
+  let cells='';
+  items.forEach(([ic,label],i)=>{
+    const a=fill[i%2], b=fill[(i+1)%2];
+    cells+=`<div class="cell"><div class="ic"><div class="c" style="background:${a}"><svg><use href="#${ic}"/></svg></div></div><div class="pill" style="background:${b}">${label}</div></div>`;
+  });
+  p.innerHTML=`
+   <div class="deco" style="width:430px;height:430px;background:var(--sage);opacity:.85;top:-190px;left:-170px"></div>
+   <div class="deco" style="width:380px;height:380px;background:var(--blush);opacity:.75;top:520px;right:-250px"></div>
+   <div class="deco" style="width:360px;height:360px;background:var(--blush);opacity:.6;top:860px;left:-220px"></div>
+   <img class="logo" src="../brand/logo-en-cream.png" style="top:34px;left:44px;width:170px">
+   <h1>خدماتنا<svg style="fill:var(--blush)"><use href="#star"/></svg></h1>
+   <div class="sub">${p.dataset.sub}</div>
+   <div class="grid">${cells}</div>
+   <div class="bar"><span><svg><use href="#truck"/></svg>خدمة التوصيل متوفرة</span><span><svg><use href="#wa"/></svg>اطلب عبر الواتساب</span></div>
+   <div class="foot">@kami.printing <svg style="width:26px;height:26px;fill:var(--blush)"><use href="#star"/></svg> 66606959</div>
+   <div class="page">${p.dataset.page}</div>`;
+});
+</script>
+</body>
+</html>
