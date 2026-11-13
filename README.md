@@ -48,3 +48,7 @@ METRICOOL_BLOG_ID=...
 - "Resize this Canva design for Instagram story and TikTok" → `resize-for-social-media`
 - "Make 5 UGC ad variations for my product" → `ugc` (OpenArt)
 - "شنو أفضل وقت أنشر فيه على إنستغرام؟" → `metricool`
+
+## Instagram voice profile
+املأ `instagram/voice.md` بأسلوبك (أو أرسل لـ Claude ثلاث Reels من حسابك وقل "write my voice.md from these").
+كل سكلز `ig-*` تقرأ هذا الملف عشان الكتابة تطلع بصوتك أنت.
