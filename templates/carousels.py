@@ -4,6 +4,8 @@ Content lives in CAROUSELS below. Render with:
   python3 templates/carousels.py && PAGE=carousels.html OUTDIR=out/carousels node templates/render.js
 """
 import os, re, html
+from mascot import mascot
+POSE = {"launch": "wave", "giveaways": "gift", "school": "pencil", "printing": "star", "clearance": "doc", "collab": "card", "faq": "question"}
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 WA = '66606959'
@@ -128,8 +130,7 @@ def icon(name, cls='ic'):
 def slide(key, tag, tagicon, s, i, n):
     t = s['type']; body = ''
     if t == 'cover':
-        mid = ('<img class="coverlogo" src="../brand/logo-ar-cream.png">' if s.get('logo')
-               else f'<div class="bigic">{icon(s["icon"])}</div>')
+        mid = f'<div class="mas">{mascot(POSE[key], "open" if key == "launch" else "smile")}</div>'
         body = f'''{mid}<h1 class="t-cover">{hl(s["title"])}</h1><div class="sub">{s["sub"]}</div>
         <div class="swipe">اسحبوا<svg viewBox="0 0 120 50"><path d="M110 10 C80 40 40 40 12 26"/><path d="M26 14 L10 26 L28 36"/></svg></div>'''
     elif t in ('grid', 'features', 'steps', 'prices', 'faq'):
@@ -169,9 +170,9 @@ def slide(key, tag, tagicon, s, i, n):
             body = '<div class="kicker">✦ الأسئلة الشائعة ✦</div><div class="faqs">' + ''.join(
                 f'<div class="q">{q}</div><div class="a">{a}</div>' for q, a in s['items']) + '</div>'
     elif t == 'cta':
-        body = f'''<div class="ctaw"><svg class="spk"><use href="#star"/></svg><h1 class="t-cta">{hl(s["title"])}</h1>
+        body = f'''<div class="ctaw"><div class="mas cta">{mascot("plane", "open")}</div><h1 class="t-cta">{hl(s["title"])}</h1>
         <div class="sub">{s["sub"]}</div><div class="wa">{icon("wa", "wai")}<span>{WA}</span></div>
-        <img class="ctalogo" src="../brand/logo-ar-cream.png"></div>'''
+        </div>'''
     return f'''<section class="post {t}" id="{key}-{i:02d}">
   <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
   <header><img src="../brand/logo-en-cream.png"><div class="chip">{icon(tagicon)}<span>{tag}</span></div></header>
@@ -216,6 +217,7 @@ h2.ent{font-size:52px}
 .bigic{width:250px;height:250px;border-radius:50%;background:var(--cream);border:2px solid var(--forest);display:flex;align-items:center;justify-content:center;margin-bottom:50px;box-shadow:0 0 0 22px rgba(237,233,224,.3)}
 .bigic svg{width:130px;height:130px;fill:none;stroke:var(--forest);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
 .coverlogo{width:420px;margin-bottom:60px}
+.mas svg{width:580px;height:auto;display:block}.mas{margin-bottom:6px}.mas.cta svg{width:470px}.mas.cta{margin-bottom:10px}
 .t-cover{font-size:80px}
 .swipe{position:absolute;left:0;bottom:-10px;display:flex;align-items:center;gap:6px;font-family:Alexandria;font-size:28px;color:var(--forest);direction:rtl}
 .swipe svg{width:120px;height:50px;fill:none;stroke:var(--forest);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
