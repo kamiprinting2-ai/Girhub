@@ -4,3 +4,9 @@ __pycache__/
 video/out/lines/
 video/out/*.wav
 video/out/video-only.mp4
+
+# khaam-motion: licence forbids publishing the skill (this repo is public)
+.claude/skills/khaam-motion/
+دليل موشن خام.pdf
+.khaam/
+SESSION_HANDOFF.md
