@@ -5,7 +5,7 @@
 - **Handle:** @kami.printing · WhatsApp 66606959
 - **What I do:** توزيعات المناسبات والمدرسية، طباعة متنوعة، أدوات مدرسية، وتخليص معاملات حكومية كخدمة إضافية
 - **Who I am talking to:** الأمهات، الطلاب، العرسان، الشركات، ومنظمو الحفلات
-- **Never write the address** (no مدينة عيسى or any location in new content)
+- **Address:** allowed only in the profile bio ("🇧🇭 مدينة عيسى · توصيل لدول الخليج"), not in posts or captions. GCC delivery is available.
 
 ## What I sound like
 - Luxury Minimal / Soft Minimal: راقية، فخمة، دافئة
