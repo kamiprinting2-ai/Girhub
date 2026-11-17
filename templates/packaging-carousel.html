@@ -1,5 +1,5 @@
 <!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>Kami Packaging Carousel</title>
-<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500;600;700&family=Alexandria:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--sage:#A7B591;--cream:#EDE9E0;--blush:#E2CDCC;--forest:#2E3B2A;--forest2:#384833;--line:rgba(46,59,42,.2)}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -82,24 +82,19 @@ h2.ent{font-size:52px}
 .wai{width:64px;height:64px;fill:none;stroke:var(--cream);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .ctalogo{width:230px;margin-top:70px;opacity:.95}
 
-.ph{background:var(--img) center/cover}
-.ph header img{filter:brightness(0) saturate(100%) invert(19%) sepia(10%) saturate(1200%) hue-rotate(60deg) brightness(.9)}
-.ph .scrim{position:absolute;inset:0;pointer-events:none}
-.ph.top .scrim{background:linear-gradient(180deg,rgba(237,233,224,.96) 0%,rgba(237,233,224,.82) 26%,rgba(237,233,224,0) 46%),linear-gradient(0deg,rgba(237,233,224,.9) 0%,rgba(237,233,224,0) 16%)}
-.ph.bottom .scrim{background:linear-gradient(180deg,rgba(237,233,224,.85) 0%,rgba(237,233,224,0) 14%),linear-gradient(0deg,rgba(237,233,224,.97) 0%,rgba(237,233,224,.85) 28%,rgba(237,233,224,0) 48%)}
-.ph .txt{position:absolute;left:64px;right:64px;text-align:center;display:flex;flex-direction:column;align-items:center}
-.ph.top .txt{top:170px}.ph.bottom .txt{bottom:190px}
-.ph h2{font-size:86px;margin:0}
-.ph .cap{margin-top:22px;background:var(--forest);color:var(--cream);font-size:34px;font-weight:500;padding:12px 38px;border-radius:50px}
-.ph footer{border-top-color:rgba(46,59,42,.25)}
-.cov .tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(46,59,42,.55),rgba(46,59,42,.35) 45%,rgba(46,59,42,.7));}
-.cov header img{filter:none}.cov .chip{color:var(--cream)}.cov .chip svg{stroke:var(--cream)}
-.cov main{color:var(--cream)}.cov .t-cover{font-size:96px;color:var(--cream);text-shadow:0 4px 30px rgba(0,0,0,.25)}
-.cov .hl{color:var(--forest)}.cov .sub{color:var(--cream);opacity:1}
-.cov .spark{width:90px;height:90px;fill:var(--blush);margin-bottom:30px}
-.cov .swipe,.cov .swipe svg{color:var(--cream);stroke:var(--cream)}
-.cov footer{border-top-color:rgba(237,233,224,.4)}.cov footer,.cov .fw b{color:var(--cream)}.cov .fwi{stroke:var(--cream)}
-.cov .fr .h{color:var(--cream)}
+.post{background:linear-gradient(165deg,#B2BF9D 0%,#A7B591 50%,#9CAB86 100%)}
+h1,h2,.t-cover,.t-cta,.ftt,.kicker,.chip,.pill,.cnt,.fw b,.gh,.q,.sn,.wa span{font-family:'Readex Pro','IBM Plex Sans Arabic',sans-serif!important}
+h1,h2{font-weight:700}
+.ph .txt{position:absolute;left:64px;right:64px;top:168px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.ph h2{font-size:80px;margin:0;line-height:1.3}
+.ph.cov h1{font-size:78px;margin:0;line-height:1.35}
+.ph .cap{margin-top:18px;color:#394634;font-size:34px;font-weight:500}
+.frame{position:absolute;left:64px;right:64px;top:430px;bottom:196px;border-radius:40px;overflow:hidden;
+  border:10px solid var(--cream);box-shadow:0 24px 50px rgba(46,59,42,.22)}
+.frame img{width:100%;height:100%;object-fit:cover;display:block}
+.cov .frame{top:520px;bottom:250px}
+.cov .swipe{position:absolute;left:64px;bottom:190px;display:flex;align-items:center;gap:6px;font-family:'Readex Pro';font-size:28px;color:var(--forest);direction:rtl}
+.cov .swipe svg{width:120px;height:50px;fill:none;stroke:var(--forest);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
 .stk .mas svg{width:520px}
 </style></head><body><svg width="0" height="0" style="position:absolute"><defs>
 <symbol id="star" viewBox="0 0 40 40"><path d="M20 0C21 13 27 19 40 20C27 21 21 27 20 40C19 27 13 21 0 20C13 19 19 13 20 0Z"/></symbol>
@@ -125,42 +120,39 @@ h2.ent{font-size:52px}
 <symbol id="truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 9h4l3 3v4h-7"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
 <symbol id="wa" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.8c.3 2.8 2.6 5.4 6 6.2l1.2-1.6-2-1-1 .8c-1-.5-2-1.5-2.4-2.4l.8-1-1-2z"/></symbol>
 </defs></svg>
-<section class="post ph cov" id="pack-01" style="--img:url(photos/packaging/unbox.jpg)">
-  <div class="tint"></div><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
-  <main><svg class="spark"><use href="#star"/></svg>
-  <h1 class="t-cover">مشروعكم يحتاج<br><span class="hl">هالمطبوعات</span></h1>
-  <div class="sub">تفاصيل صغيرة.. تخلي طلبياتكم أفخم</div>
-  <div class="swipe">اسحبوا<svg viewBox="0 0 120 50"><path d="M110 10 C80 40 40 40 12 26"/><path d="M26 14 L10 26 L28 36"/></svg></div></main>
+<section class="post ph cov" id="pack-01"><svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
+  <div class="txt"><h1>مشروعكم يحتاج<br><span class="hl">هالمطبوعات</span></h1><div class="cap">تفاصيل صغيرة.. تخلي طلبياتكم أفخم</div></div>
+  <div class="frame"><img src="photos/packaging/unbox-wide.jpg" style="object-position:50% 50%"></div>
+  <div class="swipe">اسحبوا<svg viewBox="0 0 120 50"><path d="M110 10 C80 40 40 40 12 26"/><path d="M26 14 L10 26 L28 36"/></svg></div>
   <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
-  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">١ من ١٠</span></div></footer></section><section class="post stk" id="pack-02">
-  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">١ من ١٠</span></div></footer></section><section class="post stk" id="pack-02"><svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
   <main><div class="mas"><svg class="mascot" viewBox="-80 0 420 360"><ellipse cx="150" cy="330" rx="88" ry="10" fill="#2E3B2A" opacity=".14"/><path d="M124 292 L120 318" fill="none" stroke="#2E3B2A" stroke-width="9" stroke-linecap="round"/><path d="M176 292 L180 318" fill="none" stroke="#2E3B2A" stroke-width="9" stroke-linecap="round"/><ellipse cx="114" cy="321" rx="17" ry="9" fill="#2E3B2A"/><ellipse cx="186" cy="321" rx="17" ry="9" fill="#2E3B2A"/><path d="M70 112 L112 62 H188 L230 112 V280 Q230 296 214 296 H86 Q70 296 70 280 Z" fill="#F6F3EC" stroke="#2E3B2A" stroke-width="8" stroke-linejoin="round"/><path d="M70 112 L112 62 V98 Q112 112 98 112 Z" fill="#E2CDCC" stroke="#2E3B2A" stroke-width="7" stroke-linejoin="round"/><path d="M230 112 L188 62 V98 Q188 112 202 112 Z" fill="#E2CDCC" stroke="#2E3B2A" stroke-width="7" stroke-linejoin="round"/><path d="M74 250 C118 282 170 226 226 238" fill="none" stroke="#E2CDCC" stroke-width="15" stroke-linecap="round"/><ellipse cx="122" cy="172" rx="10" ry="12" fill="#2E3B2A"/><ellipse cx="178" cy="172" rx="10" ry="12" fill="#2E3B2A"/><circle cx="125" cy="167" r="3.5" fill="#fff"/><circle cx="181" cy="167" r="3.5" fill="#fff"/><ellipse cx="104" cy="198" rx="13" ry="8" fill="#D3959B" opacity=".55"/><ellipse cx="196" cy="198" rx="13" ry="8" fill="#D3959B" opacity=".55"/><path d="M134 196 Q150 220 166 196 Z" fill="#2E3B2A" stroke="#2E3B2A" stroke-width="5" stroke-linejoin="round"/><path d="M142 206 Q150 214 158 206" fill="#D3959B"/><rect x="104" y="228" width="92" height="66" rx="6" fill="#E2CDCC" stroke="#2E3B2A" stroke-width="7"/><rect x="98" y="214" width="104" height="20" rx="5" fill="#F6F3EC" stroke="#2E3B2A" stroke-width="7"/><path d="M150 214 V294" stroke="#A7B591" stroke-width="12"/><path d="M150 214 c-14 -26 -40 -18 -26 -2 M150 214 c14 -26 40 -18 26 -2" fill="none" stroke="#2E3B2A" stroke-width="6" stroke-linecap="round"/><path d="M74 215 C80 236 90 248 100 252" fill="none" stroke="#2E3B2A" stroke-width="9" stroke-linecap="round"/><circle cx="102" cy="254" r="12" fill="#F6F3EC" stroke="#2E3B2A" stroke-width="7"/><path d="M226 215 C220 236 210 248 200 252" fill="none" stroke="#2E3B2A" stroke-width="9" stroke-linecap="round"/><circle cx="198" cy="254" r="12" fill="#F6F3EC" stroke="#2E3B2A" stroke-width="7"/><path d="M0 -20C1 -7 7 -1 20 0C7 1 1 7 0 20C-1 7 -7 1 -20 0C-7 -1 -1 -7 0 -20Z" transform="translate(262 46) scale(1.25)" fill="#D3959B"/><path d="M0 -20C1 -7 7 -1 20 0C7 1 1 7 0 20C-1 7 -7 1 -20 0C-7 -1 -1 -7 0 -20Z" transform="translate(36 92) scale(0.7)" fill="#A7B591"/></svg></div>
   <h1 class="t-cover">أول شي يشوفه زبونكم..<br><span class="hl">التغليف</span></h1>
   <div class="sub">قبل لا يجرّب منتجكم، يحكم عليه من شكله</div></main>
   <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
-  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٢ من ١٠</span></div></footer></section><section class="post ph top" id="pack-03" style="--img:url(photos/packaging/logo-stickers.jpg)">
-  <div class="scrim"></div><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٢ من ١٠</span></div></footer></section><section class="post ph" id="pack-03"><svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
   <div class="txt"><h2>ستيكرات <span class="hl">الشعار</span></h2><div class="cap">بقص احترافي، تختمون فيها كل كيس وعلبة</div></div>
+  <div class="frame"><img src="photos/packaging/logo-stickers-wide.jpg" style="object-position:50% 60%"></div>
   <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
-  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٣ من ١٠</span></div></footer></section><section class="post ph bottom" id="pack-04" style="--img:url(photos/packaging/uv-stickers.jpg)">
-  <div class="scrim"></div><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٣ من ١٠</span></div></footer></section><section class="post ph" id="pack-04"><svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
   <div class="txt"><h2>ستيكرات <span class="hl">UV</span></h2><div class="cap">لمعة بارزة تعطي منتجكم طابع فخم</div></div>
+  <div class="frame"><img src="photos/packaging/uv-stickers-wide.jpg" style="object-position:50% 55%"></div>
   <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
-  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٤ من ١٠</span></div></footer></section><section class="post ph top" id="pack-05" style="--img:url(photos/packaging/thank-cards.jpg)">
-  <div class="scrim"></div><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٤ من ١٠</span></div></footer></section><section class="post ph" id="pack-05"><svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
   <div class="txt"><h2>بطاقات <span class="hl">الشكر</span></h2><div class="cap">مع كل طلبية، ومكان تكتبون فيه اسم زبونكم</div></div>
+  <div class="frame"><img src="photos/packaging/thank-cards.jpg" style="object-position:50% 55%"></div>
   <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
-  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٥ من ١٠</span></div></footer></section><section class="post ph top" id="pack-06" style="--img:url(photos/packaging/business-cards.jpg)">
-  <div class="scrim"></div><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
-  <div class="txt"><h2><span class="hl">بزنس كارد</span></h2><div class="cap">حساباتكم ورقمكم في يد زبونكم دايماً</div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٥ من ١٠</span></div></footer></section><section class="post ph" id="pack-06"><svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
+  <div class="txt"><h2><span class="hl">بزنس كارد</span></h2><div class="cap">حساباتكم ورقمكم بيد زبونكم دايماً</div></div>
+  <div class="frame"><img src="photos/packaging/business-cards.jpg" style="object-position:50% 50%"></div>
   <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
-  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٦ من ١٠</span></div></footer></section><section class="post ph bottom" id="pack-07" style="--img:url(photos/packaging/cotton-labels.jpg)">
-  <div class="scrim"></div><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٦ من ١٠</span></div></footer></section><section class="post ph" id="pack-07"><svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
   <div class="txt"><h2>قصاصات <span class="hl">قطنية</span></h2><div class="cap">لمسة أنيقة لمشاريع الملابس والإكسسوارات</div></div>
+  <div class="frame"><img src="photos/packaging/cotton-labels.jpg" style="object-position:50% 40%"></div>
   <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
-  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٧ من ١٠</span></div></footer></section><section class="post ph top" id="pack-08" style="--img:url(photos/packaging/folding-boxes.jpg)">
-  <div class="scrim"></div><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٧ من ١٠</span></div></footer></section><section class="post ph" id="pack-08"><svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg><header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#tag"/></svg><span>لمشروعكم</span></div></header>
   <div class="txt"><h2>علب <span class="hl">مطوية</span></h2><div class="cap">تغليف يعطي كل منتج تبيعونه طابع فخم</div></div>
+  <div class="frame"><img src="photos/packaging/folding-boxes.jpg" style="object-position:50% 50%"></div>
   <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
   <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٨ من ١٠</span></div></footer></section><section class="post grid" id="pack-09">
   <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>

@@ -16,14 +16,18 @@ os.chdir(cwd)
 hl, icon, ar, slide, mascot = ns['hl'], ns['icon'], ns['ar'], ns['slide'], ns['mascot']
 TAG, TAGIC = 'لمشروعكم', 'tag'
 
-# (photo, title, sub, text position: top|bottom)
+# Theme from the local design index (فهرس-التصاميم.md): sage gradient #B2BF9D -> #9CAB86 with two
+# four-point stars, Readex Pro 700 headings, IBM Plex Sans Arabic body, #2E3B2A text, #394634 secondary,
+# cream #EDE9E0, blush highlight #E2CDCC. Logo top-left, section title top-right, footer with page count.
+# Note from the index: avoid «في» in Readex headings (the ي loses its dots).
+# (photo file, title, sub, object-position)
 PHOTOS = [
-    ('logo-stickers', 'ستيكرات [[الشعار]]', 'بقص احترافي، تختمون فيها كل كيس وعلبة', 'top'),
-    ('uv-stickers', 'ستيكرات [[UV]]', 'لمعة بارزة تعطي منتجكم طابع فخم', 'bottom'),
-    ('thank-cards', 'بطاقات [[الشكر]]', 'مع كل طلبية، ومكان تكتبون فيه اسم زبونكم', 'top'),
-    ('business-cards', '[[بزنس كارد]]', 'حساباتكم ورقمكم في يد زبونكم دايماً', 'top'),
-    ('cotton-labels', 'قصاصات [[قطنية]]', 'لمسة أنيقة لمشاريع الملابس والإكسسوارات', 'bottom'),
-    ('folding-boxes', 'علب [[مطوية]]', 'تغليف يعطي كل منتج تبيعونه طابع فخم', 'top'),
+    ('logo-stickers-wide', 'ستيكرات [[الشعار]]', 'بقص احترافي، تختمون فيها كل كيس وعلبة', '50% 60%'),
+    ('uv-stickers-wide', 'ستيكرات [[UV]]', 'لمعة بارزة تعطي منتجكم طابع فخم', '50% 55%'),
+    ('thank-cards', 'بطاقات [[الشكر]]', 'مع كل طلبية، ومكان تكتبون فيه اسم زبونكم', '50% 55%'),
+    ('business-cards', '[[بزنس كارد]]', 'حساباتكم ورقمكم بيد زبونكم دايماً', '50% 50%'),
+    ('cotton-labels', 'قصاصات [[قطنية]]', 'لمسة أنيقة لمشاريع الملابس والإكسسوارات', '50% 40%'),
+    ('folding-boxes', 'علب [[مطوية]]', 'تغليف يعطي كل منتج تبيعونه طابع فخم', '50% 50%'),
 ]
 N = 3 + len(PHOTOS) + 1
 
@@ -34,48 +38,45 @@ def foot(i):
     return f'''<footer><div class="fw">{icon("wa", "fwi")}<div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
   <div class="fr"><span class="h">@kami.printing</span><span class="cnt">{ar(i)} من {ar(N)}</span></div></footer>'''
 
+STARS = '<svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>'
+
+def frame(src, pos):
+    return f'<div class="frame"><img src="photos/packaging/{src}.jpg" style="object-position:{pos}"></div>'
+
 def cover(i):
-    return f'''<section class="post ph cov" id="pack-{i:02d}" style="--img:url(photos/packaging/unbox.jpg)">
-  <div class="tint"></div>{head()}
-  <main><svg class="spark"><use href="#star"/></svg>
-  <h1 class="t-cover">مشروعكم يحتاج<br>[[هالمطبوعات]]</h1>
-  <div class="sub">تفاصيل صغيرة.. تخلي طلبياتكم أفخم</div>
-  <div class="swipe">اسحبوا<svg viewBox="0 0 120 50"><path d="M110 10 C80 40 40 40 12 26"/><path d="M26 14 L10 26 L28 36"/></svg></div></main>
-  {foot(i)}</section>'''.replace('[[هالمطبوعات]]', '<span class="hl">هالمطبوعات</span>')
+    return f'''<section class="post ph cov" id="pack-{i:02d}">{STARS}{head()}
+  <div class="txt"><h1>مشروعكم يحتاج<br>{hl("[[هالمطبوعات]]")}</h1><div class="cap">تفاصيل صغيرة.. تخلي طلبياتكم أفخم</div></div>
+  {frame("unbox-wide", "50% 50%")}
+  <div class="swipe">اسحبوا<svg viewBox="0 0 120 50"><path d="M110 10 C80 40 40 40 12 26"/><path d="M26 14 L10 26 L28 36"/></svg></div>
+  {foot(i)}</section>'''
 
 def stake(i):
-    return f'''<section class="post stk" id="pack-{i:02d}">
-  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>{head()}
+    return f'''<section class="post stk" id="pack-{i:02d}">{STARS}{head()}
   <main><div class="mas">{mascot("gift", "open")}</div>
   <h1 class="t-cover">أول شي يشوفه زبونكم..<br>{hl("[[التغليف]]")}</h1>
   <div class="sub">قبل لا يجرّب منتجكم، يحكم عليه من شكله</div></main>
   {foot(i)}</section>'''
 
 def photo(i, name, title, sub, pos):
-    return f'''<section class="post ph {pos}" id="pack-{i:02d}" style="--img:url(photos/packaging/{name}.jpg)">
-  <div class="scrim"></div>{head()}
+    return f'''<section class="post ph" id="pack-{i:02d}">{STARS}{head()}
   <div class="txt"><h2>{hl(title)}</h2><div class="cap">{sub}</div></div>
+  {frame(name, pos)}
   {foot(i)}</section>'''
 
 CSS = ns['CSS'] + '''
-.ph{background:var(--img) center/cover}
-.ph header img{filter:brightness(0) saturate(100%) invert(19%) sepia(10%) saturate(1200%) hue-rotate(60deg) brightness(.9)}
-.ph .scrim{position:absolute;inset:0;pointer-events:none}
-.ph.top .scrim{background:linear-gradient(180deg,rgba(237,233,224,.96) 0%,rgba(237,233,224,.82) 26%,rgba(237,233,224,0) 46%),linear-gradient(0deg,rgba(237,233,224,.9) 0%,rgba(237,233,224,0) 16%)}
-.ph.bottom .scrim{background:linear-gradient(180deg,rgba(237,233,224,.85) 0%,rgba(237,233,224,0) 14%),linear-gradient(0deg,rgba(237,233,224,.97) 0%,rgba(237,233,224,.85) 28%,rgba(237,233,224,0) 48%)}
-.ph .txt{position:absolute;left:64px;right:64px;text-align:center;display:flex;flex-direction:column;align-items:center}
-.ph.top .txt{top:170px}.ph.bottom .txt{bottom:190px}
-.ph h2{font-size:86px;margin:0}
-.ph .cap{margin-top:22px;background:var(--forest);color:var(--cream);font-size:34px;font-weight:500;padding:12px 38px;border-radius:50px}
-.ph footer{border-top-color:rgba(46,59,42,.25)}
-.cov .tint{position:absolute;inset:0;background:linear-gradient(180deg,rgba(46,59,42,.55),rgba(46,59,42,.35) 45%,rgba(46,59,42,.7));}
-.cov header img{filter:none}.cov .chip{color:var(--cream)}.cov .chip svg{stroke:var(--cream)}
-.cov main{color:var(--cream)}.cov .t-cover{font-size:96px;color:var(--cream);text-shadow:0 4px 30px rgba(0,0,0,.25)}
-.cov .hl{color:var(--forest)}.cov .sub{color:var(--cream);opacity:1}
-.cov .spark{width:90px;height:90px;fill:var(--blush);margin-bottom:30px}
-.cov .swipe,.cov .swipe svg{color:var(--cream);stroke:var(--cream)}
-.cov footer{border-top-color:rgba(237,233,224,.4)}.cov footer,.cov .fw b{color:var(--cream)}.cov .fwi{stroke:var(--cream)}
-.cov .fr .h{color:var(--cream)}
+.post{background:linear-gradient(165deg,#B2BF9D 0%,#A7B591 50%,#9CAB86 100%)}
+h1,h2,.t-cover,.t-cta,.ftt,.kicker,.chip,.pill,.cnt,.fw b,.gh,.q,.sn,.wa span{font-family:'Readex Pro','IBM Plex Sans Arabic',sans-serif!important}
+h1,h2{font-weight:700}
+.ph .txt{position:absolute;left:64px;right:64px;top:168px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.ph h2{font-size:80px;margin:0;line-height:1.3}
+.ph.cov h1{font-size:78px;margin:0;line-height:1.35}
+.ph .cap{margin-top:18px;color:#394634;font-size:34px;font-weight:500}
+.frame{position:absolute;left:64px;right:64px;top:430px;bottom:196px;border-radius:40px;overflow:hidden;
+  border:10px solid var(--cream);box-shadow:0 24px 50px rgba(46,59,42,.22)}
+.frame img{width:100%;height:100%;object-fit:cover;display:block}
+.cov .frame{top:520px;bottom:250px}
+.cov .swipe{position:absolute;left:64px;bottom:190px;display:flex;align-items:center;gap:6px;font-family:'Readex Pro';font-size:28px;color:var(--forest);direction:rtl}
+.cov .swipe svg{width:120px;height:50px;fill:none;stroke:var(--forest);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
 .stk .mas svg{width:520px}
 '''
 
@@ -91,7 +92,7 @@ def main():
     out.append(slide('school', TAG, TAGIC, {'type': 'cta', 'title': 'احفظوا البوست..<br>[[وأرسلوا لنا شعاركم]]',
         'sub': 'ونجهز لكم مطبوعات مشروعكم'}, i + 1, N).replace('id="school-', 'id="pack-'))
     page = f'''<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>Kami Packaging Carousel</title>
-<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500;600;700&family=Alexandria:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body><svg width="0" height="0" style="position:absolute">{ns["defs"]}</svg>
 {''.join(out)}</body></html>'''
     open(os.path.join(HERE, 'packaging-carousel.html'), 'w', encoding='utf-8').write(page)
