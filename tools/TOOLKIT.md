@@ -14,7 +14,7 @@ at the start of each new session. If a tool is missing, run it instead of asking
 | Cut out a product or person | `hyperframes remove-background <in> -o <out.png>` | works on images and video |
 | Product mockups with the real logo | Three.js renders (see `templates/packaging_carousel.py` history) | no AI text errors |
 | Business leads from Google Maps | `google-maps-scraper` skill / command | |
-| Download a reference video | `yt-dlp` | YouTube blocks cloud servers; ask the owner to drop the file in the chat |
+| Download a reference video | `yt-dlp <url>` | TikTok works. Instagram needs a logged-in cookies file (anonymous access is blocked); otherwise ask the owner to drop the file in the chat. YouTube blocks cloud servers. |
 
 No GPU here: free AI image/video generation is not good enough on this machine. For photoreal shots
 use the free daily ElevenLabs quota only when the owner asks, or render mockups.
