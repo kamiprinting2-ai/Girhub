@@ -11,6 +11,6 @@ video/out/video-only.mp4
 .khaam/
 SESSION_HANDOFF.md
 
-# Higgsfield credentials (never commit)
+# local env files (never commit)
 .env.local
 .env*.local
