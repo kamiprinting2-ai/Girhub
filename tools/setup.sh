@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # Kami free toolkit: installs everything the project uses, with no paid services.
+# What to use for which job: tools/TOOLKIT.md
 # Safe to run again (skips what is already there). Run: bash tools/setup.sh
 # Also run automatically by the cloud environment's setup script at the start of each new session.
 set -u
