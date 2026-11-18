@@ -78,6 +78,29 @@ V = {
    {'t': 14.42, 'lib': 'card-flip', 'gain_db': -3, 'why': 'the end card'},
   ],
  },
+ 'national': {
+  'title': 'العيد الوطني', 'dur': 17.0, 'national': True, 'voice': 'assets/vo/vo.wav',
+  'shots': [
+   {'src': 'girl.jpg', 't': 0, 'd': 4.4, 'pos': '50% 40%', 'dy': 380, 'z': [1.0, 1.06], 'o': '50% 60%'},
+   {'src': 'FLAG', 't': 4.4, 'd': 2.0, 'z': [1.0, 1.04], 'o': '50% 50%'},
+   {'src': 'abaya_gift.jpg', 't': 6.4, 'd': 1.8, 'pos': '50% 40%', 'dy': 330, 'z': [1.0, 1.05], 'o': '50% 55%'},
+   {'src': 'logo-stickers.jpg', 't': 8.2, 'd': 2.0, 'pos': '50% 55%', 'z': [1.08, 1.0], 'o': '45% 60%'},
+   {'src': 'shopfront.jpg', 't': 10.2, 'd': 2.65, 'pos': '50% 40%', 'z': [1.0, 1.08], 'o': '55% 35%'},
+  ],
+  'texts': [
+   {'t': 0, 'e': 4.3, 'kick': 'العيد الوطني البحريني', 'h': 'كل عام<br>[[والبحرين بخير]]', 'cls': 'red'},
+   {'t': 4.5, 'e': 6.35, 'kick': '١٦ ديسمبر', 'h': 'جهّزنا لكم<br>[[للعيد الوطني]]', 'cls': 'onflag'},
+   {'t': 6.5, 'e': 8.15, 'num': '١', 'h': 'توزيعات [[بألوان العلم]]', 'cls': 'red'},
+   {'t': 8.3, 'e': 10.15, 'num': '٢', 'h': 'ستيكرات و[[بطاقات تهنئة]]', 'cls': 'red'},
+   {'t': 10.3, 'e': 12.75, 'num': '٣', 'h': 'بنرات [[للمدارس والشركات]]', 'cls': 'red'},
+  ],
+  'end': {'t': 12.85, 'h': 'احجزوا<br>[[من اليوم]]', 'sub': 'كل عام والبحرين بخير ✦'},
+  'sfx': [
+   {'t': 4.12, 'lib': 'cloth-rustle', 'cut': [0.0, 0.45], 'gain_db': -2, 'why': 'the flag sweeps in, in the pause'},
+   {'t': 6.22, 'lib': 'card-deal', 'gain_db': -3, 'why': 'the favors, in the pause'},
+   {'t': 15.0, 'lib': 'card-flip', 'gain_db': -4, 'why': 'the end card settles after the last word'},
+  ],
+ },
 }
 
 def hl(s):
@@ -112,6 +135,14 @@ h1.sm{font-size:84px}
 .pr .n{font-family:Second;font-size:44px;color:#2E3B2A;font-weight:500}
 .pr .p{font-family:Display;font-size:50px;color:#2E3B2A;background:#E2CDCC;border-radius:40px;padding:4px 26px;direction:ltr;white-space:nowrap}
 .pr .p small{font-family:Second;font-size:30px;margin-left:8px}
+.flag{position:absolute;inset:0;width:100%;height:100%}
+.strip{position:absolute;left:0;top:0;width:1080px;height:60px;z-index:5}
+.red .hl{background:#CE1126;color:#FFFFFF}
+.card.onflag{left:440px;right:60px;top:690px}
+.card.onflag h1{font-size:96px;text-shadow:none}
+.card.onflag .hl{background:#FFFFFF;color:#CE1126}
+.card.onflag .kick{color:#FFFFFF}
+.strip{z-index:10}
 #end{position:absolute;inset:0;opacity:0;background:linear-gradient(165deg,#B2BF9D 0%,#A7B591 50%,#9CAB86 100%);
   display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 110px 160px}
 #end .st{position:absolute;fill:#EDE9E0;opacity:.18;width:760px;height:760px;left:-300px;bottom:180px}
@@ -138,8 +169,18 @@ def build(key, proj, assets):
         shutil.copy(os.path.join('brand', f), os.path.join(proj, 'assets', f))
     els, tl = [], []
     for i, s in enumerate(v['shots']):
-        shutil.copy(os.path.join(assets, s['src']), os.path.join(proj, 'assets', s['src']))
         sid = f's{i}'
+        if s['src'] == 'FLAG':  # the Bahrain flag drawn in code: white hoist, five white points, red field
+            pts = ' '.join(f'{x},{y}' for k in range(5) for x, y in ((300, k * 384), (430, k * 384 + 192))) + ' 300,1920'
+            media = (f'<svg class="flag" viewBox="0 0 1080 1920" preserveAspectRatio="none"><rect width="1080" height="1920" fill="#CE1126"/>'
+                     f'<polygon fill="#FFFFFF" points="0,0 {pts} 0,1920"/></svg>')
+            els.append(f'<div class="shot" id="{sid}" style="transform-origin:{s["o"]}">{media}</div>')
+            z0, z1 = s['z']
+            tl.append(f'tl.set("#{sid}",{{opacity:1,scale:{z0}}},{s["t"]});tl.to("#{sid}",{{scale:{z1},duration:{s["d"]},ease:"none"}},{s["t"]});'
+                      f'tl.fromTo("#{sid} polygon",{{x:-520}},{{x:0,duration:0.6,ease:"power3.out"}},{s["t"]});'
+                      f'tl.set("#{sid}",{{opacity:0}},{s["t"] + s["d"]});')
+            continue
+        shutil.copy(os.path.join(assets, s['src']), os.path.join(proj, 'assets', s['src']))
         if s['src'].endswith('.mp4'):
             vid = lambda k, cls, st: (f'<video id="{sid}{k}" class="clip {cls}" src="assets/{s["src"]}" data-start="{s["t"]}" data-duration="{s["d"]}" '
                      f'data-media-start="{s.get("ms", 0)}" data-track-index="{i * 2 + 1 + (k == "b")}" muted playsinline style="{st}"></video>')
@@ -159,6 +200,9 @@ def build(key, proj, assets):
                   f'tl.to("#{sid}",{{scale:{z1},duration:{s["d"]},ease:"none"}},{s["t"]});'
                   f'tl.set("#{sid}",{{opacity:0}},{s["t"] + s["d"]});')
     els.append('<div class="scrim"></div>')
+    if v.get('national'):  # a thin red-white national strip along the top, serrated like the flag
+        teeth = ''.join(f'<polygon points="{x},0 {x + 54},0 {x + 27},26" fill="#FFFFFF"/>' for x in range(0, 1080, 54))
+        els.append(f'<svg id="strip" class="strip" viewBox="0 0 1080 60"><rect width="1080" height="60" fill="#CE1126"/>{teeth}</svg>')
     els.append('<div class="brand" id="brand"><img src="assets/logo-en-cream.png"><span>@kami.printing</span></div>')
     for i, c in enumerate(v['texts']):
         cid = f'c{i}'
@@ -173,7 +217,7 @@ def build(key, proj, assets):
             inner += '<div class="prices">' + ''.join(
                 f'<div class="pr" id="{cid}p{k}"><span class="n" dir="rtl">{n}</span><span class="p">{p}<small>BD</small></span></div>'
                 for k, (n, p) in enumerate(c['prices'])) + '</div>'
-        els.append(f'<div class="card" id="{cid}">{inner}</div>')
+        els.append(f'<div class="card {c.get("cls", "")}" id="{cid}">{inner}</div>')
         t0, t1 = c['t'], c['e']
         if t0 == 0:  # the hook is readable on frame 0, already moving
             tl.append(f'tl.fromTo("#{cid}",{{opacity:1,y:24}},{{y:0,duration:0.6,ease:"power2.out"}},0);')
@@ -213,6 +257,8 @@ window.__timelines["main"] = tl;
     open(os.path.join(proj, 'index.html'), 'w', encoding='utf-8').write(html)
     plan = {'duration': D, 'bed': [], 'pictures': [{'from': 0, 'to': D, 'material': 'paper'}],
             'effects': [{**x, 'align': 'attack'} for x in v['sfx']]}
+    if v.get('voice'):
+        plan['voice'] = {'file': v['voice'], 'at': 0.0}
     json.dump(plan, open(os.path.join(proj, 'plan', 'sound.json'), 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
     print('built', key, D, 's')
 
