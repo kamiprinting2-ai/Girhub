@@ -78,6 +78,28 @@ V = {
    {'t': 14.42, 'lib': 'card-flip', 'gain_db': -3, 'why': 'the end card'},
   ],
  },
+ 'intro': {
+  'title': 'عن كامي', 'dur': 13.5,
+  'shots': [
+   {'src': 'shopfront.jpg', 't': 0, 'd': 3.3, 'pos': '50% 40%', 'dy': 300, 'z': [1.0, 1.07], 'o': '50% 55%'},
+   {'src': 'logo-stickers.jpg', 't': 3.3, 'd': 2.6, 'pos': '50% 55%', 'z': [1.08, 1.0], 'o': '45% 60%'},
+   {'src': 'thank-cards.jpg', 't': 5.9, 'd': 2.4, 'pos': '50% 50%', 'z': [1.0, 1.08], 'o': '55% 45%'},
+   {'src': 'folding-boxes.jpg', 't': 8.3, 'd': 2.3, 'pos': '50% 50%', 'z': [1.0, 1.08], 'o': '50% 50%'},
+  ],
+  'texts': [
+   {'t': 0, 'e': 3.2, 'kick': 'كامي للطباعة', 'h': 'طباعة وتوزيعات<br>[[بلمسة تليق فيكم]]'},
+   {'t': 3.45, 'e': 5.8, 'num': '١', 'h': 'ستيكرات [[الشعار]]'},
+   {'t': 6.05, 'e': 8.2, 'num': '٢', 'h': 'بطاقات [[الشكر]]'},
+   {'t': 8.45, 'e': 10.5, 'num': '٣', 'h': 'علب [[مطوية]]'},
+  ],
+  'end': {'t': 10.6, 'h': 'حيّاكم في<br>[[كامي للطباعة]]', 'sub': 'طباعة · توزيعات · تخليص معاملات'},
+  'sfx': [
+   {'t': 3.32, 'lib': 'card-deal', 'gain_db': -3, 'why': 'the stickers come into view'},
+   {'t': 5.92, 'lib': 'card-flip', 'gain_db': -2, 'why': 'the thank-you cards'},
+   {'t': 8.32, 'lib': 'cardboard-tap-1', 'gain_db': -2, 'why': 'the boxes'},
+   {'t': 10.62, 'lib': 'cardboard-lid', 'gain_db': -3, 'why': 'the end card'},
+  ],
+ },
  'national': {
   'title': 'العيد الوطني', 'dur': 17.0, 'national': True, 'voice': 'assets/vo/vo.wav',
   'shots': [
