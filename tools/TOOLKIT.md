@@ -19,3 +19,13 @@ at the start of each new session. If a tool is missing, run it instead of asking
 No GPU here: free AI image/video generation is not good enough on this machine. For photoreal shots
 use the free daily ElevenLabs quota only when the owner asks, or render mockups.
 In this cloud session Node needs `NODE_USE_ENV_PROXY=1` for downloads (tools/setup.sh sets it).
+
+## Added 2026-11-18 (from the owner's reel list)
+| Job | Tool | Notes |
+|---|---|---|
+| Videos as React code | Remotion + its 12 skills (`remotion-create`, `remotion-render`, ...) | free for individuals and companies of up to 3 people; run `remotion-license` before any business client use |
+| Edit footage by chat (cut filler, grade, subtitles) | `video-use` skill (`/home/user/tools/video-use`) | its transcription uses ElevenLabs Scribe and needs an API key; free alternative: `hyperframes transcribe` (Whisper) |
+| Whisper (video can hear) | `hyperframes transcribe <file> --model small --language ar` | already installed |
+| Editly | NOT installed | its graphics module does not build on Node 22; HyperFrames/Remotion cover it |
+| Skipped | Higgsfield (paid, owner removed it), Apify, Notion, Resend (need accounts), IG Edits (phone app), Claude Design (claude.ai) | |
+

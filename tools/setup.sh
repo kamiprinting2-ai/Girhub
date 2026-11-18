@@ -33,6 +33,15 @@ if ! command -v google-maps-scraper >/dev/null && command -v go >/dev/null; then
   mkdir -p ~/.claude/skills && cp -r google-maps-scraper/skills/google-maps-scraper ~/.claude/skills/ 2>/dev/null
 fi
 
+# 5. Remotion skills (React videos; the Remotion package itself installs per project) and video-use (edit footage by chat)
+ls ~/.claude/skills 2>/dev/null | grep -q '^remotion-create$' || { log "installing remotion skills"; (cd /tmp && npx -y skills add remotion-dev/skills -g -y >/dev/null 2>&1); }
+mkdir -p /home/user/tools
+[ -d /home/user/tools/video-use ] || GIT_LFS_SKIP_SMUDGE=1 git clone -q --depth 1 https://github.com/browser-use/video-use /home/user/tools/video-use
+if [ -d /home/user/tools/video-use ]; then
+  (cd /home/user/tools/video-use && pip install -q -e . >/dev/null 2>&1)
+  mkdir -p ~/.claude/skills && ln -sfn /home/user/tools/video-use ~/.claude/skills/video-use
+fi
+
 log "versions:"
 hyperframes --version 2>/dev/null | sed 's/^/  hyperframes /'
 edge-tts --version 2>/dev/null | head -1 | sed 's/^/  /'
