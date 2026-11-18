@@ -1,0 +1,17 @@
+{
+  "name": "girhub",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "higgsfield": "tsx index.ts"
+  },
+  "dependencies": {
+    "@higgsfield/client": "^0.2.6",
+    "dotenv": "^18.0.10"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

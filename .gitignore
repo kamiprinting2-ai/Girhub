@@ -10,3 +10,7 @@ video/out/video-only.mp4
 دليل موشن خام.pdf
 .khaam/
 SESSION_HANDOFF.md
+
+# Higgsfield credentials (never commit)
+.env.local
+.env*.local
