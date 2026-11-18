@@ -83,21 +83,20 @@ V = {
   'shots': [
    {'src': 'girl.jpg', 't': 0, 'd': 4.4, 'pos': '50% 40%', 'dy': 380, 'z': [1.0, 1.06], 'o': '50% 60%'},
    {'src': 'FLAG', 't': 4.4, 'd': 2.0, 'z': [1.0, 1.04], 'o': '50% 50%'},
-   {'src': 'abaya_gift.jpg', 't': 6.4, 'd': 1.8, 'pos': '50% 40%', 'dy': 330, 'z': [1.0, 1.05], 'o': '50% 55%'},
-   {'src': 'logo-stickers.jpg', 't': 8.2, 'd': 2.0, 'pos': '50% 55%', 'z': [1.08, 1.0], 'o': '45% 60%'},
-   {'src': 'shopfront.jpg', 't': 10.2, 'd': 2.65, 'pos': '50% 40%', 'z': [1.0, 1.08], 'o': '55% 35%'},
+   {'src': 'nd_labels.jpg', 't': 6.4, 'd': 3.2, 'pos': '50% 50%', 'z': [1.0, 1.1], 'o': '50% 55%'},
+   {'src': 'nd_name.jpg', 't': 9.6, 'd': 3.25, 'pos': '50% 50%', 'z': [1.15, 1.0], 'o': '50% 50%'},
   ],
   'texts': [
    {'t': 0, 'e': 4.3, 'kick': 'العيد الوطني البحريني', 'h': 'كل عام<br>[[والبحرين بخير]]', 'cls': 'red'},
-   {'t': 4.5, 'e': 6.35, 'kick': '١٦ ديسمبر', 'h': 'جهّزنا لكم<br>[[للعيد الوطني]]', 'cls': 'onflag'},
-   {'t': 6.5, 'e': 8.15, 'num': '١', 'h': 'توزيعات [[بألوان العلم]]', 'cls': 'red'},
-   {'t': 8.3, 'e': 10.15, 'num': '٢', 'h': 'ستيكرات و[[بطاقات تهنئة]]', 'cls': 'red'},
-   {'t': 10.3, 'e': 12.75, 'num': '٣', 'h': 'بنرات [[للمدارس والشركات]]', 'cls': 'red'},
+   {'t': 4.5, 'e': 6.35, 'kick': '١٦ ديسمبر', 'h': 'توزيعات<br>[[العيد الوطني]]', 'cls': 'onflag'},
+   {'t': 6.5, 'e': 9.5, 'num': '١', 'h': 'ستيكر [[بألوان العلم]]', 'cls': 'red'},
+   {'t': 9.7, 'e': 12.75, 'num': '٢', 'h': '[[باسم عيالكم]]', 'cls': 'red'},
   ],
-  'end': {'t': 12.85, 'h': 'احجزوا<br>[[من اليوم]]', 'sub': 'كل عام والبحرين بخير ✦'},
+  'end': {'t': 12.85, 'h': 'اكتبوا اسم عيالكم<br>[[بالتعليقات]] ✦', 'sub': 'وللحجز: حيّاكم على الواتساب'},
   'sfx': [
    {'t': 4.12, 'lib': 'cloth-rustle', 'cut': [0.0, 0.45], 'gain_db': -2, 'why': 'the flag sweeps in, in the pause'},
-   {'t': 6.22, 'lib': 'card-deal', 'gain_db': -3, 'why': 'the favors, in the pause'},
+   {'t': 6.22, 'lib': 'card-deal', 'gain_db': -3, 'why': 'the labels land, in the pause'},
+   {'t': 9.45, 'lib': 'card-flip', 'gain_db': -3, 'why': 'the name sticker, in the pause'},
    {'t': 15.0, 'lib': 'card-flip', 'gain_db': -4, 'why': 'the end card settles after the last word'},
   ],
  },
@@ -138,7 +137,7 @@ h1.sm{font-size:84px}
 .flag{position:absolute;inset:0;width:100%;height:100%}
 .strip{position:absolute;left:0;top:0;width:1080px;height:60px;z-index:5}
 .red .hl{background:#CE1126;color:#FFFFFF}
-.card.onflag{left:440px;right:60px;top:690px}
+.card.onflag{left:380px;right:40px;top:690px}
 .card.onflag h1{font-size:96px;text-shadow:none}
 .card.onflag .hl{background:#FFFFFF;color:#CE1126}
 .card.onflag .kick{color:#FFFFFF}
