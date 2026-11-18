@@ -79,25 +79,29 @@ V = {
   ],
  },
  'intro': {
-  'title': 'عن كامي', 'dur': 13.5,
+  'title': 'عن كامي', 'dur': 17.3, 'voice': 'assets/vo/vo.wav',
   'shots': [
-   {'src': 'shopfront.jpg', 't': 0, 'd': 3.3, 'pos': '50% 40%', 'dy': 300, 'z': [1.0, 1.07], 'o': '50% 55%'},
-   {'src': 'logo-stickers.jpg', 't': 3.3, 'd': 2.6, 'pos': '50% 55%', 'z': [1.08, 1.0], 'o': '45% 60%'},
-   {'src': 'thank-cards.jpg', 't': 5.9, 'd': 2.4, 'pos': '50% 50%', 'z': [1.0, 1.08], 'o': '55% 45%'},
-   {'src': 'folding-boxes.jpg', 't': 8.3, 'd': 2.3, 'pos': '50% 50%', 'z': [1.0, 1.08], 'o': '50% 50%'},
+   {'src': 'shopfront.jpg', 't': 0, 'd': 3.1, 'pos': '50% 40%', 'dy': 520, 'z': [1.0, 1.07], 'o': '50% 40%'},
+   {'src': 'unbox.jpg', 't': 3.1, 'd': 2.8, 'pos': '50% 50%', 'z': [1.12, 1.0], 'o': '50% 52%'},
+   {'src': 'logo-stickers.jpg', 't': 5.9, 'd': 1.0, 'pos': '50% 55%', 'z': [1.05, 1.0], 'o': '45% 60%'},
+   {'src': 'thank-cards.jpg', 't': 6.9, 'd': 1.4, 'pos': '50% 50%', 'z': [1.25, 1.35], 'o': '60% 62%'},
+   {'src': 'folding-boxes.jpg', 't': 8.3, 'd': 1.4, 'pos': '50% 50%', 'dy': 300, 'z': [1.0, 1.07], 'o': '50% 55%'},
+   {'src': 'girl.jpg', 't': 9.7, 'd': 2.5, 'pos': '50% 40%', 'dy': 380, 'z': [1.0, 1.06], 'o': '50% 60%'},
   ],
   'texts': [
-   {'t': 0, 'e': 3.2, 'kick': 'كامي للطباعة', 'h': 'طباعة وتوزيعات<br>[[بلمسة تليق فيكم]]'},
-   {'t': 3.45, 'e': 5.8, 'num': '١', 'h': 'ستيكرات [[الشعار]]'},
-   {'t': 6.05, 'e': 8.2, 'num': '٢', 'h': 'بطاقات [[الشكر]]'},
-   {'t': 8.45, 'e': 10.5, 'num': '٣', 'h': 'علب [[مطوية]]'},
+   {'t': 0, 'e': 3.05, 'kick': 'كامي للطباعة', 'h': 'تبون طباعة<br>[[تليق بمشروعكم؟]]'},
+   {'t': 3.2, 'e': 5.85, 'h': 'حيّاكم في<br>[[كامي للطباعة]]'},
+   {'t': 5.95, 'e': 6.85, 'num': '١', 'h': 'ستيكرات'},
+   {'t': 6.9, 'e': 8.25, 'num': '٢', 'h': 'بطاقات [[شكر]]'},
+   {'t': 8.35, 'e': 9.65, 'num': '٣', 'h': 'علب [[مطوية]]'},
+   {'t': 9.8, 'e': 12.15, 'num': '٤', 'h': 'توزيعات [[لكل مناسبة]]'},
   ],
-  'end': {'t': 10.6, 'h': 'حيّاكم في<br>[[كامي للطباعة]]', 'sub': 'طباعة · توزيعات · تخليص معاملات'},
+  'end': {'t': 12.25, 'h': 'شنو تبون<br>[[نطبع لكم؟]]', 'sub': 'اكتبوا بالتعليقات · وللطلب حيّاكم على الواتساب'},
   'sfx': [
-   {'t': 3.32, 'lib': 'card-deal', 'gain_db': -3, 'why': 'the stickers come into view'},
-   {'t': 5.92, 'lib': 'card-flip', 'gain_db': -2, 'why': 'the thank-you cards'},
-   {'t': 8.32, 'lib': 'cardboard-tap-1', 'gain_db': -2, 'why': 'the boxes'},
-   {'t': 10.62, 'lib': 'cardboard-lid', 'gain_db': -3, 'why': 'the end card'},
+   {'t': 2.42, 'lib': 'card-flip', 'gain_db': -6, 'why': 'shop to welcome shot, in the pause'},
+   {'t': 5.22, 'lib': 'card-deal', 'gain_db': -6, 'why': 'before the product list, in the pause'},
+   {'t': 11.7, 'lib': 'cardboard-lid', 'gain_db': -5, 'why': 'the favor box closed, in the pause'},
+   {'t': 15.95, 'lib': 'card-flip', 'gain_db': -4, 'why': 'the end card settles after the last word'},
   ],
  },
  'national': {
@@ -141,7 +145,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2E3B2A}
 .scrim{position:absolute;inset:0;pointer-events:none;
   background:linear-gradient(180deg,rgba(30,40,28,.82) 0%,rgba(30,40,28,.45) 30%,rgba(30,40,28,0) 48%),
              linear-gradient(0deg,rgba(30,40,28,.75) 0%,rgba(30,40,28,0) 22%)}
-.brand{position:absolute;left:70px;bottom:440px;display:flex;align-items:center;gap:18px;direction:ltr}
+.brand{position:absolute;left:70px;top:84px;display:flex;align-items:center;gap:18px;direction:ltr}
 .brand img{height:62px}
 .brand span{font-family:Second;font-size:30px;color:#EDE9E0;opacity:.9}
 .card{position:absolute;left:90px;right:150px;top:250px;display:flex;flex-direction:column;align-items:center;text-align:center;opacity:0}
