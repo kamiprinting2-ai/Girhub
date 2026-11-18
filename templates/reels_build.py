@@ -79,18 +79,18 @@ V = {
   ],
  },
  'intro': {
-  'title': 'عن كامي', 'dur': 17.3, 'voice': 'assets/vo/vo.wav',
+  'title': 'عن كامي', 'dur': 16.4, 'voice': 'assets/vo/vo.wav',
   'shots': [
    {'src': 'shopfront.jpg', 't': 0, 'd': 3.1, 'pos': '50% 40%', 'dy': 520, 'z': [1.0, 1.07], 'o': '50% 40%'},
    {'src': 'unbox.jpg', 't': 3.1, 'd': 2.8, 'pos': '50% 50%', 'z': [1.12, 1.0], 'o': '50% 52%'},
    {'src': 'logo-stickers.jpg', 't': 5.9, 'd': 1.0, 'pos': '50% 55%', 'z': [1.05, 1.0], 'o': '45% 60%'},
    {'src': 'thank-cards.jpg', 't': 6.9, 'd': 1.4, 'pos': '50% 50%', 'z': [1.25, 1.35], 'o': '60% 62%'},
    {'src': 'folding-boxes.jpg', 't': 8.3, 'd': 1.4, 'pos': '50% 50%', 'dy': 300, 'z': [1.0, 1.07], 'o': '50% 55%'},
-   {'src': 'girl.jpg', 't': 9.7, 'd': 2.5, 'pos': '50% 40%', 'dy': 380, 'z': [1.0, 1.06], 'o': '50% 60%'},
+   {'src': 'girl.jpg', 't': 9.7, 'd': 3.1, 'pos': '50% 40%', 'dy': 380, 'z': [1.0, 1.08], 'o': '50% 60%'},
   ],
   'texts': [
    {'t': 0, 'e': 3.05, 'kick': 'كامي للطباعة', 'h': 'تبون طباعة<br>[[تليق بمشروعكم؟]]'},
-   {'t': 3.2, 'e': 5.85, 'h': 'حيّاكم في<br>[[كامي للطباعة]]'},
+   {'t': 3.2, 'e': 5.85, 'h': 'حيّاكم<br>[[كامي للطباعة]]'},
    {'t': 5.95, 'e': 6.85, 'num': '١', 'h': 'ستيكرات'},
    {'t': 6.9, 'e': 8.25, 'num': '٢', 'h': 'بطاقات [[شكر]]'},
    {'t': 8.35, 'e': 9.65, 'num': '٣', 'h': 'علب [[مطوية]]'},
@@ -258,8 +258,11 @@ def build(key, proj, assets):
     tl.append(f'tl.fromTo("#end",{{opacity:0}},{{opacity:1,duration:0.4}},{e["t"]});'
               f'tl.fromTo("#end .logo",{{y:40,opacity:0}},{{y:0,opacity:1,duration:0.5,ease:"power3.out"}},{e["t"] + 0.1:.2f});'
               f'tl.fromTo("#end h1",{{y:50,opacity:0}},{{y:0,opacity:1,duration:0.5,ease:"power3.out"}},{e["t"] + 0.25:.2f});'
-              f'tl.fromTo("#end .sub",{{opacity:0}},{{opacity:1,duration:0.4}},{e["t"] + 0.6:.2f});'
-              f'tl.fromTo("#end .wa",{{scale:0.85,opacity:0}},{{scale:1,opacity:1,duration:0.45,ease:"back.out(1.6)"}},{e["t"] + 0.8:.2f});'
+              f'tl.fromTo("#end .sub",{{opacity:0}},{{opacity:1,duration:0.4}},{e["t"] + 0.35:.2f});'
+              f'tl.fromTo("#end .wa",{{scale:0.85,opacity:0}},{{scale:1,opacity:1,duration:0.4,ease:"back.out(1.6)"}},{e["t"] + 0.5:.2f});'
+              f'tl.to("#end .wa",{{scale:1.05,duration:0.9,ease:"sine.inOut",yoyo:true,repeat:{max(1, int((D - e["t"] - 1.4) / 0.9))}}},{e["t"] + 1.1:.2f});'
+              f'tl.to("#end .logo",{{y:-16,duration:{D - e["t"]:.2f},ease:"sine.inOut"}},{e["t"] + 0.6:.2f});'
+              f'tl.fromTo("#end .st2",{{y:0}},{{y:-60,rotation:18,duration:{D - e["t"]:.2f},ease:"none"}},{e["t"]});'
               f'tl.fromTo("#end .st",{{rotation:0}},{{rotation:25,duration:{D - e["t"]:.2f},ease:"none"}},{e["t"]});'
               f'tl.to("#brand",{{opacity:0,duration:0.3}},{e["t"]});')
     audio = (f'<audio id="mix" class="clip" src="assets/mix.wav" data-start="0" data-duration="{D}" data-track-index="20" data-volume="1"></audio>'
