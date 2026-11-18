@@ -1,121 +1,88 @@
-<!doctype html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="utf-8">
-<title>Kami Giveaway Posts</title>
-<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;700;800;900&family=Aref+Ruqaa:wght@700&family=Fraunces:opsz,wght@144,800&display=swap" rel="stylesheet">
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>Kami Giveaway Posts</title>
+<link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--cream:#F4F0E4;--paper:#FBF8EF;--green:#2E3B2A;--green2:#3E4D39;--sage:#9AA88A;--sage-l:#CDD6BF;--blush:#ECD3CE;--rose:#D3959B}
+:root{--sage:#A7B591;--cream:#EDE9E0;--blush:#E2CDCC;--forest:#2E3B2A;--line:rgba(46,59,42,.2)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#ccc;font-family:'Alexandria',sans-serif;color:var(--green);display:flex;flex-wrap:wrap;gap:40px;padding:40px;justify-content:center}
-.post{width:1080px;height:1350px;position:relative;overflow:hidden}
-.abs{position:absolute}
-.pol{position:absolute;background:#fff;padding:18px 18px 70px;box-shadow:0 22px 40px rgba(0,0,0,.28);border-radius:6px}
-.pol .img{width:100%;height:100%;background:#ddd center/cover no-repeat;border-radius:2px}
-.pol .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:'Aref Ruqaa',serif;font-size:34px;color:var(--green)}
-.spark{position:absolute}
-.ribbon{position:absolute;white-space:nowrap;font-weight:800;letter-spacing:2px;padding:16px 0;overflow:hidden;box-shadow:0 10px 20px rgba(0,0,0,.18)}
-.foot{position:absolute;bottom:46px;left:70px;right:70px;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:30px}
-.foot .h{direction:ltr}
-.label{position:absolute;top:10px;left:10px;background:#000;color:#fff;font:600 20px monospace;padding:4px 10px;z-index:99;direction:ltr}
-</style>
-</head>
-<body>
-<svg width="0" height="0" style="position:absolute"><defs>
-  <symbol id="sp" viewBox="0 0 40 40"><path d="M20 0C22 14 26 18 40 20 26 22 22 26 20 40 18 26 14 22 0 20 14 18 18 14 20 0Z"/></symbol>
-  <symbol id="star" viewBox="0 0 40 40"><path d="M20 2v36M2 20h36M7 7l26 26M33 7L7 33" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/></symbol>
-</defs></svg>
+body{background:#999;display:flex;flex-wrap:wrap;gap:30px;padding:30px;font-family:'IBM Plex Sans Arabic',sans-serif}
+.post{flex:none;width:1080px;height:1350px;position:relative;overflow:hidden;color:var(--forest);background:radial-gradient(circle at 80% 15%,#B4C19F 0%,#A7B591 55%,#9CAB86 100%)}
+.wm{position:absolute;width:620px;height:620px;left:-230px;bottom:120px;fill:var(--cream);opacity:.18}
+.wm2{position:absolute;width:260px;height:260px;right:-80px;top:240px;fill:var(--blush);opacity:.45}
+header{position:absolute;top:56px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;direction:ltr;z-index:9}
+header img{height:78px}
+.chip{display:flex;align-items:center;gap:14px;direction:rtl;font-family:Alexandria;font-weight:500;font-size:28px}
+.chip svg,.ic{width:40px;height:40px;fill:none;stroke:var(--forest);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+footer{position:absolute;left:64px;right:64px;bottom:52px;display:flex;justify-content:space-between;align-items:center;direction:ltr;border-top:1.5px solid var(--line);padding-top:26px;z-index:9}
+.fw{display:flex;align-items:center;gap:14px}
+.fwi{width:52px;height:52px;fill:none;stroke:var(--forest);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.fw small{display:block;font-size:20px;opacity:.75;direction:rtl}
+.fw b{font-family:Alexandria;font-size:32px;font-weight:600;letter-spacing:1px}
+.fr{display:flex;align-items:center;gap:20px}.fr .h{font-size:26px;opacity:.85}
+.cnt{background:var(--blush);font-family:Alexandria;font-weight:700;font-size:24px;padding:4px 20px;border-radius:30px;direction:rtl}
+.top{position:absolute;top:190px;left:64px;right:64px;text-align:center;z-index:8}
+.kicker{font-family:Alexandria;font-size:30px;font-weight:500;opacity:.85}
+h2{font-family:Alexandria;font-weight:700;font-size:66px;line-height:1.45;margin-top:10px;letter-spacing:-.5px}
+.hl{background:var(--blush);padding:0 18px;border-radius:10px}
+.sub{font-size:32px;opacity:.9;margin-top:6px}
+.pol{position:absolute;background:var(--cream);border:2px solid var(--forest);border-radius:14px;padding:14px 14px 58px;box-shadow:0 18px 34px rgba(46,59,42,.22)}
+.pol .img{width:100%;height:100%;background:#ccc center/cover no-repeat;border-radius:8px}
+.pol .cap{position:absolute;bottom:10px;left:0;right:0;text-align:center;font-family:Alexandria;font-weight:600;font-size:26px}
+.badge{position:absolute;width:210px;height:210px;border-radius:50%;background:var(--blush);border:2px solid var(--forest);box-shadow:0 0 0 16px rgba(226,205,204,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Alexandria;z-index:8}
+.badge b{font-size:64px;font-weight:700;line-height:1}.badge span{font-size:26px;font-weight:600;margin-top:4px}
+.ribbon{position:absolute;white-space:nowrap;overflow:hidden;font-family:Alexandria;font-weight:600;padding:12px 0;border-top:2px solid var(--forest);border-bottom:2px solid var(--forest)}
+.label{position:absolute;top:6px;left:6px;background:#000;color:#fff;font:600 18px monospace;padding:3px 8px;z-index:99;direction:ltr}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs><symbol id="star" viewBox="0 0 40 40"><path d="M20 0C21 13 27 19 40 20C27 21 21 27 20 40C19 27 13 21 0 20C13 19 19 13 20 0Z"/></symbol><symbol id="gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10 4 6.5 4.5 8 7.2M12 8c2-4 5.5-3.5 4-.8"/></symbol><symbol id="bag" viewBox="0 0 24 24"><path d="M6 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z"/><path d="M9 6V5a3 3 0 0 1 6 0v1M6 12h12M10 12v2h4v-2M8 17h8"/></symbol><symbol id="wa" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.8c.3 2.8 2.6 5.4 6 6.2l1.2-1.6-2-1-1 .8c-1-.5-2-1.5-2.4-2.4l.8-1-1-2z"/></symbol><symbol id="pencil" viewBox="0 0 24 24"><path d="M15 4l5 5L9 20H4v-5z"/><path d="M13 6l5 5M4 15l5 5"/></symbol></defs></svg>
 
-<!-- ================= 1) التوزيعات التعليمية — shopping bag ================= -->
-<section class="post" id="edu-bag" style="background:radial-gradient(circle at 70% 30%,#3E4D39,#2E3B2A 70%);color:var(--paper)">
-  <span class="label">edu-bag</span>
-  <!-- headline -->
-  <div class="abs" style="top:70px;right:80px;text-align:right">
-    <div style="font-size:30px;font-weight:500;color:var(--sage-l);letter-spacing:1px">قسم التوزيعات ✦</div>
-    <div style="font-size:96px;font-weight:900;line-height:1.15;margin-top:6px">التوزيعات<br><span style="color:var(--blush)">التعليمية</span></div>
-    <div style="font-size:34px;font-weight:500;margin-top:14px;color:var(--cream)">حرف، رقم، ولمسة فرحة في كل كيس</div>
+<!-- ===== 1) التوزيعات التعليمية ===== -->
+<section class="post" id="edu-bag"><span class="label">edu-bag</span>
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg><use href="#pencil"/></svg><span>التوزيعات التعليمية</span></div></header>
+  <div class="top"><div class="kicker">✦ بيع فوري ✦</div><h2>نتعلّم.. <span class="hl">ونفرح</span></h2><div class="sub">حرف، رقم، ولمسة فرحة في كل كيس</div></div>
+
+  <div class="pol" style="width:290px;height:310px;top:500px;padding-bottom:14px;left:150px;transform:rotate(-13deg)"><div class="img" style="background-image:url(photos/giveaways/giraffe.jpg);background-position:50% 55%"></div></div>
+  <div class="pol" style="width:290px;height:310px;top:490px;padding-bottom:14px;right:140px;transform:rotate(11deg)"><div class="img" style="background-image:url(photos/giveaways/nine.jpg);background-position:30% 45%"></div></div>
+  <div class="pol" style="width:310px;height:330px;top:445px;left:385px;transform:rotate(2deg);z-index:2;padding-bottom:14px"><div class="img" style="background-image:url(photos/giveaways/bee.jpg);background-position:40% 48%"></div></div>
+
+  <div style="position:absolute;top:800px;left:220px;width:640px;height:340px;z-index:5">
+    <svg style="position:absolute;top:-120px;left:190px;width:260px;height:200px" viewBox="0 0 260 200"><path d="M25 195 C15 50 55 8 130 8 C205 8 245 50 235 195" fill="none" stroke="#2E3B2A" stroke-width="9" stroke-linecap="round"/></svg>
+    <div style="width:100%;height:100%;background:var(--cream);border:2px solid var(--forest);border-radius:18px;box-shadow:0 30px 60px rgba(46,59,42,.3);display:flex;justify-content:center"><img src="../brand/logo-en-green.png" style="height:120px;margin-top:56px"></div>
   </div>
-  <img src="../brand/logo-en-cream.png" class="abs" style="top:84px;left:80px;height:120px">
-  <!-- sparkles -->
-  <svg class="spark" style="top:290px;left:120px;width:46px;color:var(--paper)"><use href="#star"/></svg>
-  <svg class="spark" style="top:250px;left:210px;width:30px;color:var(--paper)"><use href="#star"/></svg>
-  <svg class="spark" style="top:350px;left:190px;width:36px;fill:var(--rose)"><use href="#sp"/></svg>
-  <div class="abs" style="top:240px;left:300px;width:10px;height:10px;border-radius:50%;background:var(--paper)"></div>
-  <div class="abs" style="top:400px;left:110px;width:8px;height:8px;border-radius:50%;background:var(--paper)"></div>
+  <div class="ribbon" id="r1" style="top:1050px;left:-60px;width:1240px;transform:rotate(-5deg);background:var(--blush);font-size:34px;z-index:6"></div>
+  <div class="ribbon" id="r2" style="top:955px;left:-60px;width:330px;transform:rotate(10deg);background:var(--cream);font-size:26px;z-index:4"></div>
+  <div class="ribbon" id="r3" style="top:975px;right:-60px;width:300px;transform:rotate(12deg);background:var(--cream);font-size:26px;z-index:4"></div>
 
-  <!-- polaroids coming out of the bag -->
-  <div class="pol" style="width:330px;height:400px;top:540px;left:110px;transform:rotate(-14deg)"><div class="img" style="background-image:url(photos/giveaways/giraffe.jpg);background-position:50% 55%"></div><div class="cap">حروف</div></div>
-  <div class="pol" style="width:330px;height:400px;top:520px;right:100px;transform:rotate(12deg)"><div class="img" style="background-image:url(photos/giveaways/nine.jpg);background-position:30% 45%"></div><div class="cap">أرقام</div></div>
-  <div class="pol" style="width:350px;height:430px;top:450px;left:365px;transform:rotate(3deg);z-index:2"><div class="img" style="background-image:url(photos/giveaways/bee.jpg);background-position:40% 50%"></div></div>
-
-  <!-- bag -->
-  <div class="abs" style="top:840px;left:190px;width:700px;height:390px;z-index:5">
-    <svg class="abs" style="top:-130px;left:200px;width:300px;height:220px" viewBox="0 0 300 220"><path d="M30 210 C20 60 60 10 150 10 C240 10 280 60 270 210" fill="none" stroke="#1d261b" stroke-width="12" stroke-linecap="round" stroke-dasharray="3 9"/><path d="M30 210 C20 60 60 10 150 10 C240 10 280 60 270 210" fill="none" stroke="#1d261b" stroke-width="7" stroke-linecap="round"/></svg>
-    <div style="width:100%;height:100%;background:linear-gradient(180deg,#FBF8EF,#EDE7D8);border:7px solid #1d261b;border-radius:6px;box-shadow:0 40px 70px rgba(0,0,0,.4);display:flex;flex-direction:column;align-items:center;justify-content:flex-start">
-      <img src="../brand/logo-en-green.png" style="height:140px;margin-top:70px">
-    </div>
-  </div>
-
-  <!-- ribbons -->
-  <div class="ribbon" style="top:1110px;left:-60px;width:1300px;transform:rotate(-5deg);background:var(--blush);color:var(--green);font-size:40px;z-index:6" id="r1"></div>
-  <div class="ribbon" style="top:960px;left:-80px;width:400px;transform:rotate(12deg);background:var(--sage-l);color:var(--green);font-size:30px;z-index:4" id="r2"></div>
-  <div class="ribbon" style="top:990px;right:-80px;width:330px;transform:rotate(14deg);background:var(--sage-l);color:var(--green);font-size:30px;z-index:4" id="r3"></div>
-
-  <div class="foot" style="color:var(--paper)">
-    <div>بيع فوري ✦ <b style="color:var(--blush)">200 فلس</b></div>
-    <div class="h">66606959 · @kami.printing</div>
-  </div>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">200 فلس</span></div></footer>
 </section>
 
-<!-- ================= 2) توزيعات المناسبات — calendar ================= -->
-<section class="post" id="occasion-cal" style="background:linear-gradient(165deg,#FBF8EF 0%,#F4F0E4 40%,#CDD6BF 100%)">
-  <span class="label">occasion-cal</span>
-  <div class="abs" style="top:66px;right:80px;text-align:right">
-    <div style="font-size:30px;font-weight:500;color:var(--sage);">قسم التوزيعات ✦</div>
-    <div style="font-size:68px;font-weight:900;line-height:1.15;margin-top:4px">توزيعات <span style="background:var(--blush);padding:0 16px">المناسبات</span></div>
-    <div style="font-size:34px;font-weight:500;margin-top:14px;color:var(--green2)">كل مناسبة لها توزيعتها، وخلّوها علينا 🤍</div>
-  </div>
-  <img src="../brand/logo-en-green.png" class="abs" style="top:70px;left:60px;height:92px">
+<!-- ===== 2) توزيعات المناسبات ===== -->
+<section class="post" id="occasion-cal"><span class="label">occasion-cal</span>
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg><use href="#gift"/></svg><span>توزيعات المناسبات</span></div></header>
+  <div class="top"><div class="kicker">✦ كل مناسبة لها توزيعتها ✦</div><h2>توزيعات <span class="hl">المناسبات</span></h2></div>
 
-  <!-- calendar card -->
-  <div class="abs" id="cal" style="top:320px;left:90px;width:900px;height:620px;background:#fff;border-radius:56px;box-shadow:0 30px 70px rgba(46,59,42,.18);padding:50px 56px">
-    <div style="display:flex;justify-content:space-between;align-items:center">
-      <div style="font-size:66px;font-weight:800;color:var(--green)">ديسمبر <span style="font-family:'Fraunces';font-size:46px;color:var(--rose)">2026</span></div>
-      <div style="font-size:80px;font-weight:300;color:var(--sage);line-height:1">+</div>
+  <div style="position:absolute;top:400px;left:110px;right:110px;height:540px;background:var(--cream);border:2px solid var(--forest);border-radius:36px;padding:36px 46px;box-shadow:0 24px 50px rgba(46,59,42,.18)">
+    <div style="display:flex;justify-content:space-between;align-items:center;font-family:Alexandria">
+      <div style="font-size:52px;font-weight:700">ديسمبر</div><div style="font-size:30px;font-weight:500;opacity:.6">2026</div>
     </div>
-    <div id="grid" style="display:grid;grid-template-columns:repeat(7,1fr);row-gap:12px;margin-top:22px;text-align:center;font-size:42px;font-weight:500;color:var(--green)"></div>
+    <div style="height:1.5px;background:var(--line);margin:18px 0 14px"></div>
+    <div id="grid" style="display:grid;grid-template-columns:repeat(7,1fr);row-gap:8px;text-align:center;font-family:Alexandria;font-size:34px;font-weight:500"></div>
   </div>
+  <div class="badge" style="top:330px;left:50px;transform:rotate(-10deg)"><b>200</b><span>فلس</span><span style="font-size:22px;opacity:.8;margin-top:0">بيع فوري</span></div>
 
-  <!-- polaroids pinned on the calendar -->
-  <div class="pol" style="width:240px;height:340px;top:870px;right:60px;transform:rotate(8deg);z-index:5"><div class="img" style="background-image:url(photos/giveaways/pen-disability.jpg);background-position:35% 40%"></div><div class="cap" style="font-size:28px">٣ ديسمبر</div></div>
-  <div class="pol" style="width:300px;height:330px;top:880px;left:50px;transform:rotate(-9deg);z-index:5"><div class="img" style="background-image:url(photos/giveaways/children-day.jpg);background-position:45% 52%"></div><div class="cap" style="font-size:28px">يوم الطفل</div></div>
-  <img src="../brand/national-day/sticker.png" class="abs" style="top:990px;left:420px;width:200px;transform:rotate(-5deg);z-index:6;clip-path:circle(46%);filter:drop-shadow(0 10px 14px rgba(0,0,0,.2))">
+  <div class="pol" style="width:260px;height:300px;top:860px;left:70px;transform:rotate(-9deg);z-index:6"><div class="img" style="background-image:url(photos/giveaways/children-day.jpg);background-position:45% 52%"></div><div class="cap">يوم الطفل</div></div>
+  <div class="pol" style="width:230px;height:320px;top:850px;right:80px;transform:rotate(8deg);z-index:6"><div class="img" style="background-image:url(photos/giveaways/pen-disability.jpg);background-position:35% 40%"></div><div class="cap">يوم ذوي الهمم</div></div>
+  <img src="../brand/national-day/sticker.png" style="position:absolute;top:925px;left:440px;width:200px;transform:rotate(-5deg);clip-path:circle(46%);z-index:6;filter:drop-shadow(0 10px 14px rgba(0,0,0,.2))">
 
-  <!-- hand-drawn arrow -->
-  <svg class="abs" id="arrow" style="top:520px;left:300px;width:300px;height:200px;z-index:4;display:none" viewBox="0 0 300 200"><path d="M10 30 C120 0 200 60 250 150" fill="none" stroke="var(--rose)" stroke-width="7" stroke-linecap="round"/><path d="M220 140 L252 155 L262 118" fill="none" stroke="var(--rose)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-
-  <!-- sticky note -->
-  <div class="abs" style="top:290px;left:40px;background:var(--blush);padding:22px 28px;transform:rotate(-6deg);box-shadow:0 12px 24px rgba(0,0,0,.15);z-index:6;font-family:'Aref Ruqaa';font-size:34px;line-height:1.4;text-align:center">طلّعها بهوية<br>مناسبتك ✦</div>
-
-  <div class="foot">
-    <div style="background:var(--green);color:var(--paper);padding:14px 34px;border-radius:60px">بيع فوري ✦ 200 فلس</div>
-    <div class="h">66606959 · @kami.printing</div>
-  </div>
+  <footer><div class="fw"><svg class="fwi"><use href="#wa"/></svg><div><small>تواصل معنا عبر الواتساب</small><b>66606959</b></div></div>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">200 فلس</span></div></footer>
 </section>
-
 <script>
-// ribbons text
-const t=' بيع فوري ✦ 200 فلس ✦ ';
-['r1','r2','r3'].forEach(id=>document.getElementById(id).textContent=t.repeat(8));
-// December 2026 grid (week starts Sunday)
+const t=' بيع فوري ✦ 200 فلس ✦ ';['r1','r2','r3'].forEach(i=>document.getElementById(i).textContent=t.repeat(8));
 const g=document.getElementById('grid');
-['ح','ن','ث','ر','خ','ج','س'].forEach(d=>{const e=document.createElement('div');e.textContent=d;e.style.cssText='color:var(--sage);font-weight:700;font-size:36px';g.appendChild(e)});
-const first=new Date(2026,11,1).getDay();
-for(let i=0;i<first;i++)g.appendChild(document.createElement('div'));
-const mark={3:'var(--rose)',16:'var(--green)',31:'var(--rose)'};
-for(let d=1;d<=31;d++){const e=document.createElement('div');e.textContent=d;e.style.position='relative';
-  if(mark[d]){e.innerHTML=d+`<svg style="position:absolute;left:50%;top:50%;width:100px;height:74px;transform:translate(-50%,-52%) rotate(-8deg);overflow:visible" viewBox="0 0 100 74"><path d="M78 10 C50 -4 6 8 6 38 C6 66 60 74 86 56 C102 44 96 18 66 10" fill="none" stroke="${mark[d]}" stroke-width="5" stroke-linecap="round"/></svg>`;e.style.fontWeight=800}
-  g.appendChild(e)}
-</script>
-</body>
-</html>
+['ح','ن','ث','ر','خ','ج','س'].forEach(d=>{const e=document.createElement('div');e.textContent=d;e.style.cssText='opacity:.55;font-size:28px;padding-bottom:6px';g.appendChild(e)});
+const f=new Date(2026,11,1).getDay();for(let i=0;i<f;i++)g.appendChild(document.createElement('div'));
+const mk={3:1,16:1};
+for(let d=1;d<=31;d++){const e=document.createElement('div');e.style.cssText='height:62px;display:flex;align-items:center;justify-content:center';
+ e.innerHTML=mk[d]?`<span style="width:62px;height:62px;border-radius:50%;background:var(--blush);border:2px solid var(--forest);display:flex;align-items:center;justify-content:center;font-weight:700">${d}</span>`:d;g.appendChild(e)}
+</script></body></html>
