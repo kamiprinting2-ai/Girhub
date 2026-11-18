@@ -86,5 +86,7 @@ const g=document.getElementById('grid');
 const f=new Date(2026,11,1).getDay();for(let i=0;i<f;i++)g.appendChild(document.createElement('div'));
 const mk={3:1,16:1};
 for(let d=1;d<=31;d++){const e=document.createElement('div');e.style.cssText='height:54px;display:flex;align-items:center;justify-content:center';
+ const tree=`<svg viewBox="0 0 40 52" style="position:absolute;width:34px;height:44px;right:-22px;top:-26px;transform:rotate(12deg)"><path d="M20 4 L31 18 H26 L35 30 H28 L38 43 H2 L12 30 H5 L14 18 H9 Z" fill="#7E9470" stroke="#2E3B2A" stroke-width="2.2" stroke-linejoin="round"/><rect x="17" y="43" width="6" height="7" fill="#2E3B2A"/><path d="M20 0 l1.6 3.4 3.6.4-2.7 2.4.8 3.6-3.3-1.9-3.3 1.9.8-3.6-2.7-2.4 3.6-.4z" fill="#D3959B"/><circle cx="16" cy="25" r="1.8" fill="#E2CDCC"/><circle cx="25" cy="34" r="1.8" fill="#E2CDCC"/><circle cx="13" cy="38" r="1.8" fill="#EDE9E0"/></svg>`;
+ if(d==25){e.style.position='relative';e.innerHTML=`<span style="position:relative;width:56px;height:56px;border-radius:50%;background:#CDD6BF;border:2px solid var(--forest);display:flex;align-items:center;justify-content:center;font-weight:700">25${tree}</span>`;g.appendChild(e);continue}
  e.innerHTML=mk[d]?`<span style="width:56px;height:56px;border-radius:50%;background:var(--blush);border:2px solid var(--forest);display:flex;align-items:center;justify-content:center;font-weight:700">${d}</span>`:d;g.appendChild(e)}
 </script></body></html>
