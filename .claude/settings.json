@@ -6,7 +6,20 @@
       "mcp__Google_Drive__download_file_content",
       "mcp__Google_Drive__read_file_content",
       "mcp__Google_Drive__create_file",
-      "mcp__Google_Drive__trash_file"
+      "mcp__Google_Drive__trash_file",
+      "Bash(python3 tools/update_index.py:*)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && python3 tools/update_index.py >/dev/null 2>&1 || true"
+          }
+        ]
+      }
     ]
   }
 }
