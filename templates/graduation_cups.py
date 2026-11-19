@@ -1,6 +1,7 @@
-"""Graduation cups & saucers carousel (4 slides, 1080x1350), editorial photo style.
+"""Custom cups & saucers carousel (photo, name or any design; graduation is one example) (4 slides, 1080x1350), editorial photo style.
 Photos: AI mockups (ElevenLabs Seedream 5 Lite) in templates/photos/graduation/: g1-ar.png is g1 with the
 misspelled English saucer text removed and «مبروك التخرج» (Amiri) printed along the rim.
+Saucer text on g1-ar.png: python3 templates/saucer_text.py <text.png> (Amiri 400, along the front rim).
 Render:
   python3 templates/graduation_cups.py && PAGE=graduation-cups.html OUTDIR=out/graduation node templates/render.js
 """
@@ -33,7 +34,7 @@ Image.open(os.path.join(PH, 'g3.png')).convert('RGB').resize((FW, round(FW * 144
     .crop((0, 0, FW, FH)).save(os.path.join(PH, 's4.jpg'), quality=95, subsampling=0)
 
 N = 4
-TAG = 'أكواب التخرج'
+TAG = 'أكواب وصحون'
 
 
 def head(logo='logo-en-green.png'):
@@ -56,7 +57,7 @@ def cta(i):
     return f'''<section class="post cta4" id="grad-{i:02d}">
   <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
   <header><img src="../brand/logo-en-cream.png"><div class="chip">{icon("gift")}<span>{TAG}</span></div></header>
-  <div class="txt"><h2>نصمم وننفذ<br>{hl("[[على طلبكم]]")}</h2><div class="cap">أرسلوا الاسم والعبارة.. والصورة إذا تبونها</div></div>
+  <div class="txt"><h2>نصمم وننفذ<br>{hl("[[على طلبكم]]")}</h2><div class="cap">أرسلوا الصورة أو الاسم أو فكرتكم.. والباقي علينا</div></div>
   <div class="frame"><img src="photos/graduation/s4.jpg"></div>
   <div class="wa">{icon("wa", "wai")}<span>66606959</span></div>
   <footer><span class="h">للطلب والاستفسار واتساب</span>
@@ -64,9 +65,9 @@ def cta(i):
 
 
 SLIDES = [
-    photo(1, 's1.jpg', 'أكواب وصحون التخرج', 'فرحة التخرج..<br>[[تنطبع]] على كوب', 'صورة الخريج داخل برواز ناعم، إذا تحبون'),
-    photo(2, 's2.jpg', '', 'عبارة [[على ذوقكم]]', 'بالعربي أو بالإنجليزي، على الكوب والصحن'),
-    photo(3, 's3.jpg', '', 'وباسم [[الخريج]]', 'نكتب الاسم بالخط واللون اللي يعجبكم'),
+    photo(1, 's1.jpg', 'أكواب وصحون بتصميمكم', 'صورتكم..<br>[[تنطبع]] على كوب', 'صورة، اسم، أو أي تصميم تبونه'),
+    photo(2, 's2.jpg', '', 'عبارة [[على ذوقكم]]', 'تخرج، مواليد، أعياد ميلاد.. أو هدية بدون مناسبة'),
+    photo(3, 's3.jpg', '', 'وبالاسم [[اللي تبونه]]', 'نكتب الاسم بالخط واللون اللي يعجبكم'),
     cta(4),
 ]
 
