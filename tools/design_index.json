@@ -79,6 +79,11 @@
    "title": "مطبوعات المشاريع (التغليف)"
   },
   {
+   "group": "ستوري",
+   "path": "instagram/ready-to-post/12-ستوري-أصحاب-المشاريع",
+   "title": "ستوري أصحاب المشاريع (نصمم وننفذ فكرتكم)"
+  },
+  {
    "group": "مصادر القوالب",
    "path": "templates/out/carousels",
    "title": "الكاروسيلات (30 سلايد)"
@@ -92,6 +97,11 @@
    "group": "مصادر القوالب",
    "path": "templates/out/packaging",
    "title": "كاروسيل التغليف"
+  },
+  {
+   "group": "ستوري",
+   "path": "templates/out/stories",
+   "title": "الستوريات (مصدر الرندر)"
   },
   {
    "group": "مصادر القوالب",
