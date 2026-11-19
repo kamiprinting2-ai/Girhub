@@ -1,8 +1,14 @@
 # Project notes for Claude
 
 ## 0. Google Drive is the workspace (standing rule, always applies)
-The owner's standing instruction (2026-11-19): **all files, designs, videos, memory and
-conversations live in Google Drive (Kami account).** Do not ask again in any session.
+The owner's standing instruction (2026-11-19, D-025): **every file, design, project, video, memory and
+conversation lives in Google Drive (Kami account).** This is a permanent written rule for every session,
+device and environment. Do not ask again, and do not keep work only on this machine or in this repo.
+- Kami designs and projects → `My Drive/Kami_Printing/المشروع/<اسم المشروع>/` (drafts in `متفرقات/`).
+- Any other project (personal, other businesses, videos, montages, documents) → its own folder inside
+  `My Drive/الملفات الرئيسية/` in the matching 00–99 folder (unsure → `99_INBOX/Unsorted_Files/<اسم المشروع>/`).
+- A file too big for the cloud connector (~3 MB per call, e.g. long videos): upload its sources and a
+  preview, deliver the file in chat, and say so; the owner said videos need not go to Drive.
 
 - This GitHub repo is only a launcher for cloud sessions (skills + scripts). Do not deliver work here.
 - Every deliverable (design, video, PDF, PNG, caption, document) is uploaded to Drive with the
