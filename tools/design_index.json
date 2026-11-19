@@ -84,6 +84,11 @@
    "title": "ستوري أصحاب المشاريع (نصمم وننفذ فكرتكم)"
   },
   {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/13-أكواب-التخرج",
+   "title": "أكواب وصحون التخرج"
+  },
+  {
    "group": "مصادر القوالب",
    "path": "templates/out/carousels",
    "title": "الكاروسيلات (30 سلايد)"
@@ -102,6 +107,11 @@
    "group": "ستوري",
    "path": "templates/out/stories",
    "title": "الستوريات (مصدر الرندر)"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/out/graduation",
+   "title": "كاروسيل أكواب التخرج (مصدر الرندر)"
   },
   {
    "group": "مصادر القوالب",
