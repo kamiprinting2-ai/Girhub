@@ -55,6 +55,7 @@ These files load into every session. If a rule changes, update the Drive copy an
 - D-015 / D-021 / D-024 / D-025 Google Drive is the only workspace and source of truth for every session; the memory sheet is Claude's memory; never ask again.
 - D-016 Never delete or move original files during migration.
 - D-026 Temporary designs go in `Kami_Printing/متفرقات`.
+- D-027 Every skill or agent is also installed in Drive (`My Drive/.claude/skills` + `08_AI_SKILLS_AND_AGENTS/Installed_Skills`; account plugins as zips in `Installed_Skills/Account_Plugins`). When a new skill is added anywhere, copy it to Drive in the same session.
 
 The sheet is the live source: read `5_DECISION_LOG` for new decisions added after this list.
 
