@@ -59,8 +59,15 @@ These files load into every session. If a rule changes, update the Drive copy an
 The sheet is the live source: read `5_DECISION_LOG` for new decisions added after this list.
 
 ## Instagram skills (ig-*)
-The ig-* skills look for the user's voice profile at `~/.claude/instagram/voice.md`.
-In this repo the voice profile lives at `instagram/voice.md` (cloud sessions reset the home folder).
+The 13 ig-* skills (Instagram Agent Skill, MIT) are installed in three places, all identical:
+this repo `.claude/skills/ig-*`, Drive `My Drive/.claude/skills/ig-*` (active for the Drive workspace),
+and Drive `08_AI_SKILLS_AND_AGENTS/Installed_Skills/ig-*` (library).
+
+The skills look for the user's voice profile at `~/.claude/instagram/voice.md`.
+The master copy is in Drive: `My Drive/.claude/instagram/` (folder `1bG1hnpLX3nTB-GxL6rUMFsuko9ggFQwd`:
+voice.md, log.md, content/, reels/). A mirror lives in this repo at `instagram/`.
 At the start of any ig-* task: if `~/.claude/instagram/voice.md` is missing, copy `instagram/` into
-`~/.claude/instagram/`, and after editing voice.md / swipe.md / log.md copy them back to `instagram/`
-so they are saved in git.
+`~/.claude/instagram/`. After editing voice.md / swipe.md / log.md, upload the changed file to the Drive
+folder above (Drive is the source of truth) and copy it back to `instagram/` here.
+Agents: `kami-reviewer` (QA before delivery) and `Quicky` (routine work) are in `.claude/agents/` and in
+Drive `My Drive/.claude/agents/` + `08_AI_SKILLS_AND_AGENTS/Agents/`.
