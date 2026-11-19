@@ -6,6 +6,7 @@ source: Drive 00_MASTER_CONTROL/Claude_Master_Memory/memory/drive-workspace.md (
 
 On 2026-11-19 the user made Google Drive (the Kami account) their permanent workspace, "repository" and source of truth. On the same day they confirmed for cloud sessions too: «جميع الملفات والمحادثات وكلشي يكون في جوجل درايف وما يحتاج اخبرك مره ثانيه» (decision D-025).
 
+- **Drive layout (D-028):** My Drive root = `Kami_Printing/` (designs) + `الملفات الرئيسية/` (00–99 folders) + `CLAUDE.md` + `.claude/`. Paths like `00_MASTER_CONTROL/…` mean `My Drive/الملفات الرئيسية/00_MASTER_CONTROL/…`.
 - **Default folder:** on the PC, `G:\My Drive` is the default working folder. Its root `CLAUDE.md` plus `.claude\skills` and `.claude\agents` make it a complete Claude project.
 - **GitHub:** this repo (kamiprinting2-ai/Girhub) is only the launcher for cloud sessions. Deliverables never stay here; they go to Drive.
 - **Memory sheet:** CLAUDE_MASTER_MEMORY_AND_ACTIVITY_LOG, ID `1u9QXeksiXo_NjkJ_vmy69KSKR9wHPrcQINmwFPj2lPI`, in 00_MASTER_CONTROL (`1w9jdWBFw_5afzl6fzciywpIjedKknITY`). Tabs 1_MASTER_DASHBOARD … 7_CHANGELOG.

@@ -17,6 +17,21 @@ conversations live in Google Drive (Kami account).** Do not ask again in any ses
 - Search Drive before creating files. Never overwrite or delete originals; revisions go in `تعديل N`.
 - Reply in Arabic (Bahraini dialect for marketing and design text).
 
+**Drive layout (D-028, 2026-11-19).** My Drive root holds only two working folders plus Claude's files:
+```
+My Drive/
+├── Kami_Printing/          ← التصاميم (designs) — ID 17TbJv_LDf2wvtpPiZze-1mPkIiGQuwTL
+├── الملفات الرئيسية/        ← the main files — ID 1DIxk7dulCzuQRxeOTRySAKVV6wHQwFL7
+│   ├── 00_MASTER_CONTROL … 09_TEMPLATES_AND_SYSTEMS, 10_ARCHIVE, 99_INBOX
+│   └── 01_BUSINESS_PROJECTS (Business_Plans, Future_Projects, Servix)
+├── CLAUDE.md               ← must stay at the root (Claude loads it from there)
+└── .claude/                ← must stay at the root (skills, agents, instagram voice)
+```
+Every path in these notes written as `00_MASTER_CONTROL/…`, `08_AI_SKILLS_AND_AGENTS/…`, `09_…`, `10_ARCHIVE`,
+`99_INBOX/…` means `My Drive/الملفات الرئيسية/<that path>`. Kami work is `My Drive/Kami_Printing/…`.
+Never put a new top-level folder in My Drive: designs go in Kami_Printing, everything else in الملفات الرئيسية.
+Folder IDs did not change in the move, so the IDs below still work.
+
 | Where | Drive folder ID |
 |---|---|
 | Kami designs: `Kami_Printing/المشروع/<اسم التصميم>/` | `1AtcmoSNbGBe-mPFtxyAD44M1YploQe3D` |
@@ -55,6 +70,7 @@ These files load into every session. If a rule changes, update the Drive copy an
 - D-015 / D-021 / D-024 / D-025 Google Drive is the only workspace and source of truth for every session; the memory sheet is Claude's memory; never ask again.
 - D-016 Never delete or move original files during migration.
 - D-026 Temporary designs go in `Kami_Printing/متفرقات`.
+- D-028 My Drive has two working folders: `Kami_Printing` (designs, at the root) and `الملفات الرئيسية` (all 00–99 folders). `CLAUDE.md` and `.claude` stay at the root.
 - D-027 Every skill or agent is also installed in Drive (`My Drive/.claude/skills` + `08_AI_SKILLS_AND_AGENTS/Installed_Skills`; account plugins as zips in `Installed_Skills/Account_Plugins`). When a new skill is added anywhere, copy it to Drive in the same session.
 
 The sheet is the live source: read `5_DECISION_LOG` for new decisions added after this list.

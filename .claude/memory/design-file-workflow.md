@@ -1,10 +1,10 @@
 ---
 name: design-file-workflow
-description: How to organize design files, reference examples and revisions, directly in Google Drive (01_BUSINESS_PROJECTS/Kami_Printing)
+description: How to organize design files, reference examples and revisions, directly in Google Drive (Kami_Printing)
 source: Drive 00_MASTER_CONTROL/Claude_Master_Memory/memory/design-file-workflow.md (copied 2026-11-19)
 ---
 
-From 2026-11-19 on, the design workspace lives in Google Drive: `My Drive/01_BUSINESS_PROJECTS/Kami_Printing/` (call it KAMI, folder ID `17TbJv_LDf2wvtpPiZze-1mPkIiGQuwTL`). The old `C:\Users\user\Desktop\claude` is a legacy local copy. Don't save new work there, and don't leave deliverables only in this GitHub repo.
+From 2026-11-19 on, the design workspace lives in Google Drive: `My Drive/Kami_Printing/` (call it KAMI, folder ID `17TbJv_LDf2wvtpPiZze-1mPkIiGQuwTL`). The old `C:\Users\user\Desktop\claude` is a legacy local copy. Don't save new work there, and don't leave deliverables only in this GitHub repo.
 - `KAMI/امثلة/` holds the user's reference examples, one or more per design or occasion (مناسبة). Before designing, look there for examples that fit the request and follow them.
 - `KAMI/المشروع/` (`1AtcmoSNbGBe-mPFtxyAD44M1YploQe3D`) holds the designs. Every new design gets its own folder named after it: `KAMI/المشروع/<اسم التصميم>/`. The original goes inside that folder, and sources go in `المصدر/`.
 - `KAMI/متفرقات/` (`172u6fZtjZ3DDUPNKFGpU54OfygfuVYvc`) holds temporary and draft designs. Approved ones move to `المشروع/<اسم التصميم>/`; unused ones go to `10_ARCHIVE` (never deleted). (D-026)

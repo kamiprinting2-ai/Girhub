@@ -4,7 +4,7 @@ description: Every new Kami design must copy the visual style of the posts in ا
 source: Drive 00_MASTER_CONTROL/Claude_Master_Memory/memory/brand-style.md (copied 2026-11-19)
 ---
 
-Always use the design style of the posts in `My Drive/01_BUSINESS_PROJECTS/Kami_Printing/المشروع/` for every new design (highlights, templates, stories, posts). The user said so on 2026-11-14: «استعمل دائما تصميم ملف المشروع».
+Always use the design style of the posts in `My Drive/Kami_Printing/المشروع/` for every new design (highlights, templates, stories, posts). The user said so on 2026-11-14: «استعمل دائما تصميم ملف المشروع».
 
 Style spec, measured from those posts:
 - Background: soft sage-green gradient, lighter at the top right (#B2BF9D) and darker at the bottom left (#9CAB86). Two 4-point stars with curved sides: a beige one at the right edge (#C6C4B0, centered near x1030,y370 on 1080×1350) and a large faint light-green one at the bottom left (centered near x80,y920).
