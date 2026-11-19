@@ -41,6 +41,12 @@ Folder IDs did not change in the move, so the IDs below still work.
 | 00_MASTER_CONTROL (memory, instructions, reports) | `1w9jdWBFw_5afzl6fzciywpIjedKknITY` |
 | 99_INBOX / Unsorted_Files | `1dYVLXBACaViydVct19036_QZnMsyN_0c` |
 
+**Canva (D-029):** Canva is connected at the claude.ai account level (connector «Canva», tools `mcp__Canva__*`,
+load them with ToolSearch). It works in every session on this account, so make the editable Canva copy of every
+design with it (rule D-004). Do not add a `canva` server to `.mcp.json`: that duplicate needs a separate login per
+session and always shows as unauthenticated in cloud sessions. If the connector ever fails, tell the owner to
+reconnect it in claude.ai → Settings → Connectors.
+
 Upload a local file with `create_file` and `base64Content` set to a file reference
 (`sha256:<hash>:<absolute path>`), `disableConversionToGoogleType: true`.
 

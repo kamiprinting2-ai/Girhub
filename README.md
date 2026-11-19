@@ -19,11 +19,8 @@ Claude Code يحمّلها تلقائياً لما تشتغل داخل هذا ا
 ## الإعداد / Setup
 
 ### Canva و OpenArt (MCP)
-ملف `.mcp.json` يضيف خوادم MCP الرسمية:
-- Canva → `https://mcp.canva.com/mcp`
-- OpenArt → `https://mcp.openart.ai/mcp`
-
-أول مرة يطلب منك Claude Code تسجيل الدخول (OAuth) بحساب Canva / OpenArt. شغّل `/mcp` للتحقق.
+- **Canva:** مربوط من حساب claude.ai (Settings → Connectors → Canva)، فيشتغل في كل السشنات بنفس الحساب (السحابة والكمبيوتر والجوال). أدواته اسمها `mcp__Canva__*`. لا تضيفه في `.mcp.json`، لأن النسخة اللي هناك تطلب تسجيل دخول منفصل في كل سشن.
+- **OpenArt:** ملف `.mcp.json` يضيف `https://mcp.openart.ai/mcp`. أول مرة يطلب منك Claude Code تسجيل الدخول (OAuth). شغّل `/mcp` للتحقق.
 
 ### Metricool
 ```bash
