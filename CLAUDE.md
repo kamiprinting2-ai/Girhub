@@ -29,6 +29,35 @@ conversations live in Google Drive (Kami account).** Do not ask again in any ses
 Upload a local file with `create_file` and `base64Content` set to a file reference
 (`sha256:<hash>:<absolute path>`), `disableConversionToGoogleType: true`.
 
+## 1. Memory (copied from Drive `00_MASTER_CONTROL/Claude_Master_Memory/memory/`)
+These files load into every session. If a rule changes, update the Drive copy and this copy together.
+
+@.claude/memory/drive-workspace.md
+@.claude/memory/reply-in-arabic.md
+@.claude/memory/bahraini-dialect.md
+@.claude/memory/brand-style.md
+@.claude/memory/design-file-workflow.md
+@.claude/memory/decor-print-style.md
+@.claude/memory/quicky-delegation.md
+
+## 2. Standing decisions (from the memory sheet `5_DECISION_LOG`)
+- D-001 New designs copy the green «المشروع» post style (sage gradient, Readex Pro + IBM Plex Sans Arabic, 4-point stars).
+- D-002 All marketing text in Bahraini dialect (no سوا/لمين).
+- D-003 Times written in English with AM/PM.
+- D-004 Each design in its own folder; revisions saved as تعديل 1/2/3; editable Canva copy.
+- D-005 Routine no-taste tasks go to the Quicky subagent (haiku).
+- D-006 Reels overlay: logo without background (cut-out).
+- D-010 Opening-hours vinyl: 30x30 cm, wider «للطباعة», phone icon + brand stars.
+- D-011 Decor prints use the retro gallery-wall poster style.
+- D-012 Wall prints use logo colors only (sage, light pink, cream, dark green).
+- D-013 Receipt wall print: no striped frame; torn-edge receipt on plain pink.
+- D-014 Framed wall prints printed matte 250–300gsm (under review).
+- D-015 / D-021 / D-024 / D-025 Google Drive is the only workspace and source of truth for every session; the memory sheet is Claude's memory; never ask again.
+- D-016 Never delete or move original files during migration.
+- D-026 Temporary designs go in `Kami_Printing/متفرقات`.
+
+The sheet is the live source: read `5_DECISION_LOG` for new decisions added after this list.
+
 ## Instagram skills (ig-*)
 The ig-* skills look for the user's voice profile at `~/.claude/instagram/voice.md`.
 In this repo the voice profile lives at `instagram/voice.md` (cloud sessions reset the home folder).
