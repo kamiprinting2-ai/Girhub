@@ -25,8 +25,8 @@ The repo copy `فهرس-التصاميم.md` is a mirror.
 All images, designs and projects must also live in the owner's Google Drive under `Kami_Printing/المشروع/`
 (folder id `1AtcmoSNbGBe-mPFtxyAD44M1YploQe3D`), not only in this repo or in chat. This applies to every
 new design and every edit, without being asked:
-- One Drive folder per design, named in Arabic like the existing ones (e.g. `أكواب وصحون`, `ستيكرات شتوية كريكت`).
-  Instagram posts made here go in `بوستات إنستغرام جاهزة للنشر/<NN-name>/`. Search before creating, reuse a folder that exists.
+- One Drive folder per design directly in `المشروع/`, named in Arabic like the owner's own (e.g. `أكواب وصحون`,
+  `كوب الخريجين`). Search before creating and reuse a folder that already exists.
 - The original goes in the folder itself; each edit goes in a `تعديل N` subfolder (never overwrite or trash files there).
   Include the caption (`كابشن.txt`) and a preview when there is one.
 - Upload limit from a cloud session is ~3 MB per file. For a bigger file: images without transparency as high-quality
