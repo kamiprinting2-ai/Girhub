@@ -13,6 +13,9 @@ Claude Code يحمّلها تلقائياً لما تشتغل داخل هذا ا
 | **Metricool** | [Purple-Horizons/metricool-cli](https://github.com/Purple-Horizons/metricool-cli) | MIT (package.json) | `metricool` (+ الـ CLI في `tools/metricool-cli`) |
 | **Metricool setup** | [gerritschaefer-hash/metricool-skill](https://github.com/gerritschaefer-hash/metricool-skill) | MIT | `metricool-setup` |
 | **Anthropic design** (رسمي) | [anthropics/skills](https://github.com/anthropics/skills) | Apache-2.0 | `canvas-design`, `frontend-design`, `theme-factory`, `brand-guidelines`, `algorithmic-art` |
+| **OpenMontage** | [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage) | AGPL-3.0 | `openmontage` (النظام نفسه في الدرايف: `09_TEMPLATES_AND_SYSTEMS/OpenMontage`) |
+| **Claude Design** | [Trystan-SA/claude-design-system-prompt](https://github.com/Trystan-SA/claude-design-system-prompt) | MIT | `claude-design` + 14 `claude-design-*` |
+| **Pollinations** (بديل OpenArt المجاني للصور) | [pollinations/pollinations](https://github.com/pollinations/pollinations) | MIT | `pollinations` + خادم MCP في `.mcp.json` |
 
 نسخ الرخص موجودة في `licenses/` وفي مجلد كل سكل من Anthropic.
 

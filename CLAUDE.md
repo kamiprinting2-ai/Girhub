@@ -56,6 +56,14 @@ reconnect it in claude.ai → Settings → Connectors.
 Upload a local file with `create_file` and `base64Content` set to a file reference
 (`sha256:<hash>:<absolute path>`), `disableConversionToGoogleType: true`.
 
+## Creative tools (D-030, 2026-11-20) — all from GitHub, all stored in Drive
+| Tool | What for | Skill | Drive |
+|---|---|---|---|
+| **OpenMontage** (calesthio/OpenMontage, AGPL-3.0) | full video production from an idea/script/footage | `openmontage` | package + installers in `09_TEMPLATES_AND_SYSTEMS/OpenMontage` (`1RhoHwWqDu-ATX_sF1ySnsIc9d0F1XZwk`) |
+| **Claude Design** (Trystan-SA/claude-design-system-prompt, MIT) | designer system prompt + 14 design procedures | `claude-design`, `claude-design-*` | `.claude/skills` + `Installed_Skills` |
+| **Pollinations** (pollinations/pollinations, MIT) — free replacement for OpenArt images | AI images (free daily tier with a free key); its video models are paid | `pollinations` + `.mcp.json` server `pollinations` | `.claude/skills` + `Installed_Skills` |
+OpenArt stays available but is paid; prefer Pollinations for images and OpenMontage (Piper + Remotion/HyperFrames) for video.
+
 ## 1. Memory (copied from Drive `00_MASTER_CONTROL/Claude_Master_Memory/memory/`)
 These files load into every session. If a rule changes, update the Drive copy and this copy together.
 
