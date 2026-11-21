@@ -1,4 +1,4 @@
-"""«باقة تكمّل هوية مشروعك» carousel (4 slides, 1080x1350) for business owners.
+"""«من أعمالنا» client-work carousel (was «باقة تكمّل هوية مشروعك») (4 slides, 1080x1350) for business owners.
 Photos (real Kami work, from the owner): templates/photos/bundle/1.jpg cups, 2.jpg sticker stack,
 3.jpg sticker sheet (a previous client's logo is replaced by a «شعار مشروعك» placeholder), 4.jpg toppers.
 Every photo is shown whole (no crop): frames take each photo's own aspect ratio.
@@ -29,25 +29,12 @@ await (await p.$('#t')).screenshot({{path:{json.dumps(out)},omitBackground:true}
 
 
 def clean_sheet():
-    """Cover the previous client's round logo on the sticker sheet with a placeholder for the customer's brand."""
+    """Client work shown anonymously: blur the client's round logo and phone number on the sticker sheet."""
     im = Image.open(os.path.join(PH, '3.jpg')).convert('RGB')
-    cx, cy, r = 690, 1500, 170
-    fill = im.getpixel((cx - 150, cy - 40))
-    d = ImageDraw.Draw(im)
-    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=fill)
-    # dashed placeholder ring
-    import math
-    rr = r - 28
-    for k in range(48):
-        if k % 2: continue
-        a0, a1 = k * 360 / 48, (k + 1) * 360 / 48
-        d.arc((cx - rr, cy - rr, cx + rr, cy + rr), a0, a1, fill=(170, 160, 154), width=5)
-    tp = os.path.join(PH, '_txt.png')
-    text_png('شعار<br>مشروعك', tp)
-    t = Image.open(tp); os.remove(tp)
-    k = 200 / t.width; t = t.resize((round(t.width * k), round(t.height * k)), Image.LANCZOS)
-    im.paste(t, (cx - t.width // 2, cy - t.height // 2), t)
-    # soften the patch edge a touch so it sits in the photo
+    cx, cy, r = 690, 1500, 178
+    m = Image.new('L', im.size, 0); ImageDraw.Draw(m).ellipse((cx - r, cy - r, cx + r, cy + r), fill=255)
+    m = m.filter(ImageFilter.GaussianBlur(6))
+    im = Image.composite(im.filter(ImageFilter.GaussianBlur(22)), im, m)
     im.save(os.path.join(PH, '3-clean.jpg'), quality=95)
 
 
@@ -98,7 +85,7 @@ def slide(i, l1, l2, sub, img, fw, fh, swipe=False):
     x = (W - fw) // 2
     return f'''<section class="post" id="bundle-{i:02d}">
   <svg class="st st1" viewBox="0 0 100 100">{STAR}</svg><svg class="st st2" viewBox="0 0 100 100">{STAR}</svg>
-  <header><img src="../brand/logo-en-cream.png"><div class="chip">{ICON}<span>الطباعة · المشاريع</span></div></header>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip">{ICON}<span>من أعمالنا</span></div></header>
   <div class="txt"><h1>{l1}<br><span class="hl">{l2}</span></h1><div class="cap">{sub}</div></div>
   <div class="card" style="left:{x}px;top:{y}px;width:{fw}px;height:{fh}px"></div>
   <div class="frame" style="left:{x}px;top:{y}px;width:{fw}px;height:{fh}px"><img src="photos/bundle/{img}"></div>
@@ -147,10 +134,10 @@ def main():
     c = fit('3-clean.jpg', *BOX)
     d = fit('4.jpg', *BOX)
     slides = [
-        slide(1, 'باقة تكمّل..', 'هوية مشروعك', 'من التصميم للتنفيذ.. أو بالطلب المنفصل ✦', *a, swipe=True),
-        slide(2, 'أكواب..', 'تميّز مشروعك', 'تصميم وطباعة وتفاصيل تاقات تناسب براندك', *b),
-        slide(3, 'ستيكر شيت..', 'وستيكرات جاهزة', 'قص مرتب يبرز اسم مشروعك على كل تغليفة', *c),
-        slide(4, 'لمسة تحلي..', 'جمعة زباينك', 'توبرز وأعواد تزيين ضمن الباقة أو لحالها ✦<br>حيّاكم على الواتساب 66606959', *d),
+        slide(1, 'من أعمالنا..', 'لأحد زباينا', 'أكواب وستيكرات وتوبرز بهوية مشروعه ✦', *a, swipe=True),
+        slide(2, 'أكواب..', 'بهوية المشروع', 'تصميم وطباعة وتاقات على ثيم البراند', *b),
+        slide(3, 'ستيكر شيت..', 'وستيكرات بقص مرتب', 'باسم المشروع وشعاره على كل تغليفة', *c),
+        slide(4, 'فكرتكم..', 'نطبعها لكم', 'اطلبوا أي ديزاين أو فكرة لمشروعكم ✦<br>حيّاكم على الواتساب 66606959', *d),
     ]
     page = f'''<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>Kami Bundle Carousel</title>
 <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
