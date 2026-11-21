@@ -1,0 +1,147 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>Kami Graduation Cups</title>
+<link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500;600;700&family=Alexandria:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sage:#A7B591;--cream:#EDE9E0;--blush:#E2CDCC;--forest:#2E3B2A;--forest2:#384833;--line:rgba(46,59,42,.2)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#999;display:flex;flex-wrap:wrap;gap:30px;padding:30px;font-family:'IBM Plex Sans Arabic',sans-serif}
+.post{flex:none;width:1080px;height:1350px;position:relative;overflow:hidden;color:var(--forest);
+  background:radial-gradient(circle at 80% 15%,#B4C19F 0%,#A7B591 55%,#9CAB86 100%)}
+.wm{position:absolute;width:620px;height:620px;left:-230px;bottom:120px;fill:var(--cream);opacity:.18}
+.wm2{position:absolute;width:260px;height:260px;right:-80px;top:240px;fill:var(--blush);opacity:.45}
+header{position:absolute;top:56px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;direction:ltr}
+header img{height:78px}
+.chip{display:flex;align-items:center;gap:14px;direction:rtl;font-family:Alexandria;font-weight:500;font-size:28px;color:var(--forest)}
+.chip svg{width:40px;height:40px;fill:none;stroke:var(--forest);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+main{position:absolute;top:180px;left:64px;right:64px;bottom:180px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+footer{position:absolute;left:64px;right:64px;bottom:52px;display:flex;justify-content:space-between;align-items:center;direction:ltr;border-top:1.5px solid var(--line);padding-top:26px}
+.fw{display:flex;align-items:center;gap:14px}
+.fwi{width:52px;height:52px;fill:none;stroke:var(--forest);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.fw small{display:block;font-size:20px;opacity:.75;direction:rtl}
+.fw b{font-family:Alexandria;font-size:32px;font-weight:600;letter-spacing:1px}
+.fr{display:flex;align-items:center;gap:20px}
+.fr .h{font-size:26px;opacity:.85}
+.cnt{background:var(--blush);color:var(--forest);font-family:Alexandria;font-weight:700;font-size:24px;padding:4px 20px;border-radius:30px;direction:rtl}
+h1,h2{font-family:Alexandria;font-weight:700;line-height:1.45;letter-spacing:-.5px}
+.hl{background:var(--blush);color:var(--forest);padding:0 18px;border-radius:10px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.sub{font-size:34px;font-weight:400;opacity:.9;margin-top:26px;line-height:1.6}
+.kicker{font-family:Alexandria;font-size:30px;font-weight:500;color:var(--forest);opacity:.85;letter-spacing:.5px}
+h2{font-size:66px;margin-top:14px}
+h2.ent{font-size:52px}
+.rule{width:100%;height:1.5px;background:var(--line);margin:30px 0 34px}
+/* cover */
+.cover main{padding-bottom:40px}
+.bigic{width:250px;height:250px;border-radius:50%;background:var(--cream);border:2px solid var(--forest);display:flex;align-items:center;justify-content:center;margin-bottom:50px;box-shadow:0 0 0 22px rgba(237,233,224,.3)}
+.bigic svg{width:130px;height:130px;fill:none;stroke:var(--forest);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.coverlogo{width:420px;margin-bottom:60px}
+.mas svg{width:580px;height:auto;display:block}.mas{margin-bottom:6px}.mas.cta svg{width:470px}.mas.cta{margin-bottom:10px}
+.t-cover{font-size:80px}
+.swipe{position:absolute;left:0;bottom:-10px;display:flex;align-items:center;gap:6px;font-family:Alexandria;font-size:28px;color:var(--forest);direction:rtl}
+.swipe svg{width:120px;height:50px;fill:none;stroke:var(--forest);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+/* grid */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 20px;width:100%}
+.gi{display:flex;flex-direction:column;align-items:center;gap:14px}
+.gc{width:136px;height:136px;border-radius:50%;background:var(--cream);border:2px solid var(--forest);display:flex;align-items:center;justify-content:center}
+.gc svg{width:66px;height:66px;fill:none;stroke:var(--forest);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.gc.sm{flex:none;width:118px;height:118px}.gc.sm svg{width:58px;height:58px}
+.gl{font-size:29px;font-weight:500}
+.grid:has(.gi:nth-child(7)) .gc{width:116px;height:116px}.grid:has(.gi:nth-child(7)) .gc svg{width:56px;height:56px}
+.grid:has(.gi:nth-child(7)){gap:22px 20px}.grid:has(.gi:nth-child(7)) .gl{font-size:27px}
+.pill{margin-top:64px;background:var(--forest);color:var(--cream);font-family:Alexandria;font-weight:600;font-size:30px;padding:16px 44px;border-radius:50px}
+/* features + steps */
+.feats,.steps{display:flex;flex-direction:column;gap:26px;width:100%;margin-top:6px}
+.ft,.st{display:flex;align-items:center;gap:34px;text-align:right;background:rgba(237,233,224,.45);border:1.5px solid rgba(237,233,224,.8);border-radius:30px;padding:32px 36px}
+.ftt{font-family:Alexandria;font-weight:600;font-size:40px}
+.ftd{font-size:30px;opacity:.85;margin-top:6px}
+.sn{flex:none;width:96px;height:96px;border-radius:50%;background:var(--blush);color:var(--forest);font-family:Alexandria;font-weight:700;font-size:50px;display:flex;align-items:center;justify-content:center}
+.steps .st{padding:22px 34px}
+/* prices */
+
+.card{width:100%;background:var(--cream);color:var(--forest);border-radius:28px;padding:10px 36px;text-align:right}
+.card.tight{padding:4px 32px;margin-bottom:22px}
+.gh{align-self:flex-start;background:var(--forest);color:var(--cream);font-family:Alexandria;font-weight:600;font-size:28px;padding:6px 26px;border-radius:30px;margin:22px 0 14px}
+.gh:first-of-type{margin-top:20px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:26px 0;border-bottom:2px dotted rgba(46,59,42,.25)}
+.tight .row{padding:15px 0}
+.row:last-child{border:0}
+.rn{font-size:31px;font-weight:500;line-height:1.45}
+.rn small{display:block;font-size:22px;font-weight:400;opacity:.7}
+.rp{flex:none;background:var(--blush);border-radius:40px;padding:6px 22px;font-size:24px;font-weight:500;white-space:nowrap}
+.rp b{font-family:Alexandria;font-size:30px;font-weight:700;direction:ltr;unicode-bidi:isolate}
+.cur{margin-top:26px;font-size:24px;opacity:.7}
+/* faq */
+.faqs{display:flex;flex-direction:column;gap:26px;width:100%;margin-top:50px;text-align:right}
+.q{align-self:flex-start;background:var(--blush);color:var(--forest);font-family:Alexandria;font-weight:600;font-size:44px;padding:24px 40px;border-radius:36px 36px 36px 8px;line-height:1.4}
+.a{font-size:38px;line-height:1.7;padding:0 20px 50px;opacity:.95}
+/* cta */
+.cta main{justify-content:center}
+.ctaw{display:flex;flex-direction:column;align-items:center}
+.spk{width:64px;height:64px;fill:var(--cream);margin-bottom:34px}
+.t-cta{font-size:76px}
+.wa{margin-top:54px;display:flex;align-items:center;gap:20px;background:var(--forest);color:var(--cream);border-radius:60px;padding:16px 54px;direction:ltr}
+.wa span{font-family:Alexandria;font-weight:700;font-size:64px;letter-spacing:2px}
+.wai{width:64px;height:64px;fill:none;stroke:var(--cream);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ctalogo{width:230px;margin-top:70px;opacity:.95}
+
+h2,.chip,.cnt,.kick,.wa span,.fw b{font-family:'Readex Pro','IBM Plex Sans Arabic',sans-serif!important}
+.ed{background-size:cover;background-position:center}
+.ed .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(247,243,236,.97) 0%,rgba(247,243,236,.9) 24%,rgba(247,243,236,0) 42%,
+  rgba(247,243,236,0) 84%,rgba(247,243,236,.85) 100%)}
+.ed .txt{position:absolute;left:64px;right:64px;top:168px;text-align:center;display:flex;flex-direction:column;align-items:center}
+.ed .kick{font-size:28px;font-weight:500;letter-spacing:1px;color:#394634;margin-bottom:10px}
+.ed h2{font-size:74px;font-weight:700;line-height:1.3;margin:0;color:var(--forest)}
+.ed .cap{margin-top:14px;font-size:32px;font-weight:500;color:#394634}
+.pf{position:absolute;left:64px;right:64px;bottom:44px;display:flex;justify-content:space-between;align-items:center;direction:ltr}
+.pf .note{font-size:20px;color:#394634;opacity:.8;direction:rtl}
+.pf .h{font-size:26px;color:var(--forest)}
+.cta4{background:linear-gradient(165deg,#B2BF9D 0%,#A7B591 50%,#9CAB86 100%)}
+.cta4 .txt{position:absolute;left:64px;right:64px;top:170px;text-align:center}
+.cta4 h2{font-size:80px;font-weight:700;line-height:1.3;margin:0}
+.cta4 .cap{margin-top:16px;font-size:34px;font-weight:500;color:#394634}
+.cta4 .frame{position:absolute;left:64px;right:64px;top:560px;height:535px;border-radius:40px;overflow:hidden;border:12px solid var(--cream);
+  box-shadow:0 24px 50px rgba(46,59,42,.22)}
+.cta4 .frame img{width:928px;height:511px;display:block}
+.cta4 .wa{position:absolute;left:50%;transform:translateX(-50%);top:1126px;margin:0;padding:12px 44px}
+</style></head><body><svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="star" viewBox="0 0 40 40"><path d="M20 0C21 13 27 19 40 20C27 21 21 27 20 40C19 27 13 21 0 20C13 19 19 13 20 0Z"/></symbol>
+<!-- icons, 24x24 line style -->
+<symbol id="printer" viewBox="0 0 24 24"><path d="M7 8V3h10v5M7 17H4a1 1 0 0 1-1-1v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1h-3"/><path d="M7 14h10v7H7z"/><path d="M17.5 11h.5"/></symbol>
+<symbol id="laminate" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><rect x="7.5" y="5.5" width="9" height="13" rx="1"/><path d="M9.5 9h5M9.5 12h5M9.5 15h3"/></symbol>
+<symbol id="sticker" viewBox="0 0 24 24"><path d="M4 4h16v10l-6 6H4z"/><path d="M14 20v-6h6"/><path d="M9 9h.01M14 9h.01M9 13.5c1.5 1.3 3.5 1.3 5 0"/></symbol>
+<symbol id="uv" viewBox="0 0 24 24"><path d="M10 2c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7z"/><path d="M18.5 14c.3 2 1 2.7 3 3-2 .3-2.7 1-3 3-.3-2-1-2.7-3-3 2-.3 2.7-1 3-3z"/></symbol>
+<symbol id="cotton" viewBox="0 0 24 24"><path d="M4 5l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1v3l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1-2 1z"/><path d="M4 11l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1v3l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1-2 1z"/><path d="M5 17l2-1 2 1 2-1 2 1 2-1 2 1 2-1 1 1v3l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-1-1z"/></symbol>
+<symbol id="acrylic" viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="15" rx="1.5"/><path d="M9.5 9l3-3M10 13l5-5M4 21h16M9 18v3M15 18v3"/></symbol>
+<symbol id="banner" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="16" rx="1"/><path d="M9.5 6h5M9.5 9h5M9.5 12h3M12 18v3M7 21h10"/></symbol>
+<symbol id="card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="12" rx="2"/><circle cx="8" cy="11" r="1.6"/><path d="M6 15h4M12.5 10h5M12.5 13h4"/></symbol>
+<symbol id="letter" viewBox="0 0 24 24"><path d="M5 2h14v20H5z"/><path d="M8 5h3M15 5.5h.01M8 9h8M8 12h8M8 15h8M8 18h5"/></symbol>
+<symbol id="baby" viewBox="0 0 24 24"><path d="M10 2h4v3h-4z"/><path d="M9 5h6l1 3v12a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V8z"/><path d="M8 11h3M8 14h3M8 17h3"/></symbol>
+<symbol id="rings" viewBox="0 0 24 24"><circle cx="9" cy="14" r="5.5"/><circle cx="15" cy="14" r="5.5"/><path d="M7.5 6l1.5-2.5L10.5 6z"/></symbol>
+<symbol id="cake" viewBox="0 0 24 24"><path d="M4 21V12a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v9z"/><path d="M4 15c1.3 1 2.7 1 4 0s2.7-1 4 0 2.7 1 4 0 2.7-1 4 0M8 11V8M12 11V8M16 11V8M3 21h18"/><path d="M8 4.5c-.6.6 0 1.5 0 1.5s.6-.9 0-1.5zM12 4.5c-.6.6 0 1.5 0 1.5s.6-.9 0-1.5zM16 4.5c-.6.6 0 1.5 0 1.5s.6-.9 0-1.5z"/></symbol>
+<symbol id="ramadan" viewBox="0 0 24 24"><path d="M14 3a8 8 0 1 0 7 11.5A6.5 6.5 0 0 1 14 3z"/><path d="M18 3.5l.7 1.6 1.6.7-1.6.7L18 8.1l-.7-1.6-1.6-.7 1.6-.7z"/></symbol>
+<symbol id="gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M5 12v9h14v-9M12 8v13M12 8C10 4 6.5 4.5 8 7.2M12 8c2-4 5.5-3.5 4-.8"/></symbol>
+<symbol id="bag" viewBox="0 0 24 24"><path d="M6 8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1z"/><path d="M9 6V5a3 3 0 0 1 6 0v1M6 12h12M10 12v2h4v-2M8 17h8"/></symbol>
+<symbol id="tag" viewBox="0 0 24 24"><rect x="2.5" y="7" width="19" height="10" rx="5"/><path d="M7 12h7M16.5 12h.01"/></symbol>
+<symbol id="pencil" viewBox="0 0 24 24"><path d="M15 4l5 5L9 20H4v-5z"/><path d="M13 6l5 5M4 15l5 5"/></symbol>
+<symbol id="docs" viewBox="0 0 24 24"><path d="M14 2H6a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"/><path d="M14 2v5h5M8 11h6M8 14h4"/><circle cx="15.5" cy="17" r="3"/><path d="M14.2 17l1 1 1.6-1.8"/></symbol>
+<symbol id="truck" viewBox="0 0 24 24"><path d="M2 6h12v10H2zM14 9h4l3 3v4h-7"/><circle cx="6" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></symbol>
+<symbol id="wa" viewBox="0 0 24 24"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"/><path d="M9 8.8c.3 2.8 2.6 5.4 6 6.2l1.2-1.6-2-1-1 .8c-1-.5-2-1.5-2.4-2.4l.8-1-1-2z"/></symbol>
+</defs></svg>
+<section class="post ed" id="grad-01" style="background-image:url(photos/graduation/s1.jpg)">
+  <div class="veil"></div><header><img src="../brand/logo-en-green.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>أكواب وصحون</span></div></header>
+  <div class="txt"><div class="kick">أكواب وصحون بتصميمكم</div><h2>صورتكم..<br><span class="hl">تنطبع</span> على كوب</h2><div class="cap">صورة، اسم، أو أي تصميم تبونه</div></div>
+  <footer class="pf"><span class="note">صور توضيحية</span>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">١ من ٤</span></div></footer></section><section class="post ed" id="grad-02" style="background-image:url(photos/graduation/s2.jpg)">
+  <div class="veil"></div><header><img src="../brand/logo-en-green.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>أكواب وصحون</span></div></header>
+  <div class="txt"><h2>عبارة <span class="hl">على ذوقكم</span></h2><div class="cap">تخرج، مواليد، أعياد ميلاد.. أو هدية بدون مناسبة</div></div>
+  <footer class="pf"><span class="note">صور توضيحية</span>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٢ من ٤</span></div></footer></section><section class="post ed" id="grad-03" style="background-image:url(photos/graduation/s3.jpg)">
+  <div class="veil"></div><header><img src="../brand/logo-en-green.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>أكواب وصحون</span></div></header>
+  <div class="txt"><h2>وبالاسم <span class="hl">اللي تبونه</span></h2><div class="cap">نكتب الاسم بالخط واللون اللي يعجبكم</div></div>
+  <footer class="pf"><span class="note">صور توضيحية</span>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٣ من ٤</span></div></footer></section><section class="post cta4" id="grad-04">
+  <svg class="wm"><use href="#star"/></svg><svg class="wm2"><use href="#star"/></svg>
+  <header><img src="../brand/logo-en-cream.png"><div class="chip"><svg class="ic"><use href="#gift"/></svg><span>أكواب وصحون</span></div></header>
+  <div class="txt"><h2>نصمم وننفذ<br><span class="hl">على طلبكم</span></h2><div class="cap">أرسلوا الصورة أو الاسم أو فكرتكم.. والباقي علينا</div></div>
+  <div class="frame"><img src="photos/graduation/s4.jpg"></div>
+  <div class="wa"><svg class="wai"><use href="#wa"/></svg><span>66606959</span></div>
+  <footer><span class="h">للطلب والاستفسار واتساب</span>
+  <div class="fr"><span class="h">@kami.printing</span><span class="cnt">٤ من ٤</span></div></footer></section></body></html>

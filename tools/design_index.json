@@ -1,0 +1,177 @@
+{
+ "_note": "مجلدات التصاميم في الريبو. tools/update_index.py يكتب منها قسم «حالة ملفات المستودع» التلقائي في آخر فهرس-التصاميم.md. الوصف والسجل مكانهم القسم 6 و7 في الفهرس نفسه (النسخة الأصلية في جوجل درايف).",
+ "roots": [
+  "جاهز",
+  "instagram/ready-to-post/*",
+  "templates/out/*",
+  "brand/mascot",
+  "brand/characters",
+  "brand/national-day",
+  "brand/stickers/*",
+  "seo/google-photos",
+  "video/out",
+  "docs"
+ ],
+ "designs": [
+  {
+   "group": "فيديو",
+   "path": "جاهز",
+   "title": "ريلز جاهزة للنشر (4 فيديوهات v1)"
+  },
+  {
+   "group": "فيديو",
+   "path": "video/out",
+   "title": "ريل كامي المتحرك + النسخة بالصوت"
+  },
+  {
+   "group": "فيديو",
+   "path": "instagram/ready-to-post/08-ريل",
+   "title": "ريل الحساب الجديد"
+  },
+  {
+   "group": "فيديو",
+   "path": "video/cups-reel",
+   "title": "ريل باقة الشتاء (مصدر)"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/01-اطلاق-الهوية",
+   "title": "إطلاق الهوية"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/02-موقعنا",
+   "title": "موقعنا (واجهة المحل)"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/03-خدماتنا",
+   "title": "خدماتنا"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/04-التوزيعات",
+   "title": "التوزيعات"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/05-التوزيعات-المدرسية",
+   "title": "التوزيعات المدرسية"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/06-الطباعة",
+   "title": "الطباعة"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/07-تخليص-المعاملات",
+   "title": "تخليص المعاملات"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/09-التعاون",
+   "title": "التعاون"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/10-الأسئلة-الشائعة",
+   "title": "الأسئلة الشائعة"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/11-مطبوعات-المشاريع",
+   "title": "مطبوعات المشاريع (التغليف)"
+  },
+  {
+   "group": "ستوري",
+   "path": "instagram/ready-to-post/12-ستوري-أصحاب-المشاريع",
+   "title": "ستوري أصحاب المشاريع (نصمم وننفذ فكرتكم)"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/13-أكواب-التخرج",
+   "title": "أكواب وصحون التخرج"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/14-باقة-هوية-المشاريع",
+   "title": "باقة تكمّل هوية مشروعك"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/out/carousels",
+   "title": "الكاروسيلات (30 سلايد)"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/out/launch",
+   "title": "بوستات الإطلاق"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/out/packaging",
+   "title": "كاروسيل التغليف"
+  },
+  {
+   "group": "ستوري",
+   "path": "templates/out/stories",
+   "title": "الستوريات (مصدر الرندر)"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/out/graduation",
+   "title": "كاروسيل أكواب التخرج (مصدر الرندر)"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/out/bundle",
+   "title": "كاروسيل باقة المشاريع (مصدر الرندر)"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/out/services",
+   "title": "شبكة الخدمات"
+  },
+  {
+   "group": "البراند",
+   "path": "brand/mascot",
+   "title": "ماسكوت كامي الورقي"
+  },
+  {
+   "group": "البراند",
+   "path": "brand/characters",
+   "title": "شخصية جود (وجه البراند)"
+  },
+  {
+   "group": "البراند",
+   "path": "brand/national-day",
+   "title": "اليوم الوطني"
+  },
+  {
+   "group": "ستيكرات",
+   "path": "brand/stickers/dalla",
+   "title": "ستيكرات الدلة (كيوت)"
+  },
+  {
+   "group": "ستيكرات",
+   "path": "brand/stickers/winter-camp",
+   "title": "ستيكرات الكشتة الشتوية (واقعية)"
+  },
+  {
+   "group": "ستيكرات",
+   "path": "brand/stickers/winter-cozy",
+   "title": "ستيكرات شتوية بمقاسات الطباعة (4.5 و3 سم)"
+  },
+  {
+   "group": "SEO",
+   "path": "docs",
+   "title": "موقع كامي (عربي وإنجليزي)"
+  },
+  {
+   "group": "SEO",
+   "path": "seo/google-photos",
+   "title": "صور ملف قوقل للنشاط التجاري"
+  }
+ ]
+}
