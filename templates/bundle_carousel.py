@@ -38,10 +38,16 @@ def clean_sheet():
     im.save(os.path.join(PH, '3-clean.jpg'), quality=95)
 
 
+def neat_cups():
+    """Tidy cups shot: crop to the front stack of two cups with their tags (drops the leaning cups behind)."""
+    Image.open(os.path.join(PH, '1.jpg')).convert('RGB').crop((180, 330, 1060, 1990)) \
+        .save(os.path.join(PH, '1-neat.jpg'), quality=95)
+
+
 def collage():
     """Cover collage: row 1 cups + toppers (both 3:4), row 2 sticker stack + sheet; every photo whole."""
     g, Wc = 18, 1600
-    a = [Image.open(os.path.join(PH, f)).convert('RGB') for f in ('1.jpg', '4.jpg', '2.jpg', '3-clean.jpg')]
+    a = [Image.open(os.path.join(PH, f)).convert('RGB') for f in ('1-neat.jpg', '4.jpg', '2.jpg', '3-clean.jpg')]
     def row(ims):
         rs = [i.width / i.height for i in ims]
         h = round((Wc - g * (len(ims) - 1)) / sum(rs))
@@ -127,10 +133,10 @@ footer{{position:absolute;left:64px;right:64px;bottom:44px;display:flex;justify-
 
 
 def main():
-    clean_sheet(); collage()
+    clean_sheet(); neat_cups(); collage()
     BOX = (952, 690)
     a = fit('collage.jpg', 952, 650)
-    b = fit('1.jpg', *BOX)
+    b = fit('1-neat.jpg', *BOX)
     c = fit('3-clean.jpg', *BOX)
     d = fit('4.jpg', *BOX)
     slides = [
