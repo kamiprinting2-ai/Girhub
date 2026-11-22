@@ -130,6 +130,11 @@
   },
   {
    "group": "مصادر القوالب",
+   "path": "templates/national-box",
+   "title": "علبة اليوم الوطني «دام عزك يا وطن»"
+  },
+  {
+   "group": "مصادر القوالب",
    "path": "templates/out/services",
    "title": "شبكة الخدمات"
   },
