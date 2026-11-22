@@ -34,6 +34,11 @@ new design and every edit, without being asked:
   Never skip a file silently; if something still cannot go up, tell the owner which file and why.
 - Write the Drive path in the design's row in فهرس-التصاميم.md.
 
+## Inspiration examples
+Before designing a post, carousel, favor or sticker, look at `instagram/examples/` (also in Drive: `Kami_Printing/امثلة/`).
+Each folder has the reference images and a `ملاحظات.md` with what to take from it. Take ideas, never copy someone's artwork,
+and add new examples the owner sends the same way (images + notes, in the repo and in Drive `امثلة`).
+
 ## Instagram skills (ig-*)
 The ig-* skills look for the user's voice profile at `~/.claude/instagram/voice.md`.
 In this repo the voice profile lives at `instagram/voice.md` (cloud sessions reset the home folder).
