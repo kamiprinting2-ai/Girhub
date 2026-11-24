@@ -1,4 +1,4 @@
-"""«كيف نجهز طلبكم» تعديل 1: real order «دانة» step by step (8 slides; تعديل 2 بدون سلايد الهوية، تعديل 3 «طلب أم دانة»). Same Kami look as works_carousels.py.
+"""«كيف نجهز طلبكم» تعديل 1: real order «دانة» step by step (8 slides; تعديل 2 بدون سلايد الهوية، تعديل 3 «طلب أم دانة»، تعديل 4 بدون «حقيقي»). Same Kami look as works_carousels.py.
   python3 templates/works_how_dana.py && PAGE=works-how-dana.html OUTDIR=out/how-dana node templates/render.js
 """
 import os
@@ -13,7 +13,7 @@ g['CROP'].update({'dana-ribbons': (0.8, 0.45), 'dana-whatsapp': (0.7, 0.0), 'dan
 photo, cta, CSS, EXTRA = ns['photo'], ns['cta'], ns['CSS'], ns['EXTRA']
 TAG, N = 'كيف نجهز طلبكم', 8
 S = [
- ('كيف نجهز طلبكم؟', 'طلب أم دانة من البداية', 'قصة طلب حقيقي، خطوة بخطوة ✦', 'dana-shell', True),
+ ('كيف نجهز طلبكم؟', 'طلب أم دانة من البداية', 'طلب من أعمالنا، خطوة بخطوة ✦', 'dana-shell', True),
  ('١. نرسل العينة..', 'قبل التنفيذ', '«حده حلو.. مرررتب» كان رد الزبونة على العينة 🤍', 'dana-whatsapp', False),
  ('٢. نطبع ونقص..', 'بالكريكت', 'تاقات على شكل المحارة، مقصوصة بدقة', 'dana-cutting', False),
  ('٣. نركّب يدوي..', 'قطعة قطعة', 'كل تاق يدخل فيه الشريط باليد', 'dana-ribbons', False),
