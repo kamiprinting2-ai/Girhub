@@ -139,6 +139,26 @@
    "title": "ريل توزيعات بالاسم"
   },
   {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/24-ليش-كامي",
+   "title": "ليش كامي؟"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/25-مناسبات-كثيرة-وخبرة-وحدة",
+   "title": "مناسبات كثيرة.. وخبرة وحدة"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/26-كيف-نجهز-طلبكم",
+   "title": "كيف نجهز طلبكم"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/27-ريل-خبرتنا",
+   "title": "ريل خبرتنا"
+  },
+  {
    "group": "مصادر القوالب",
    "path": "templates/out/carousels",
    "title": "الكاروسيلات (30 سلايد)"
@@ -232,6 +252,11 @@
    "group": "مصادر القوالب",
    "path": "templates/out/works2",
    "title": "سلايدات من أعمالنا 2 (المصدر)"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/out/trust",
+   "title": "سلايدات الثقة والخبرة (المصدر)"
   }
  ]
 }
