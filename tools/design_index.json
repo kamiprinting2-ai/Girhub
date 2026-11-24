@@ -94,6 +94,26 @@
    "title": "باقة تكمّل هوية مشروعك"
   },
   {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/15-من-أعمالنا-المواليد",
+   "title": "من أعمالنا: توزيعات المواليد"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/16-من-أعمالنا-التخرج",
+   "title": "من أعمالنا: التخرج"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/17-من-أعمالنا-الملكة",
+   "title": "من أعمالنا: الملكة والعرس"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/18-ريل-من-الطباعة-للقص",
+   "title": "ريل من الطباعة للقص"
+  },
+  {
    "group": "مصادر القوالب",
    "path": "templates/out/carousels",
    "title": "الكاروسيلات (30 سلايد)"
@@ -177,6 +197,11 @@
    "group": "SEO",
    "path": "seo/google-photos",
    "title": "صور ملف قوقل للنشاط التجاري"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/out/works",
+   "title": "سلايدات من أعمالنا (المصدر)"
   }
  ]
 }
