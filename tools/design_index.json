@@ -159,6 +159,11 @@
    "title": "ريل خبرتنا"
   },
   {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/28-ريل-طلب-دانة",
+   "title": "ريل طلب دانة"
+  },
+  {
    "group": "مصادر القوالب",
    "path": "templates/out/carousels",
    "title": "الكاروسيلات (30 سلايد)"
@@ -257,6 +262,11 @@
    "group": "مصادر القوالب",
    "path": "templates/out/trust",
    "title": "سلايدات الثقة والخبرة (المصدر)"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/out/how-dana",
+   "title": "سلايدات كيف نجهز طلبكم - طلب دانة (المصدر)"
   }
  ]
 }
