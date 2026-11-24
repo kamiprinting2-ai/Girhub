@@ -114,6 +114,31 @@
    "title": "ريل من الطباعة للقص"
   },
   {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/19-من-أعمالنا-المدرسية",
+   "title": "من أعمالنا: تجهيزات المدرسة"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/20-من-أعمالنا-مواليد-وأعياد-ميلاد",
+   "title": "من أعمالنا: مواليد وأعياد ميلاد"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/21-آراء-زباينا",
+   "title": "آراء زباينا"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/22-ستيكرات-ثواب",
+   "title": "ستيكرات ثواب"
+  },
+  {
+   "group": "بوستات",
+   "path": "instagram/ready-to-post/23-ريل-توزيعات-بالاسم",
+   "title": "ريل توزيعات بالاسم"
+  },
+  {
    "group": "مصادر القوالب",
    "path": "templates/out/carousels",
    "title": "الكاروسيلات (30 سلايد)"
@@ -202,6 +227,11 @@
    "group": "مصادر القوالب",
    "path": "templates/out/works",
    "title": "سلايدات من أعمالنا (المصدر)"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/out/works2",
+   "title": "سلايدات من أعمالنا 2 (المصدر)"
   }
  ]
 }
