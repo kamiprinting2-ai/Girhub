@@ -272,6 +272,11 @@
    "group": "عناصر البراند",
    "path": "brand/shop-boards",
    "title": "لوحات المحل 20×25 سم"
+  },
+  {
+   "group": "عناصر البراند",
+   "path": "brand/colors/reds",
+   "title": "درجات الأحمر"
   }
  ]
 }
