@@ -267,6 +267,11 @@
    "group": "مصادر القوالب",
    "path": "templates/out/how-dana",
    "title": "سلايدات كيف نجهز طلبكم - طلب دانة (المصدر)"
+  },
+  {
+   "group": "عناصر البراند",
+   "path": "brand/shop-boards",
+   "title": "لوحات المحل 20×25 سم"
   }
  ]
 }

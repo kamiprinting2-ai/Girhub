@@ -1,0 +1,108 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><title>Kami Shop Prints</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lalezar&family=Shrikhand&family=IBM+Plex+Sans:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@500;600;700&family=Reem+Kufi+Ink&display=block">
+<style>
+@page{size:210mm 297mm;margin:0}
+:root{--forest:#2E3B2A;--blush:#E2CDCC;--rose:#A9B893;--cream:#F3EFE6;--sage:#BFCBA8}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#ccc}
+body{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.p{position:relative;width:210mm;height:297mm;overflow:hidden;break-after:page}
+.p:last-child{break-after:auto}
+.abs{position:absolute}
+.lz{font-family:'Lalezar';line-height:1.02}
+.en{font-family:'IBM Plex Sans';direction:ltr;font-weight:700}
+
+/* receipt */
+.stripes{background:repeating-linear-gradient(90deg,var(--rose) 0 13mm,var(--blush) 13mm 26mm)}
+.rc{position:absolute;left:24mm;top:20mm;width:162mm;height:257mm;background:var(--cream);box-shadow:0 2mm 0 rgba(46,59,42,.18)}
+.rc .zig{position:absolute;left:0;right:0;height:5mm;background:linear-gradient(135deg,var(--cream) 2.5mm,transparent 0) 0 0/5mm 5mm,linear-gradient(225deg,var(--cream) 2.5mm,transparent 0) 0 0/5mm 5mm}
+.rc table{position:absolute;right:12mm;width:138mm;border-collapse:collapse;font-family:'IBM Plex Sans Arabic';color:var(--forest)}
+.rc th{font:700 3.6mm 'IBM Plex Sans';letter-spacing:.6mm;text-align:right;border-bottom:.5mm solid var(--forest);padding:1.5mm 2mm;direction:ltr}
+.rc td{font-weight:600;font-size:6.6mm;padding:3.1mm 2mm;border-bottom:.35mm solid rgba(46,59,42,.35);background:rgba(226,205,204,.6)}
+.rc td.chk{width:14mm;text-align:center;font-family:'Shrikhand';color:var(--forest);font-size:8mm}
+.rc td.no{width:16mm;text-align:center;font:700 4mm 'IBM Plex Sans';color:rgba(46,59,42,.6)}
+.r2{left:22mm;top:22mm;width:166mm;height:253mm;transform:rotate(-1.5deg);box-shadow:0 3mm 8mm rgba(46,59,42,.22)}
+.r2::before,.r2::after{content:'';position:absolute;left:0;right:0;height:3.2mm;
+  background:linear-gradient(135deg,var(--blush) 50%,transparent 50%) 0 0/6.4mm 3.2mm,linear-gradient(225deg,var(--blush) 50%,transparent 50%) 0 0/6.4mm 3.2mm}
+.r2::before{top:-.1mm}
+.r2::after{bottom:-.1mm;transform:rotate(180deg)}
+.r2{display:flex;flex-direction:column;justify-content:space-between;padding:14mm 14mm 11mm}
+.r2 .dash{border-top:.7mm dashed var(--forest);opacity:.7}
+.r2 .list{display:flex;flex-direction:column;gap:2.4mm}
+.r2 .it{display:flex;align-items:center;gap:3mm;color:var(--forest);font-family:'IBM Plex Sans Arabic'}
+.r2 .bx{flex:none;width:8mm;height:8mm;border:.6mm solid var(--forest);border-radius:1.4mm;background:var(--blush);display:flex;align-items:center;justify-content:center;font:700 5mm 'IBM Plex Sans';line-height:1}
+.r2 .nm{font-weight:700;font-size:6.2mm;white-space:nowrap}
+.r2 .it i{flex:1;border-bottom:.5mm dotted rgba(46,59,42,.55);transform:translateY(1.5mm)}
+.r2 .no{flex:none;font:700 4mm 'IBM Plex Sans';color:rgba(46,59,42,.6)}
+.r2 .bar{height:11mm;margin:0 22mm;background:repeating-linear-gradient(90deg,var(--forest) 0 .6mm,transparent .6mm 1.4mm,var(--forest) 1.4mm 2.6mm,transparent 2.6mm 3.2mm,var(--forest) 3.2mm 3.6mm,transparent 3.6mm 4.6mm)}
+.hand{font-family:'Reem Kufi Ink','Lalezar';color:var(--forest)}
+
+/* tickets */
+.ticket{position:absolute;left:25mm;width:160mm;height:72mm;background:var(--blush);
+  -webkit-mask:radial-gradient(circle 7mm at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 7mm at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat;
+          mask:radial-gradient(circle 7mm at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 7mm at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat}
+.ticket .in{position:absolute;inset:5mm 12mm;border:.7mm dashed var(--forest);border-radius:2mm}
+.ticket .n{position:absolute;right:24mm;top:50%;transform:translateY(-50%);width:20mm;height:20mm;border-radius:50%;background:var(--forest);color:var(--cream);font:400 11mm/20mm 'Shrikhand';text-align:center}
+.ticket .t1{position:absolute;right:50mm;left:22mm;top:15mm;text-align:center;font-size:15mm;color:var(--forest);white-space:nowrap}
+.ticket .t2{position:absolute;right:50mm;left:22mm;top:46mm;text-align:center;font:700 4.6mm 'IBM Plex Sans';letter-spacing:1.2mm;color:var(--forest);direction:ltr}
+.ticket .ser{position:absolute;top:50%;left:18mm;transform:translate(-50%,-50%) rotate(-90deg);font:700 4.2mm 'IBM Plex Sans';letter-spacing:1mm;color:var(--forest);direction:ltr;white-space:nowrap}
+</style></head><body>
+
+<!-- 01 receipt: services -->
+<div class="p" style="background:var(--blush)">
+  <div class="rc r2">
+    <img src="logo_ink.svg" style="display:block;width:44mm;margin:0 auto">
+    <div class="en" style="text-align:center;font-size:3.4mm;letter-spacing:1mm;color:var(--forest);margin-top:1mm">ORDER N° 66606959</div>
+    <div class="dash"></div>
+    <div class="lz" style="text-align:center;font-size:21mm;color:var(--forest)">شنو نطبع لكم؟</div>
+    <div class="list">
+      <div class="it"><span class="bx">✓</span><span class="nm">توزيعات المناسبات</span><i></i><span class="no">01</span></div>
+      <div class="it"><span class="bx">✓</span><span class="nm">طباعة وستيكرات</span><i></i><span class="no">02</span></div>
+      <div class="it"><span class="bx">✓</span><span class="nm">بزنس كارد وبنرات</span><i></i><span class="no">03</span></div>
+      <div class="it"><span class="bx">✓</span><span class="nm">توزيعات مدرسية</span><i></i><span class="no">04</span></div>
+      <div class="it"><span class="bx">✓</span><span class="nm">أكريليك وتغليف حراري</span><i></i><span class="no">05</span></div>
+      <div class="it"><span class="bx">✓</span><span class="nm">تخليص معاملات</span><i></i><span class="no">06</span></div>
+    </div>
+    <div class="dash"></div>
+    <div class="it tot"><span class="nm lz" style="font-size:9mm">المجموع</span><i></i><span class="lz" style="font-size:9mm;background:var(--blush);border-radius:8mm;padding:0 5mm 1mm">فرحة مضمونة ♥</span></div>
+    <div class="bar"></div>
+    <div class="en" style="text-align:center;font-size:3.2mm;letter-spacing:1.2mm;color:var(--forest)">THANK YOU · KAMI PRINTING · BAHRAIN</div>
+  </div>
+</div>
+
+<!-- 02 wavy: slogan -->
+<div class="p" style="background:var(--rose)">
+  <svg class="abs" style="left:0;top:0" width="210mm" height="297mm" viewBox="0 0 210 297"><path id="wave" fill="#F3EFE6"/></svg>
+  <div class="abs lz" style="left:0;right:0;top:58mm;text-align:center;font-size:31mm;color:var(--forest)">عندكم<br>فكرة؟</div>
+  <div class="abs" style="left:0;right:0;top:140mm;text-align:center"><span class="lz" style="display:inline-block;background:var(--forest);color:var(--cream);font-size:31mm;border-radius:20mm;padding:3mm 12mm 7mm;transform:rotate(-3deg)">نطبعها لكم</span></div>
+  <svg class="abs" style="left:58mm;top:205mm" width="94mm" height="14mm" viewBox="0 0 94 14"><path d="M2,7 C8,0 14,0 20,7 S32,14 38,7 S50,0 56,7 S68,14 74,7 S86,0 92,7" fill="none" stroke="#2E3B2A" stroke-width="2.2" stroke-linecap="round"/></svg>
+  <img class="abs" src="logo_ink.svg" style="left:50%;top:224mm;width:40mm;transform:translateX(-50%)">
+</div>
+
+<!-- 03 tickets: how to order -->
+<div class="p" style="background:var(--cream)">
+  <div class="abs lz" style="left:0;right:0;top:20mm;text-align:center;font-size:20mm;color:var(--forest)">كيف تطلبون؟</div>
+  <div class="ticket" style="top:52mm;transform:rotate(-2deg)"><div class="in"></div><div class="n">1</div><div class="ser">N° 66606959</div>
+    <div class="t1 lz">أرسلوا فكرتكم</div><div class="t2">WHATSAPP 66606959</div></div>
+  <div class="ticket" style="top:132mm"><div class="in"></div><div class="n">2</div><div class="ser">N° 66606959</div>
+    <div class="t1 lz">نصمم ونطبع</div><div class="t2">ON YOUR TASTE</div></div>
+  <div class="ticket" style="top:212mm;transform:rotate(2deg)"><div class="in"></div><div class="n">3</div><div class="ser">N° 66606959</div>
+    <div class="t1 lz">استلموا طلبكم</div><div class="t2">@KAMI.PRINTING</div></div>
+</div>
+
+<script>
+(function(){
+  var L=22,T=26,R=188,B=271,r=6.5,d=[],x,y;
+  var nx=Math.round((R-L)/(2*r)), ny=Math.round((B-T)/(2*r));
+  var sx=(R-L)/nx, sy=(B-T)/ny;
+  d.push('M'+L+','+T);
+  for(var i=0;i<nx;i++){x=L+i*sx;d.push('Q'+(x+sx/2)+','+(T-r)+' '+(x+sx)+','+T);}
+  for(i=0;i<ny;i++){y=T+i*sy;d.push('Q'+(R+r)+','+(y+sy/2)+' '+R+','+(y+sy));}
+  for(i=0;i<nx;i++){x=R-i*sx;d.push('Q'+(x-sx/2)+','+(B+r)+' '+(x-sx)+','+B);}
+  for(i=0;i<ny;i++){y=B-i*sy;d.push('Q'+(L-r)+','+(y-sy/2)+' '+L+','+(y-sy));}
+  document.getElementById('wave').setAttribute('d',d.join(' ')+'Z');
+})();
+var m=location.search.match(/p=(\d)/);
+if(m)document.querySelectorAll('.p').forEach(function(p,i){if(i+1!==+m[1])p.style.display='none'});
+</script>
+</body></html>
