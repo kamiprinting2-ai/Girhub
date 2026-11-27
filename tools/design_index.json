@@ -282,6 +282,11 @@
    "group": "مصادر القوالب",
    "path": "templates/national-10x10",
    "title": "اليوم الوطني 10×10 أحمر FF0000"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/composite-girls",
+   "title": "دمج صورة البنات"
   }
  ]
 }
