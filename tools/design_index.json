@@ -277,6 +277,11 @@
    "group": "عناصر البراند",
    "path": "brand/colors/reds",
    "title": "درجات الأحمر"
+  },
+  {
+   "group": "مصادر القوالب",
+   "path": "templates/national-10x10",
+   "title": "اليوم الوطني 10×10 أحمر FF0000"
   }
  ]
 }
