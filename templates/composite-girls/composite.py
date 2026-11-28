@@ -64,10 +64,7 @@ front_l = SC.convert('RGBA'); front_l.putalpha(front)
 
 out = SC.convert('RGBA')
 for l in (shadow, layer, occ_l, front_l): out = Image.alpha_composite(out, l)
-# ---- light final grade shared by everything (ties layers together)
-o = np.array(out.convert('RGB')).astype(float)
-o = o*1.0; o[...,0]*=1.01; o[...,2]*=0.99
-final = Image.fromarray(np.clip(o,0,255).astype('uint8'))
+final = out.convert('RGB')   # no global grade: original photo pixels stay untouched
 final.save('composite.png'); final.save('composite.jpg', quality=95, dpi=(300,300))
 for n_, l in [('L1-scene', SC.convert('RGBA')), ('L2-shadow', shadow), ('L3-girl', layer), ('L4-occlusion', occ_l), ('L5-front-girls', front_l)]:
     l.save(f'layer-{n_}.png')
